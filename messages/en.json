@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "howItWorks": "How it works",
+    "locations": "Locations",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Get a quote"
+  },
+  "hero": {
+    "title": "Sell your USDT for Colombian pesos — safe, legal, fast",
+    "subtitle": "Receive cash or bank transfer. Full KYC process, SARLAFT compliance. Physical locations in Medellín and Envigado.",
+    "ctaPrimary": "Quote on WhatsApp",
+    "ctaSecondary": "See locations"
+  },
+  "trust": {
+    "legal": "Legally registered company",
+    "kyc": "Mandatory KYC process",
+    "sarlaft": "SARLAFT compliance system",
+    "verification": "Source of funds verification"
+  },
+  "howItWorks": {
+    "title": "How does it work?",
+    "step1Title": "Get a quote",
+    "step1Desc": "Message us on WhatsApp with the amount of USDT you want to sell and we'll give you today's rate instantly.",
+    "step2Title": "KYC verification",
+    "step2Desc": "Complete our identity and source-of-funds verification. Required by law for all clients — passport accepted for tourists.",
+    "step3Title": "Receive your pesos",
+    "step3Desc": "Visit one of our physical locations or receive a bank transfer. We deliver COP in cash or to your Colombian bank account."
+  },
+  "whoWeServe": {
+    "title": "Who do we serve?",
+    "touristsTitle": "International tourists",
+    "touristsDesc": "Arrived in Medellín with USDT and need pesos to get around? No Colombian bank account needed. We accept passports.",
+    "touristsBadge": "Passport accepted",
+    "localsTitle": "Locals & professionals",
+    "localsDesc": "Traders, freelancers, or crypto remittance recipients who want to convert USDT or BTC to pesos with legal backing and regulatory compliance.",
+    "localsBadge": "USDT · BTC · TRC20 / ERC20 networks"
+  },
+  "locations": {
+    "title": "Our locations",
+    "subtitle": "Operating within Nutifinanzas concession points",
+    "directions": "Get directions",
+    "hours": "Hours"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Information about crypto, compliance and the Colombian market",
+    "readMore": "Read more",
+    "viewAll": "View all articles",
+    "minRead": "min read"
+  },
+  "compliance": {
+    "title": "Compliance & security",
+    "subtitle": "We operate under the highest Colombian regulatory compliance standards",
+    "kycTitle": "KYC Process",
+    "kycDesc": "All our clients go through a mandatory Know Your Customer (KYC) process including official ID verification and source-of-funds validation.",
+    "sarlaftTitle": "SARLAFT System",
+    "sarlaftDesc": "We have an implemented anti-money laundering and counter-terrorism financing risk management system (SARLAFT), in compliance with current Colombian regulations.",
+    "legalTitle": "Legally registered company",
+    "legalDesc": "BitWave is a legally incorporated company in Colombia, operating in accordance with current regulations applicable to crypto-asset exchange services.",
+    "disclaimer": "Legal notice: BitWave is not an entity supervised by the Superintendencia Financiera de Colombia. Crypto-asset exchange is not covered by Fogafin deposit insurance. Crypto-assets are not legal tender in Colombia. Operations are conducted under applicable current Colombian regulations."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "What documents do I need to exchange?",
+    "a1": "For Colombian citizens: national ID (cédula). For foreigners and tourists: valid passport. In all cases we apply full KYC and source-of-funds verification.",
+    "q2": "What are the minimum and maximum amounts?",
+    "a2": "The minimum is 100 USDT. For operations above certain amounts, additional verification applies per our SARLAFT compliance policy. Contact us for large-volume operations.",
+    "q3": "How is the exchange rate calculated?",
+    "a3": "The rate is based on the USDT market price at the time of the transaction, with an operational spread. We don't guarantee fixed rates — contact us on WhatsApp for the current quote.",
+    "q4": "How long does the operation take?",
+    "a4": "Once KYC is complete and USDT are received in our wallet, cash delivery at our physical locations is immediate. Bank transfers are processed on the same business day.",
+    "q5": "Is it legal to exchange USDT in Colombia?",
+    "a5": "Yes. Crypto-asset exchange is not prohibited in Colombia. BitWave operates as a legally incorporated company, fulfilling anti-money laundering obligations and other applicable regulations.",
+    "q6": "I'm a tourist without a Colombian ID — can you help me?",
+    "a6": "Yes. We serve international tourists with a valid passport. It is the official document recognized in our KYC process for foreign clients.",
+    "q7": "Which USDT networks do you accept?",
+    "a7": "We accept USDT on TRC20 (Tron) and ERC20 (Ethereum) networks. Check the available network at the time of your transaction. Unverified networks are not accepted.",
+    "q8": "Do I receive pesos in cash or bank transfer?",
+    "a8": "Both options are available. At our physical locations we deliver cash pesos instantly. We can also make a bank transfer to a Colombian account (same business day)."
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Available on WhatsApp for quotes and inquiries",
+    "whatsappBtn": "Message on WhatsApp",
+    "email": "Email",
+    "attention": "In-person service",
+    "schedule": "Monday to Saturday · 9am – 7pm"
+  },
+  "footer": {
+    "tagline": "Legally registered crypto-asset exchange company in Colombia.",
+    "links": "Links",
+    "legal": "Legal",
+    "disclaimer": "BitWave is not supervised by the Superintendencia Financiera de Colombia. Crypto-assets are not legal tender.",
+    "rights": "All rights reserved."
+  }
+}

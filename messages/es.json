@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "howItWorks": "Cómo funciona",
+    "locations": "Ubicaciones",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "cta": "Cotiza tu cambio"
+  },
+  "hero": {
+    "title": "Cambia tus USDT por pesos colombianos, de forma legal y segura",
+    "subtitle": "Entregamos pesos en efectivo o transferencia bancaria. Proceso KYC completo, sistema SARLAFT y verificación de fondos. Puntos físicos en Medellín y Envigado.",
+    "ctaPrimary": "Cotiza por WhatsApp",
+    "ctaSecondary": "Ver ubicaciones"
+  },
+  "trust": {
+    "legal": "Empresa legalmente constituida",
+    "kyc": "Proceso KYC obligatorio",
+    "sarlaft": "Sistema SARLAFT",
+    "verification": "Verificación de origen de fondos"
+  },
+  "howItWorks": {
+    "title": "¿Cómo funciona?",
+    "step1Title": "Cotiza tu cambio",
+    "step1Desc": "Escríbenos por WhatsApp con el monto de USDT que deseas vender y te damos la tasa del día al instante.",
+    "step2Title": "Verificación KYC",
+    "step2Desc": "Completa nuestro proceso de verificación de identidad y origen de fondos. Requerido por ley para todos los clientes.",
+    "step3Title": "Recibe tus pesos",
+    "step3Desc": "Visita uno de nuestros puntos físicos o recibe transferencia bancaria. Entregamos COP en efectivo o a tu cuenta."
+  },
+  "whoWeServe": {
+    "title": "¿A quién servimos?",
+    "touristsTitle": "Turistas internacionales",
+    "touristsDesc": "Llegaste a Medellín con USDT y necesitas pesos para moverte con tranquilidad. Sin cuenta bancaria colombiana, sin complicaciones. Te atendemos con pasaporte.",
+    "touristsBadge": "Aceptamos pasaporte",
+    "localsTitle": "Locales y profesionales",
+    "localsDesc": "Traders, freelancers o receptores de remesas cripto que quieren convertir USDT o BTC a pesos con respaldo legal y cumplimiento normativo.",
+    "localsBadge": "USDT · BTC · Redes TRC20 / ERC20"
+  },
+  "locations": {
+    "title": "Nuestros puntos de atención",
+    "subtitle": "Opera bajo contratos de concesión dentro de los puntos Nutifinanzas",
+    "directions": "Cómo llegar",
+    "hours": "Horario"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Información sobre criptomonedas, cumplimiento y el mercado en Colombia",
+    "readMore": "Leer más",
+    "viewAll": "Ver todos los artículos",
+    "minRead": "min de lectura"
+  },
+  "compliance": {
+    "title": "Cumplimiento y seguridad",
+    "subtitle": "Operamos bajo los más altos estándares de cumplimiento normativo colombiano",
+    "kycTitle": "Proceso KYC",
+    "kycDesc": "Todos nuestros clientes pasan por un proceso obligatorio de conocimiento del cliente (KYC) que incluye verificación de identidad con documento oficial y validación del origen de los fondos.",
+    "sarlaftTitle": "Sistema SARLAFT",
+    "sarlaftDesc": "Contamos con un sistema implementado de administración del riesgo de lavado de activos y financiación del terrorismo (SARLAFT), en cumplimiento de la normativa colombiana vigente.",
+    "legalTitle": "Empresa legalmente constituida",
+    "legalDesc": "BitWave es una empresa legalmente constituida en Colombia, que opera conforme a la normativa vigente para el intercambio de criptoactivos.",
+    "disclaimer": "Aviso legal: BitWave no es una entidad vigilada por la Superintendencia Financiera de Colombia. El intercambio de criptoactivos no está cubierto por el seguro de depósitos del Fogafin. Los criptoactivos no son moneda de curso legal en Colombia. Las operaciones se realizan bajo la normativa colombiana vigente aplicable a este tipo de servicios."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Qué documentos necesito para hacer el cambio?",
+    "a1": "Para ciudadanos colombianos: cédula de ciudadanía. Para extranjeros y turistas: pasaporte vigente. En todos los casos aplicamos proceso KYC completo y verificación del origen de los fondos.",
+    "q2": "¿Cuáles son los montos mínimos y máximos?",
+    "a2": "El monto mínimo es de 100 USDT. Para operaciones superiores a ciertos montos aplicamos verificación adicional según nuestra política de cumplimiento SARLAFT. Contáctanos para operaciones de gran volumen.",
+    "q3": "¿Cómo se calcula la tasa de cambio?",
+    "a3": "La tasa se calcula con base en el precio de mercado del USDT al momento de la operación, con un spread operativo. No garantizamos tasas fijas — consúltanos por WhatsApp para obtener la cotización del momento.",
+    "q4": "¿Cuánto demora la operación?",
+    "a4": "Una vez completada la verificación KYC y recibidos los USDT en nuestra billetera, la entrega de pesos en efectivo es inmediata en nuestros puntos físicos. Las transferencias bancarias se procesan en el mismo día hábil.",
+    "q5": "¿Es legal cambiar USDT en Colombia?",
+    "a5": "Sí. El intercambio de criptoactivos no está prohibido en Colombia. BitWave opera como empresa legalmente constituida, cumpliendo las obligaciones de prevención de lavado de activos y las demás normas aplicables.",
+    "q6": "Soy turista y no tengo cédula colombiana, ¿me atienden?",
+    "a6": "Sí. Atendemos a turistas internacionales con pasaporte vigente. Es el documento oficial reconocido en nuestro proceso KYC para clientes extranjeros.",
+    "q7": "¿Qué redes de USDT aceptan?",
+    "a7": "Aceptamos USDT en redes TRC20 (Tron) y ERC20 (Ethereum). Consulta la red disponible al momento de tu operación. No aceptamos redes no verificadas para evitar pérdidas.",
+    "q8": "¿Cómo recibo los pesos, en efectivo o transferencia?",
+    "a8": "Ofrecemos ambas opciones. En nuestros puntos físicos entregamos pesos en efectivo al instante. También podemos realizar transferencia bancaria a cuenta colombiana (mismo día hábil)."
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos disponibles por WhatsApp para cotizaciones y consultas",
+    "whatsappBtn": "Escribir por WhatsApp",
+    "email": "Correo electrónico",
+    "attention": "Atención en puntos físicos",
+    "schedule": "Lunes a sábado · 9am – 7pm"
+  },
+  "footer": {
+    "tagline": "Empresa de intercambio de criptoactivos legalmente constituida en Colombia.",
+    "links": "Enlaces",
+    "legal": "Legal",
+    "disclaimer": "BitWave no es entidad vigilada por la Superintendencia Financiera de Colombia. Los criptoactivos no son moneda de curso legal.",
+    "rights": "Todos los derechos reservados."
+  }
+}
