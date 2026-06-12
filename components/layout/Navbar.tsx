@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link"
 import { useTranslations, useLocale } from "next-intl"
+import { Link, useRouter, usePathname } from "@/i18n/navigation"
 import { getWhatsAppUrl } from "@/lib/config"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
@@ -17,13 +17,19 @@ const navLinks = [
 export default function Navbar() {
   const t = useTranslations("nav")
   const locale = useLocale()
+  const router = useRouter()
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
-  const altHref = locale === "es" ? "/en" : "/"
+
+  function switchLocale() {
+    const nextLocale = locale === "es" ? "en" : "es"
+    router.replace(pathname, { locale: nextLocale })
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href={locale === "es" ? "/" : "/en"} className="flex-shrink-0">
+        <Link href="/" className="flex-shrink-0">
           <Image
             src="/logo_nb.png"
             alt="BitWave"
@@ -48,10 +54,14 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <Link href={altHref} className="text-xl leading-none" title={locale === "es" ? "English" : "Español"}>
+          <button
+            onClick={switchLocale}
+            className="text-xl leading-none cursor-pointer"
+            title={locale === "es" ? "English" : "Español"}
+          >
             <span aria-hidden="true">{locale === "es" ? "🇺🇸" : "🇨🇴"}</span>
             <span className="sr-only">{locale === "es" ? "Switch to English" : "Cambiar a Español"}</span>
-          </Link>
+          </button>
           <a
             href={getWhatsAppUrl()}
             target="_blank"
