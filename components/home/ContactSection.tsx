@@ -15,7 +15,7 @@ export default async function ContactSection() {
           href={getWhatsAppUrl()}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1da851] text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
+          className="inline-flex items-center gap-3 bg-whatsapp hover:bg-whatsapp-hover text-white font-bold px-8 py-4 rounded-xl text-lg transition-colors shadow-lg"
         >
           <MessageCircle size={24} />
           {t("whatsappBtn")}
