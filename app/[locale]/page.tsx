@@ -1,3 +1,27 @@
+import HeroSection from "@/components/home/HeroSection"
+import TrustBar from "@/components/home/TrustBar"
+import HowItWorks from "@/components/home/HowItWorks"
+import WhoWeServe from "@/components/home/WhoWeServe"
+import LocationsSection from "@/components/home/LocationsSection"
+import BlogCarousel from "@/components/home/BlogCarousel"
+import ComplianceSection from "@/components/home/ComplianceSection"
+import FaqSection from "@/components/home/FaqSection"
+import ContactSection from "@/components/home/ContactSection"
+import WhatsAppFloatButton from "@/components/ui/WhatsAppFloatButton"
+
 export default function HomePage() {
-  return <main className="min-h-screen p-8"><h1 className="text-2xl font-bold text-brand-primary">BitWave — Coming soon</h1></main>
+  return (
+    <main>
+      <HeroSection />
+      <TrustBar />
+      <HowItWorks />
+      <WhoWeServe />
+      <LocationsSection />
+      <BlogCarousel />
+      <ComplianceSection />
+      <FaqSection />
+      <ContactSection />
+      <WhatsAppFloatButton />
+    </main>
+  )
 }
