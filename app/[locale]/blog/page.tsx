@@ -11,7 +11,7 @@ export async function generateMetadata({
   const { locale } = await params
   const isEN = locale === "en"
   return {
-    title: isEN ? "Blog | BitWave" : "Blog | BitWave",
+    title: "Blog | BitWave",
     description: isEN
       ? "Articles about cryptocurrency, compliance and the Colombian market."
       : "Artículos sobre criptomonedas, cumplimiento y el mercado colombiano.",

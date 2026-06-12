@@ -5,11 +5,15 @@ import Link from "next/link"
 import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
 import { siteConfig } from "@/lib/config"
+import { MDXRemote } from "next-mdx-remote/rsc"
 
 export async function generateStaticParams() {
   const esPosts = getAllPosts("es")
   const enPosts = getAllPosts("en")
-  return [...esPosts, ...enPosts].map((p) => ({ slug: p.slug }))
+  return [
+    ...esPosts.map((p) => ({ locale: "es", slug: p.slug })),
+    ...enPosts.map((p) => ({ locale: "en", slug: p.slug })),
+  ]
 }
 
 export async function generateMetadata({
@@ -17,13 +21,16 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
-  const post = getPostBySlug(slug)
+  const { slug, locale } = await params
+  const post = getPostBySlug(slug, locale as "es" | "en")
   if (!post) return {}
   return {
     title: post.metaTitle,
     description: post.metaDescription,
     keywords: post.keywords.join(", "),
+    alternates: {
+      canonical: `${siteConfig.siteUrl}${locale === "en" ? "/en" : ""}/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
@@ -40,96 +47,13 @@ export async function generateMetadata({
   }
 }
 
-function renderMarkdown(content: string) {
-  const lines = content.split("\n")
-  const elements: React.ReactNode[] = []
-  let key = 0
-
-  const parseInline = (text: string): React.ReactNode => {
-    // Handle bold+italic combinations and simple bold/italic
-    const parts = text.split(/(\*\*\*.*?\*\*\*|\*\*.*?\*\*|\*.*?\*)/g)
-    return parts.map((part, i) => {
-      if (part.startsWith("***") && part.endsWith("***")) {
-        return <strong key={i}><em>{part.slice(3, -3)}</em></strong>
-      }
-      if (part.startsWith("**") && part.endsWith("**")) {
-        return <strong key={i} className="font-semibold text-text-title">{part.slice(2, -2)}</strong>
-      }
-      if (part.startsWith("*") && part.endsWith("*") && part.length > 2) {
-        return <em key={i}>{part.slice(1, -1)}</em>
-      }
-      return part
-    })
-  }
-
-  let i = 0
-  while (i < lines.length) {
-    const line = lines[i]
-
-    if (line.startsWith("## ")) {
-      elements.push(
-        <h2 key={key++} className="text-2xl font-bold text-text-title mt-8 mb-3">
-          {line.slice(3)}
-        </h2>
-      )
-    } else if (line.startsWith("### ")) {
-      elements.push(
-        <h3 key={key++} className="text-xl font-semibold text-text-title mt-6 mb-2">
-          {line.slice(4)}
-        </h3>
-      )
-    } else if (line.startsWith("- ")) {
-      // Collect consecutive list items
-      const items: string[] = []
-      while (i < lines.length && lines[i].startsWith("- ")) {
-        items.push(lines[i].slice(2))
-        i++
-      }
-      elements.push(
-        <ul key={key++} className="list-disc list-inside space-y-1 mb-4 text-text-body">
-          {items.map((item, idx) => (
-            <li key={idx} className="leading-relaxed">{parseInline(item)}</li>
-          ))}
-        </ul>
-      )
-      continue
-    } else if (/^\d+\./.test(line)) {
-      // Collect consecutive numbered list items
-      const items: string[] = []
-      while (i < lines.length && /^\d+\./.test(lines[i])) {
-        items.push(lines[i].replace(/^\d+\.\s*/, ""))
-        i++
-      }
-      elements.push(
-        <ol key={key++} className="list-decimal list-inside space-y-1 mb-4 text-text-body">
-          {items.map((item, idx) => (
-            <li key={idx} className="leading-relaxed">{parseInline(item)}</li>
-          ))}
-        </ol>
-      )
-      continue
-    } else if (line.trim() === "") {
-      // skip blank lines
-    } else {
-      elements.push(
-        <p key={key++} className="text-text-body leading-relaxed mb-4">
-          {parseInline(line)}
-        </p>
-      )
-    }
-    i++
-  }
-
-  return elements
-}
-
 export default async function BlogPostPage({
   params,
 }: {
   params: Promise<{ slug: string; locale: string }>
 }) {
   const { slug, locale } = await params
-  const post = getPostBySlug(slug)
+  const post = getPostBySlug(slug, locale as "es" | "en")
   if (!post) notFound()
 
   const backHref = locale === "en" ? "/en/blog" : "/blog"
@@ -177,8 +101,8 @@ export default async function BlogPostPage({
         />
       </div>
 
-      <article className="prose-custom">
-        {renderMarkdown(post.content)}
+      <article className="space-y-4">
+        <MDXRemote source={post.content} />
       </article>
     </main>
   )

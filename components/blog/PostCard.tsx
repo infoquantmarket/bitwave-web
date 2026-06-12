@@ -42,7 +42,7 @@ export default function PostCard({ post, locale }: PostCardProps) {
         <Link
           href={blogPath}
           className="mt-4 text-sm font-semibold text-brand-accent hover:text-brand-primary transition-colors"
-          aria-label={`Leer más sobre ${post.title}`}
+          aria-label={locale === "en" ? `Read more about ${post.title}` : `Leer más sobre ${post.title}`}
         >
           {locale === "en" ? "Read more" : "Leer más"} →
         </Link>

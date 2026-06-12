@@ -8,8 +8,10 @@ import ComplianceSection from "@/components/home/ComplianceSection"
 import FaqSection from "@/components/home/FaqSection"
 import ContactSection from "@/components/home/ContactSection"
 import WhatsAppFloatButton from "@/components/ui/WhatsAppFloatButton"
+import { getLocale } from "next-intl/server"
 
-export default function HomePage() {
+export default async function HomePage() {
+  const locale = await getLocale()
   return (
     <main>
       <HeroSection />
@@ -17,7 +19,7 @@ export default function HomePage() {
       <HowItWorks />
       <WhoWeServe />
       <LocationsSection />
-      <BlogCarousel />
+      <BlogCarousel locale={locale} />
       <ComplianceSection />
       <FaqSection />
       <ContactSection />

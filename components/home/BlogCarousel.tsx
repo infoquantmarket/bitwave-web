@@ -1,14 +1,16 @@
 import { getAllPosts } from "@/lib/blog"
 import PostCard from "@/components/blog/PostCard"
 import { getTranslations } from "next-intl/server"
-import { headers } from "next/headers"
 import Link from "next/link"
 
-export default async function BlogCarousel() {
+interface BlogCarouselProps {
+  locale: string
+}
+
+export default async function BlogCarousel({ locale }: BlogCarouselProps) {
   const t = await getTranslations("blog")
-  const headersList = await headers()
-  const locale = (headersList.get("x-next-intl-locale") ?? "es") as "es" | "en"
-  const posts = getAllPosts(locale).slice(0, 3)
+  const lang = (locale === "en" ? "en" : "es") as "es" | "en"
+  const posts = getAllPosts(lang).slice(0, 3)
   const blogHref = locale === "en" ? "/en/blog" : "/blog"
 
   return (
@@ -28,22 +30,7 @@ export default async function BlogCarousel() {
         </div>
 
         {posts.length === 0 ? (
-          <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-            aria-busy="true"
-            aria-label={t("loading")}
-          >
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                <div className="h-48 bg-brand-light animate-pulse" />
-                <div className="p-5 space-y-3">
-                  <div className="h-3 bg-gray-100 rounded animate-pulse w-1/2" />
-                  <div className="h-5 bg-gray-100 rounded animate-pulse" />
-                  <div className="h-4 bg-gray-100 rounded animate-pulse w-4/5" />
-                </div>
-              </div>
-            ))}
-          </div>
+          <p className="text-center text-text-body py-8">{t("comingSoon")}</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {posts.map((post) => (
