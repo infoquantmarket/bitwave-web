@@ -17,7 +17,8 @@
     "legal": "Empresa legalmente constituida",
     "kyc": "Proceso KYC obligatorio",
     "sarlaft": "Sistema SARLAFT",
-    "verification": "Verificación de origen de fondos"
+    "verification": "Verificación de origen de fondos",
+    "sectionLabel": "Nuestros compromisos"
   },
   "howItWorks": {
     "title": "¿Cómo funciona?",
@@ -41,14 +42,16 @@
     "title": "Nuestros puntos de atención",
     "subtitle": "Opera bajo contratos de concesión dentro de los puntos Nutifinanzas",
     "directions": "Cómo llegar",
-    "hours": "Horario"
+    "hours": "Horario",
+    "mapTitle": "Mapa"
   },
   "blog": {
     "title": "Blog",
     "subtitle": "Información sobre criptomonedas, cumplimiento y el mercado en Colombia",
     "readMore": "Leer más",
     "viewAll": "Ver todos los artículos",
-    "minRead": "min de lectura"
+    "minRead": "min de lectura",
+    "loading": "Cargando artículos"
   },
   "compliance": {
     "title": "Cumplimiento y seguridad",
@@ -59,6 +62,7 @@
     "sarlaftDesc": "Contamos con un sistema implementado de administración del riesgo de lavado de activos y financiación del terrorismo (SARLAFT), en cumplimiento de la normativa colombiana vigente.",
     "legalTitle": "Empresa legalmente constituida",
     "legalDesc": "BitWave es una empresa legalmente constituida en Colombia, que opera conforme a la normativa vigente para el intercambio de criptoactivos.",
+    "disclaimerLabel": "Aviso legal",
     "disclaimer": "Aviso legal: BitWave no es una entidad vigilada por la Superintendencia Financiera de Colombia. El intercambio de criptoactivos no está cubierto por el seguro de depósitos del Fogafin. Los criptoactivos no son moneda de curso legal en Colombia. Las operaciones se realizan bajo la normativa colombiana vigente aplicable a este tipo de servicios."
   },
   "faq": {

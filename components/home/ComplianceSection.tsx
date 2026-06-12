@@ -30,7 +30,11 @@ export default async function ComplianceSection() {
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl p-6 flex gap-4 border border-amber-100">
+        <div
+          className="bg-white rounded-2xl p-6 flex gap-4 border border-amber-100"
+          role="note"
+          aria-label={t("disclaimerLabel")}
+        >
           <AlertCircle size={20} className="text-amber-600 flex-shrink-0 mt-0.5" />
           <p className="text-xs text-text-body leading-relaxed">{t("disclaimer")}</p>
         </div>

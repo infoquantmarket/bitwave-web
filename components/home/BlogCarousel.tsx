@@ -14,14 +14,18 @@ export default async function BlogCarousel() {
           </div>
           <Link
             href="/blog"
-            className="text-sm font-semibold text-brand-accent hover:text-brand-primary transition-colors hidden sm:block"
+            className="text-sm font-semibold text-brand-accent hover:text-brand-primary transition-colors"
           >
             {t("viewAll")} →
           </Link>
         </div>
 
         {/* Placeholders hasta que se implemente el blog en Fase 3 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          aria-busy="true"
+          aria-label={t("loading")}
+        >
           {[1, 2, 3].map((i) => (
             <div
               key={i}

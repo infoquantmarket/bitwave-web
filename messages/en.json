@@ -17,7 +17,8 @@
     "legal": "Legally registered company",
     "kyc": "Mandatory KYC process",
     "sarlaft": "SARLAFT compliance system",
-    "verification": "Source of funds verification"
+    "verification": "Source of funds verification",
+    "sectionLabel": "Our commitments"
   },
   "howItWorks": {
     "title": "How does it work?",
@@ -41,14 +42,16 @@
     "title": "Our locations",
     "subtitle": "Operating within Nutifinanzas concession points",
     "directions": "Get directions",
-    "hours": "Hours"
+    "hours": "Hours",
+    "mapTitle": "Map"
   },
   "blog": {
     "title": "Blog",
     "subtitle": "Information about crypto, compliance and the Colombian market",
     "readMore": "Read more",
     "viewAll": "View all articles",
-    "minRead": "min read"
+    "minRead": "min read",
+    "loading": "Loading articles"
   },
   "compliance": {
     "title": "Compliance & security",
@@ -59,6 +62,7 @@
     "sarlaftDesc": "We have an implemented anti-money laundering and counter-terrorism financing risk management system (SARLAFT), in compliance with current Colombian regulations.",
     "legalTitle": "Legally registered company",
     "legalDesc": "BitWave is a legally incorporated company in Colombia, operating in accordance with current regulations applicable to crypto-asset exchange services.",
+    "disclaimerLabel": "Legal notice",
     "disclaimer": "Legal notice: BitWave is not an entity supervised by the Superintendencia Financiera de Colombia. Crypto-asset exchange is not covered by Fogafin deposit insurance. Crypto-assets are not legal tender in Colombia. Operations are conducted under applicable current Colombian regulations."
   },
   "faq": {

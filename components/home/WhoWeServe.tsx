@@ -9,7 +9,6 @@ const cards = [
     badgeKey: "touristsBadge" as const,
     icon: Plane,
     image: "/images/turistas.png",
-    alt: "Turistas internacionales",
   },
   {
     titleKey: "localsTitle" as const,
@@ -17,7 +16,6 @@ const cards = [
     badgeKey: "localsBadge" as const,
     icon: Briefcase,
     image: "/images/locales.png",
-    alt: "Locales y profesionales",
   },
 ]
 
@@ -29,7 +27,7 @@ export default async function WhoWeServe() {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-text-title text-center mb-12">{t("title")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {cards.map(({ titleKey, descKey, badgeKey, icon: Icon, image, alt }) => (
+          {cards.map(({ titleKey, descKey, badgeKey, icon: Icon, image }) => (
             <div
               key={titleKey}
               className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100"
@@ -37,7 +35,7 @@ export default async function WhoWeServe() {
               <div className="relative h-56 bg-brand-light">
                 <Image
                   src={image}
-                  alt={alt}
+                  alt={t(titleKey)}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"

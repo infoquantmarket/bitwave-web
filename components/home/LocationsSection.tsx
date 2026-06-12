@@ -1,9 +1,12 @@
-import { getTranslations } from "next-intl/server"
+"use client"
+import { useTranslations } from "next-intl"
 import { locations } from "@/lib/locations"
 import { MapPin, Clock, ExternalLink } from "lucide-react"
+import { useState } from "react"
 
-export default async function LocationsSection() {
-  const t = await getTranslations("locations")
+export default function LocationsSection() {
+  const t = useTranslations("locations")
+  const [selected, setSelected] = useState(0)
 
   return (
     <section id="ubicaciones" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -14,10 +17,19 @@ export default async function LocationsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          {locations.map((loc) => (
+          {locations.map((loc, idx) => (
             <div
               key={loc.id}
-              className="border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              className={`border rounded-2xl p-6 shadow-sm cursor-pointer transition-all ${
+                selected === idx
+                  ? "border-brand-accent bg-brand-light"
+                  : "border-gray-100 hover:shadow-md"
+              }`}
+              onClick={() => setSelected(idx)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" && setSelected(idx)}
+              aria-pressed={selected === idx}
             >
               <h3 className="font-bold text-text-title text-lg mb-1">{loc.name}</h3>
               <div className="flex items-start gap-2 text-sm text-text-body mb-2">
@@ -33,6 +45,7 @@ export default async function LocationsSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent hover:text-brand-primary transition-colors"
+                onClick={(e) => e.stopPropagation()}
               >
                 {t("directions")}
                 <ExternalLink size={13} />
@@ -43,14 +56,15 @@ export default async function LocationsSection() {
 
         <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 h-64 md:h-80">
           <iframe
-            src={locations[0].embedUrl}
+            key={selected}
+            src={locations[selected].embedUrl}
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title={`Mapa ${locations[0].name}`}
+            title={`${t("mapTitle")} ${locations[selected].name}`}
           />
         </div>
       </div>

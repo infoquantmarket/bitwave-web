@@ -12,7 +12,8 @@ export default async function TrustBar() {
   const t = await getTranslations("trust")
 
   return (
-    <section className="bg-brand-primary py-8 px-4 sm:px-6 lg:px-8">
+    <section className="bg-brand-primary py-8 px-4 sm:px-6 lg:px-8" aria-labelledby="trust-heading">
+      <h2 id="trust-heading" className="sr-only">{t("sectionLabel")}</h2>
       <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
         {items.map(({ key, icon: Icon }) => (
           <div key={key} className="flex items-center gap-3 text-white">

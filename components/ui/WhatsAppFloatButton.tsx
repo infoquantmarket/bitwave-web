@@ -1,4 +1,3 @@
-"use client"
 import { getWhatsAppUrl } from "@/lib/config"
 import { MessageCircle } from "lucide-react"
 
@@ -11,7 +10,7 @@ export default function WhatsAppFloatButton() {
       aria-label="Contactar por WhatsApp"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110"
     >
-      <MessageCircle size={26} />
+      <MessageCircle size={26} aria-hidden="true" />
     </a>
   )
 }

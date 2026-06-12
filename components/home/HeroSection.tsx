@@ -40,7 +40,7 @@ export default async function HeroSection() {
           <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-brand-light">
             <Image
               src="/images/hero.png"
-              alt="Cambia tus USDT por pesos colombianos en BitWave"
+              alt={t("title")}
               fill
               className="object-cover"
               priority
