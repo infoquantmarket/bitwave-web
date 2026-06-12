@@ -4,9 +4,8 @@ export const siteConfig = {
   whatsappMessage: "Hola, quiero cotizar mi cambio de USDT",
   email: "info@bitwaveco.com",
   siteUrl: "https://www.bitwaveco.com",
-  // TODO: reemplazar con datos legales reales antes del deploy
   companyName: "BitWave S.A.S.",
-  nit: "XXX.XXX.XXX-X",
+  nit: "901.920.120-1",
 }
 
 export function getWhatsAppUrl(message?: string) {
