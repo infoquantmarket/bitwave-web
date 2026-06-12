@@ -11,7 +11,7 @@ export default async function Footer({ locale }: { locale: string }) {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#1a4a2e] text-white">
+    <footer className="bg-brand-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-1">
           <Image
@@ -46,11 +46,11 @@ export default async function Footer({ locale }: { locale: string }) {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60 mb-4">Ubicaciones</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60 mb-4">{t("locationsTitle")}</h3>
           <ul className="space-y-3 text-sm text-white/80">
             {locations.map((loc) => (
               <li key={loc.id} className="flex gap-2">
-                <MapPin size={14} className="mt-0.5 flex-shrink-0 text-[#2d8a4e]" />
+                <MapPin size={14} className="mt-0.5 flex-shrink-0 text-brand-accent" />
                 <span>
                   <span className="font-medium text-white">{loc.name}</span>
                   <br />
@@ -62,7 +62,7 @@ export default async function Footer({ locale }: { locale: string }) {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60 mb-4">Contacto</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60 mb-4">{t("contactTitle")}</h3>
           <a
             href={`mailto:${siteConfig.email}`}
             className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors"

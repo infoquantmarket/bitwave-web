@@ -4,6 +4,13 @@ import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
+import { Inter } from "next/font/google"
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+})
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
@@ -20,10 +27,14 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as "es" | "en")) notFound()
   const messages = await getMessages()
   return (
-    <NextIntlClientProvider messages={messages}>
-      <Navbar />
-      {children}
-      <Footer locale={locale} />
-    </NextIntlClientProvider>
+    <html lang={locale} className={inter.variable}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          {children}
+          <Footer locale={locale} />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   )
 }

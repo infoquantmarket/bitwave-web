@@ -39,7 +39,7 @@ export default function Navbar() {
             <li key={link.key}>
               <Link
                 href={link.href}
-                className="text-sm text-[#4b5563] hover:text-[#1a4a2e] font-medium transition-colors"
+                className="text-sm text-text-body hover:text-brand-primary font-medium transition-colors"
               >
                 {t(link.key)}
               </Link>
@@ -49,17 +49,18 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <Link href={altHref} className="text-xl leading-none" title={locale === "es" ? "English" : "Español"}>
-            {locale === "es" ? "🇺🇸" : "🇨🇴"}
+            <span aria-hidden="true">{locale === "es" ? "🇺🇸" : "🇨🇴"}</span>
+            <span className="sr-only">{locale === "es" ? "Switch to English" : "Cambiar a Español"}</span>
           </Link>
           <a
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 bg-[#2d8a4e] hover:bg-[#1a4a2e] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+            className="hidden sm:inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-primary text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
           >
             {t("cta")}
           </a>
-          <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="Menu">
+          <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
@@ -72,7 +73,7 @@ export default function Navbar() {
               <li key={link.key}>
                 <Link
                   href={link.href}
-                  className="block text-sm text-[#4b5563] hover:text-[#1a4a2e] font-medium py-1"
+                  className="block text-sm text-text-body hover:text-brand-primary font-medium py-1"
                   onClick={() => setOpen(false)}
                 >
                   {t(link.key)}
@@ -84,7 +85,7 @@ export default function Navbar() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#2d8a4e] text-white text-sm font-semibold px-4 py-2 rounded-lg mt-1"
+                className="inline-flex items-center gap-2 bg-brand-accent text-white text-sm font-semibold px-4 py-2 rounded-lg mt-1"
               >
                 {t("cta")}
               </a>
