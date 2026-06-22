@@ -12,7 +12,7 @@ export default async function Footer({ locale }: { locale: string }) {
 
   return (
     <footer className="bg-brand-primary text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="md:col-span-1">
           <div className="flex items-center gap-2 mb-2">
             <Image
@@ -65,14 +65,6 @@ export default async function Footer({ locale }: { locale: string }) {
         </div>
 
         <div>
-          <Image
-            src="/logo_nb.png"
-            alt="BitWave"
-            width={120}
-            height={34}
-            className="h-auto brightness-0 invert mb-2"
-            style={{ width: "auto", maxWidth: "100%" }}
-          />
           <h3 className="text-xs font-semibold uppercase tracking-wider text-white/60 mb-3">{t("contactTitle")}</h3>
           <a
             href={`mailto:${siteConfig.email}`}
