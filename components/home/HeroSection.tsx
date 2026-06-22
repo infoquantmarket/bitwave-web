@@ -10,10 +10,10 @@ export default async function HeroSection() {
     <section className="bg-white pt-12 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-title leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-title leading-tight text-center lg:text-left">
             {t("title")}
           </h1>
-          <p className="mt-6 text-lg text-text-body leading-relaxed max-w-xl">
+          <p className="mt-6 text-lg text-text-body leading-relaxed max-w-xl text-center lg:text-left">
             {t("subtitle")}
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
