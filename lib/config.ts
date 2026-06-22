@@ -1,7 +1,6 @@
 export const siteConfig = {
-  // TODO: reemplazar con el número real antes del deploy a producción
-  whatsappNumber: "+573XXXXXXXXX",
-  whatsappMessage: "Hola, quiero cotizar mi cambio de USDT",
+  whatsappNumber: "+57319245460",
+  whatsappMessage: "Hola vengo de tu página necesito más información",
   email: "info@bitwaveco.com",
   siteUrl: "https://www.bitwaveco.com",
   companyName: "BitWave S.A.S.",
