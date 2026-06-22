@@ -16,11 +16,11 @@ export default async function Footer({ locale }: { locale: string }) {
         <div className="md:col-span-1">
           <div className="flex items-center gap-2 mb-2">
             <Image
-              src="/logo.png"
+              src="/logo_nb.png"
               alt="BitWave"
               width={28}
               height={28}
-              className="w-7 h-7 object-contain"
+              className="w-7 h-7 object-contain invert"
             />
             <span className="text-white font-bold text-base">BitWave</span>
           </div>
