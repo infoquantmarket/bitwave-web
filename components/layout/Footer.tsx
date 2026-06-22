@@ -12,28 +12,28 @@ export default async function Footer({ locale }: { locale: string }) {
 
   return (
     <footer className="bg-brand-primary text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="md:col-span-1">
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-2 mb-2">
             <Image
               src="/logo_nb.png"
               alt="BitWave"
-              width={36}
-              height={36}
-              className="w-9 h-9 object-contain brightness-0 invert"
+              width={28}
+              height={28}
+              className="w-7 h-7 object-contain brightness-0 invert"
             />
-            <span className="text-white font-bold text-lg">BitWave</span>
+            <span className="text-white font-bold text-base">BitWave</span>
           </div>
-          <p className="text-sm text-white/70 leading-relaxed">Cambia USDT por pesos colombianos con respaldo legal.</p>
-          <div className="mt-4 text-xs text-white/50">
+          <p className="text-xs text-white/70 leading-relaxed">Cambia USDT por pesos colombianos con respaldo legal.</p>
+          <div className="mt-2 text-xs text-white/50">
             <p>{siteConfig.companyName}</p>
             <p>NIT: {siteConfig.nit}</p>
           </div>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60 mb-4">{t("links")}</h3>
-          <ul className="space-y-2 text-sm text-white/80">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-white/60 mb-3">{t("links")}</h3>
+          <ul className="space-y-1.5 text-xs text-white/80">
             {[
               { label: nav("howItWorks"), href: "#como-funciona" },
               { label: nav("locations"), href: "#ubicaciones" },
@@ -49,11 +49,11 @@ export default async function Footer({ locale }: { locale: string }) {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60 mb-4">{t("locationsTitle")}</h3>
-          <ul className="space-y-3 text-sm text-white/80">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-white/60 mb-3">{t("locationsTitle")}</h3>
+          <ul className="space-y-2 text-xs text-white/80">
             {locations.map((loc) => (
-              <li key={loc.id} className="flex gap-2">
-                <MapPin size={14} className="mt-0.5 flex-shrink-0 text-brand-accent" />
+              <li key={loc.id} className="flex gap-1.5">
+                <MapPin size={12} className="mt-0.5 flex-shrink-0 text-brand-accent" />
                 <span>
                   <span className="font-medium text-white">{loc.name}</span>
                   <br />
@@ -65,21 +65,29 @@ export default async function Footer({ locale }: { locale: string }) {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60 mb-4">{t("contactTitle")}</h3>
+          <Image
+            src="/logo_nb.png"
+            alt="BitWave"
+            width={120}
+            height={34}
+            className="h-auto brightness-0 invert mb-2"
+            style={{ width: "auto", maxWidth: "100%" }}
+          />
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-white/60 mb-3">{t("contactTitle")}</h3>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 text-xs text-white/80 hover:text-white transition-colors"
           >
-            <Mail size={14} />
+            <Mail size={12} />
             {siteConfig.email}
           </a>
-          <div className="mt-6 pt-6 border-t border-white/10">
+          <div className="mt-4 pt-4 border-t border-white/10">
             <p className="text-xs text-white/40 leading-relaxed">{t("disclaimer")}</p>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-4 text-center text-xs text-white/40">
+      <div className="border-t border-white/10 py-3 text-center text-xs text-white/40">
         © {year} {siteConfig.companyName} · {t("rights")}
       </div>
     </footer>
