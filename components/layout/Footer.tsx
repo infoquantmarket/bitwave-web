@@ -3,7 +3,7 @@ import Link from "next/link"
 import { getTranslations } from "next-intl/server"
 import { siteConfig } from "@/lib/config"
 import { locations } from "@/lib/locations"
-import { Mail, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 
 export default async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations("footer")
@@ -12,18 +12,16 @@ export default async function Footer({ locale }: { locale: string }) {
 
   return (
     <footer className="bg-brand-primary text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="md:col-span-1">
-          <div className="mb-2">
-            <Image
-              src="/logo_bl.png"
-              alt="BitWave"
-              width={112}
-              height={112}
-              className="w-28 h-28 object-contain"
-            />
-          </div>
-          <p className="text-xs text-white/70 leading-relaxed">Cambia USDT por pesos colombianos con respaldo legal.</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-4 gap-4 items-start">
+        <div className="md:col-span-1 flex flex-col items-start">
+          <Image
+            src="/logo_bl.png"
+            alt="BitWave"
+            width={112}
+            height={112}
+            className="w-28 h-28 object-contain"
+          />
+          <p className="text-xs text-white/70 leading-relaxed mt-2">Cambia USDT por pesos colombianos con respaldo legal.</p>
           <div className="mt-2 text-xs text-white/50">
             <p>{siteConfig.companyName}</p>
             <p>NIT: {siteConfig.nit}</p>
@@ -64,17 +62,7 @@ export default async function Footer({ locale }: { locale: string }) {
         </div>
 
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-white/60 mb-3">{t("contactTitle")}</h3>
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="flex items-center gap-1.5 text-xs text-white/80 hover:text-white transition-colors"
-          >
-            <Mail size={12} />
-            {siteConfig.email}
-          </a>
-          <div className="mt-4 pt-4 border-t border-white/10">
-            <p className="text-xs text-white/40 leading-relaxed">{t("disclaimer")}</p>
-          </div>
+          <p className="text-xs text-white/40 leading-relaxed">{t("disclaimer")}</p>
         </div>
       </div>
 
