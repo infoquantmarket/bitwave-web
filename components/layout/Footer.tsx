@@ -14,15 +14,14 @@ export default async function Footer({ locale }: { locale: string }) {
     <footer className="bg-brand-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="md:col-span-1">
-          <div className="flex items-center gap-2 mb-2">
+          <div className="mb-2">
             <Image
               src="/logo_bl.png"
               alt="BitWave"
-              width={28}
-              height={28}
-              className="w-7 h-7 object-contain"
+              width={112}
+              height={112}
+              className="w-28 h-28 object-contain"
             />
-            <span className="text-white font-bold text-base">BitWave</span>
           </div>
           <p className="text-xs text-white/70 leading-relaxed">Cambia USDT por pesos colombianos con respaldo legal.</p>
           <div className="mt-2 text-xs text-white/50">

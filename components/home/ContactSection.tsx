@@ -14,7 +14,7 @@ export default async function ContactSection() {
           alt="BitWave"
           width={140}
           height={40}
-          className="h-10 w-auto mx-auto mb-6"
+          className="h-40 w-auto mx-auto mb-6"
         />
         <h2 className="text-3xl font-bold text-white mb-3">{t("title")}</h2>
         <p className="text-white/70 mb-10 text-lg">{t("subtitle")}</p>
