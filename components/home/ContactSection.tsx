@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { getTranslations } from "next-intl/server"
-import { siteConfig, getWhatsAppUrl } from "@/lib/config"
-import { MessageCircle, Mail, Clock } from "lucide-react"
+import { getWhatsAppUrl } from "@/lib/config"
+import { MessageCircle } from "lucide-react"
 
 export default async function ContactSection() {
   const t = await getTranslations("contact")
@@ -29,27 +29,6 @@ export default async function ContactSection() {
           {t("whatsappBtn")}
         </a>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
-          <div className="bg-white/10 rounded-xl p-5">
-            <div className="flex items-center gap-2 text-white/60 text-sm mb-1">
-              <Mail size={14} />
-              {t("email")}
-            </div>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="text-white font-medium hover:text-brand-accent transition-colors"
-            >
-              {siteConfig.email}
-            </a>
-          </div>
-          <div className="bg-white/10 rounded-xl p-5">
-            <div className="flex items-center gap-2 text-white/60 text-sm mb-1">
-              <Clock size={14} />
-              {t("attention")}
-            </div>
-            <p className="text-white font-medium">{t("schedule")}</p>
-          </div>
-        </div>
       </div>
     </section>
   )
