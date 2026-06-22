@@ -36,28 +36,15 @@ export default async function HeroSection() {
           </div>
         </div>
 
-        {/* Móvil: logo centrado al 60% */}
-        <div className="flex justify-center lg:hidden order-first">
-          <Image
-            src="/logo.png"
-            alt="BitWave"
-            width={252}
-            height={72}
-            className="w-[60%] h-auto"
-            priority
-          />
-        </div>
-
-        {/* Desktop: imagen hero */}
-        <div className="hidden lg:flex justify-end">
-          <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-brand-light">
+        <div className="flex justify-center lg:justify-end order-first lg:order-last">
+          <div className="relative w-[50%] lg:w-full lg:max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-brand-light">
             <Image
               src="/images/hero.png"
               alt={t("title")}
               fill
               className="object-cover"
               priority
-              sizes="50vw"
+              sizes="(max-width: 1024px) 50vw, 50vw"
             />
           </div>
         </div>
