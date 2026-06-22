@@ -1,5 +1,5 @@
 export const siteConfig = {
-  whatsappNumber: "+57319245460",
+  whatsappNumber: "+573192454560",
   whatsappMessage: "Hola vengo de tu página necesito más información",
   email: "info@bitwaveco.com",
   siteUrl: "https://www.bitwaveco.com",
