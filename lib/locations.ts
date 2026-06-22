@@ -1,6 +1,7 @@
 export interface Location {
   id: string
   name: string
+  local: string
   address: string
   city: string
   mapsUrl: string
@@ -13,6 +14,7 @@ export const locations: Location[] = [
   {
     id: "oviedo",
     name: "Centro Comercial Oviedo",
+    local: "Local 158 (dentro de las oficinas de NUTIFINANZAS)",
     address: "Cra. 43A #6 Sur-15, El Poblado",
     city: "Medellín",
     mapsUrl: "https://maps.google.com/?q=Centro+Comercial+Oviedo+Medellin",
@@ -23,6 +25,7 @@ export const locations: Location[] = [
   {
     id: "coltejer",
     name: "Edificio Coltejer",
+    local: "Local 203 (dentro de las oficinas de NUTIFINANZAS)",
     address: "Cl. 52 #47-42, Centro",
     city: "Medellín",
     mapsUrl: "https://maps.google.com/?q=Edificio+Coltejer+Medellin",
@@ -33,6 +36,7 @@ export const locations: Location[] = [
   {
     id: "viva-envigado",
     name: "Centro Comercial Viva Envigado",
+    local: "Local 203Z (dentro de las oficinas de NUTIFINANZAS)",
     address: "Cra. 48 #32B Sur-139",
     city: "Envigado",
     mapsUrl: "https://maps.google.com/?q=Centro+Comercial+Viva+Envigado",

@@ -1,0 +1,99 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  .hero-mock * { font-family: 'Inter', sans-serif !important; }
+</style>
+
+<h2>Hero v2 — Sin calculadora, fuente Inter</h2>
+<p class="subtitle">Foto de Medellín de fondo, colores claros, imagen real a la derecha</p>
+
+<div class="mockup hero-mock">
+  <div class="mockup-header">www.bitwaveco.com — Hero Section</div>
+  <div class="mockup-body" style="padding:0; overflow:hidden;">
+
+    <!-- Navbar -->
+    <div style="background:#fff; padding:12px 24px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e8f5ee;">
+      <span style="color:#1a4a2e; font-weight:800; font-size:16px; font-family:Inter,sans-serif;">BitWave</span>
+      <div style="display:flex; gap:16px; align-items:center; font-family:Inter,sans-serif;">
+        <span style="color:#4b5563; font-size:12px;">Cómo funciona</span>
+        <span style="color:#4b5563; font-size:12px;">Sedes</span>
+        <span style="color:#4b5563; font-size:12px;">Blog</span>
+        <span style="background:#25d366; color:#fff; padding:6px 14px; border-radius:8px; font-size:12px; font-weight:700;">Cotizar</span>
+        <span style="font-size:14px;">🇺🇸</span>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div style="background:#f8fdf9; padding:48px 32px; display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; font-family:Inter,sans-serif;">
+
+      <!-- Texto izquierda -->
+      <div>
+        <div style="background:#e8f5ee; color:#1a4a2e; display:inline-flex; align-items:center; gap:6px; padding:5px 14px; border-radius:20px; font-size:11px; font-weight:600; margin-bottom:20px; letter-spacing:0.3px;">
+          🇨🇴 Medellín · 3 sedes físicas
+        </div>
+
+        <div style="font-size:28px; font-weight:800; color:#1a1a1a; line-height:1.15; margin-bottom:12px; letter-spacing:-0.5px;">
+          Vende tu USDT.<br/>
+          Recibe pesos.<br/>
+          <span style="color:#2d8a4e;">Hoy mismo.</span>
+        </div>
+
+        <div style="font-size:14px; color:#4b5563; margin-bottom:28px; line-height:1.6; max-width:340px;">
+          Efectivo o transferencia bancaria. Proceso KYC obligatorio. Atendemos con pasaporte para turistas internacionales.
+        </div>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px;">
+          <div style="background:#25d366; color:#fff; padding:12px 22px; border-radius:8px; font-size:14px; font-weight:700; display:inline-flex; align-items:center; gap:8px;">
+            📱 Cotizar por WhatsApp
+          </div>
+          <div style="border:2px solid #1a4a2e; color:#1a4a2e; padding:12px 22px; border-radius:8px; font-size:14px; font-weight:600; display:inline-flex; align-items:center; gap:8px;">
+            📍 Ver sedes
+          </div>
+        </div>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <span style="background:#e8f5ee; color:#1a4a2e; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:500;">✓ Empresa legal</span>
+          <span style="background:#e8f5ee; color:#1a4a2e; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:500;">✓ KYC · SARLAFT</span>
+          <span style="background:#e8f5ee; color:#1a4a2e; padding:5px 12px; border-radius:20px; font-size:12px; font-weight:500;">✓ TRC20 / ERC20</span>
+        </div>
+      </div>
+
+      <!-- Imagen derecha — foto real de Medellín con overlay sutil -->
+      <div style="position:relative; border-radius:20px; overflow:hidden; aspect-ratio:4/3; background: linear-gradient(135deg, #a8d5b8 0%, #5aaa7e 50%, #2d8a4e 100%);">
+        <!-- Simulación de foto de ciudad -->
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0.15; font-size:120px;">🏙️</div>
+        <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(26,74,46,0.5) 0%, transparent 60%);"></div>
+        <!-- Caption -->
+        <div style="position:absolute; bottom:16px; left:16px; right:16px;">
+          <div style="color:#fff; font-size:13px; font-weight:600;">Centro Comercial Oviedo</div>
+          <div style="color:rgba(255,255,255,0.7); font-size:11px;">El Poblado, Medellín</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="options" style="margin-top:24px;">
+  <div class="option" data-choice="approve" onclick="toggleSelect(this)">
+    <div class="letter">✓</div>
+    <div class="content">
+      <h3>Aprobado — implementar esto</h3>
+      <p>Sin calculadora, foto de sede a la derecha, fuente Inter, colores claros</p>
+    </div>
+  </div>
+  <div class="option" data-choice="darker" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Quiero el fondo más oscuro / foto más protagonista</h3>
+      <p>Que la foto de Medellín ocupe todo el fondo como en la opción B original</p>
+    </div>
+  </div>
+  <div class="option" data-choice="adjust" onclick="toggleSelect(this)">
+    <div class="letter">✎</div>
+    <div class="content">
+      <h3>Otro ajuste</h3>
+      <p>Dime en el chat qué cambiarías</p>
+    </div>
+  </div>
+</div>

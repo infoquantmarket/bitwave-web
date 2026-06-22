@@ -32,6 +32,7 @@ export default function LocationsSection() {
               aria-pressed={selected === idx}
             >
               <h3 className="font-bold text-text-title text-lg mb-1">{loc.name}</h3>
+              <p className="text-xs text-brand-accent font-medium mb-2">{loc.local}</p>
               <div className="flex items-start gap-2 text-sm text-text-body mb-2">
                 <MapPin size={14} className="mt-0.5 flex-shrink-0 text-brand-accent" />
                 <span>{loc.address}, {loc.city}</span>
@@ -54,7 +55,7 @@ export default function LocationsSection() {
           ))}
         </div>
 
-        <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 h-64 md:h-80">
+        <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 h-56 sm:h-72 md:h-80">
           <iframe
             key={selected}
             src={locations[selected].embedUrl}
