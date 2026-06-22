@@ -66,7 +66,7 @@ export default function Navbar() {
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-primary text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-primary text-white text-sm font-semibold px-3 sm:px-4 py-2 rounded-lg transition-colors"
           >
             {t("cta")}
           </a>

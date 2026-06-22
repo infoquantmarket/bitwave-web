@@ -18,7 +18,11 @@
     "kyc": "Proceso KYC obligatorio",
     "sarlaft": "Sistema SARLAFT",
     "verification": "Verificación de origen de fondos",
-    "sectionLabel": "Nuestros compromisos"
+    "sectionLabel": "Nuestros compromisos",
+    "stat1": "Operación en ~5 minutos",
+    "stat2": "3 sedes en Medellín y Envigado",
+    "stat3": "Efectivo o transferencia bancaria",
+    "stat4": "Turistas y locales bienvenidos"
   },
   "howItWorks": {
     "title": "¿Cómo funciona?",
@@ -27,7 +31,8 @@
     "step2Title": "Verificación KYC",
     "step2Desc": "Completa nuestro proceso de verificación de identidad y origen de fondos. Requerido por ley para todos los clientes.",
     "step3Title": "Recibe tus pesos",
-    "step3Desc": "Visita uno de nuestros puntos físicos o recibe transferencia bancaria. Entregamos COP en efectivo o a tu cuenta."
+    "step3Desc": "Visita uno de nuestros puntos físicos o recibe transferencia bancaria. Entregamos COP en efectivo o a tu cuenta.",
+    "cta": "Cotiza ahora por WhatsApp"
   },
   "whoWeServe": {
     "title": "¿A quién servimos?",

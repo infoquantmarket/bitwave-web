@@ -18,7 +18,11 @@
     "kyc": "Mandatory KYC process",
     "sarlaft": "SARLAFT compliance system",
     "verification": "Source of funds verification",
-    "sectionLabel": "Our commitments"
+    "sectionLabel": "Our commitments",
+    "stat1": "Transaction in ~5 minutes",
+    "stat2": "3 locations in Medellín & Envigado",
+    "stat3": "Cash or bank transfer",
+    "stat4": "Tourists & locals welcome"
   },
   "howItWorks": {
     "title": "How does it work?",
@@ -27,7 +31,8 @@
     "step2Title": "KYC verification",
     "step2Desc": "Complete our identity and source-of-funds verification. Required by law for all clients — passport accepted for tourists.",
     "step3Title": "Receive your pesos",
-    "step3Desc": "Visit one of our physical locations or receive a bank transfer. We deliver COP in cash or to your Colombian bank account."
+    "step3Desc": "Visit one of our physical locations or receive a bank transfer. We deliver COP in cash or to your Colombian bank account.",
+    "cta": "Get a quote on WhatsApp"
   },
   "whoWeServe": {
     "title": "Who do we serve?",

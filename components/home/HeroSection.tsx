@@ -37,14 +37,14 @@ export default async function HeroSection() {
         </div>
 
         <div className="flex justify-center lg:justify-end order-first lg:order-last">
-          <div className="relative w-[50%] lg:w-full lg:max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-brand-light">
+          <div className="relative w-full lg:max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-brand-light">
             <Image
               src="/images/hero.png"
-              alt={t("title")}
+              alt="Persona realizando un cambio de USDT en Medellín"
               fill
               className="object-cover"
               priority
-              sizes="(max-width: 1024px) 50vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </div>

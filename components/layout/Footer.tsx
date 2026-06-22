@@ -21,7 +21,7 @@ export default async function Footer({ locale }: { locale: string }) {
             height={112}
             className="w-28 h-28 object-contain"
           />
-          <p className="text-xs text-white/70 leading-relaxed mt-2">Cambia USDT por pesos colombianos con respaldo legal.</p>
+          <p className="text-xs text-white/70 leading-relaxed mt-2">{t("tagline")}</p>
           <div className="mt-2 text-xs text-white/50">
             <p>{siteConfig.companyName}</p>
             <p>NIT: {siteConfig.nit}</p>
