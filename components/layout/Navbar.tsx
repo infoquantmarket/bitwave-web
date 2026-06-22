@@ -28,14 +28,14 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 md:h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 md:h-20 flex items-center justify-between">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/logo_nb.png"
             alt="BitWave"
             width={140}
             height={40}
-            className="h-16 md:h-9 w-auto"
+            className="h-16 md:h-14 w-auto"
             priority
           />
         </Link>
