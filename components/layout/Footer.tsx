@@ -14,14 +14,17 @@ export default async function Footer({ locale }: { locale: string }) {
     <footer className="bg-brand-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-1">
-          <Image
-            src="/logo_nb.png"
-            alt="BitWave"
-            width={130}
-            height={38}
-            className="h-9 w-auto mb-4 brightness-0 invert"
-          />
-          <p className="text-sm text-white/70 leading-relaxed">{t("tagline")}</p>
+          <div className="flex items-center gap-3 mb-4">
+            <Image
+              src="/logo_nb.png"
+              alt="BitWave"
+              width={36}
+              height={36}
+              className="w-9 h-9 object-contain brightness-0 invert"
+            />
+            <span className="text-white font-bold text-lg">BitWave</span>
+          </div>
+          <p className="text-sm text-white/70 leading-relaxed">Cambia USDT por pesos colombianos con respaldo legal.</p>
           <div className="mt-4 text-xs text-white/50">
             <p>{siteConfig.companyName}</p>
             <p>NIT: {siteConfig.nit}</p>
