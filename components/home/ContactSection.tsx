@@ -10,11 +10,11 @@ export default async function ContactSection() {
     <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-primary">
       <div className="max-w-3xl mx-auto text-center">
         <Image
-          src="/logo_nb.png"
+          src="/logo_bl.png"
           alt="BitWave"
           width={140}
           height={40}
-          className="h-10 w-auto mx-auto mb-6 invert"
+          className="h-10 w-auto mx-auto mb-6"
         />
         <h2 className="text-3xl font-bold text-white mb-3">{t("title")}</h2>
         <p className="text-white/70 mb-10 text-lg">{t("subtitle")}</p>
