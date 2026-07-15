@@ -67,7 +67,7 @@
     "sarlaftTitle": "Sistema SARLAFT",
     "sarlaftDesc": "Contamos con un sistema implementado de administración del riesgo de lavado de activos y financiación del terrorismo (SARLAFT), en cumplimiento de la normativa colombiana vigente.",
     "legalTitle": "Empresa legalmente constituida",
-    "legalDesc": "BitWave es una empresa legalmente constituida en Colombia, que opera conforme a la normativa vigente para el intercambio de criptoactivos.",
+    "legalDesc": "BitWave S.A.S. es una empresa de soluciones tecnológicas legalmente constituida en Colombia, que opera conforme a la normativa vigente.",
     "disclaimerLabel": "Aviso legal",
     "disclaimer": "Aviso legal: BitWave no es una entidad vigilada por la Superintendencia Financiera de Colombia. El intercambio de criptoactivos no está cubierto por el seguro de depósitos del Fogafin. Los criptoactivos no son moneda de curso legal en Colombia. Las operaciones se realizan bajo la normativa colombiana vigente aplicable a este tipo de servicios."
   },
@@ -99,7 +99,7 @@
     "schedule": "Lunes a sábado · 9am – 7pm"
   },
   "footer": {
-    "tagline": "Empresa de intercambio de criptoactivos legalmente constituida en Colombia.",
+    "tagline": "Empresa de soluciones tecnológicas legalmente constituida en Colombia.",
     "links": "Enlaces",
     "legal": "Legal",
     "locationsTitle": "Ubicaciones",
