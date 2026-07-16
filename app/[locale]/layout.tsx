@@ -45,18 +45,28 @@ export default async function LocaleLayout({
 
   const localBusinesses = locations.map((loc) => ({
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "FinancialService",
     name: `BitWave — ${loc.name}`,
     image: `${siteConfig.siteUrl}${loc.image}`,
+    description:
+      "Intercambio de USDT por pesos colombianos (COP) en efectivo o transferencia bancaria. Proceso KYC completo y sistema SARLAFT.",
+    url: siteConfig.siteUrl,
+    telephone: siteConfig.whatsappNumber,
     address: {
       "@type": "PostalAddress",
       streetAddress: loc.address,
       addressLocality: loc.city,
       addressCountry: "CO",
     },
-    url: siteConfig.siteUrl,
+    areaServed: [
+      { "@type": "City", name: "Medellín" },
+      { "@type": "City", name: "Envigado" },
+      { "@type": "State", name: "Antioquia" },
+    ],
     openingHours: "Mo-Sa 09:00-19:00",
     currenciesAccepted: "COP",
+    priceRange: "$$",
+    knowsAbout: ["USDT", "criptoactivos", "cambio de divisas", "pesos colombianos", "TRC20", "ERC20"],
   }))
 
   const faqSchema = {

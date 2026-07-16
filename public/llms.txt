@@ -1,0 +1,48 @@
+# BitWave
+
+> Empresa de soluciones tecnológicas legalmente constituida en Colombia. NIT: 901.920.120-1.
+
+## Quiénes somos
+
+BitWave S.A.S. es una empresa colombiana con sede en Medellín que opera dos líneas de negocio tecnológicas:
+
+1. **Intercambio de USDT por pesos colombianos** (bitwaveco.com) — Compra USDT en redes TRC20 y ERC20, y los convierte a pesos colombianos (COP) en efectivo o transferencia bancaria. Atiende turistas internacionales y locales. Proceso KYC completo y sistema SARLAFT implementado.
+
+2. **Tasa Directa** (tasadirecta.com) — Marketplace B2B para Profesionales de Compra y Venta de Divisas (PCD) autorizados por la DIAN en Colombia.
+
+## Servicio de cambio de criptoactivos
+
+- **Criptomonedas aceptadas:** USDT en redes TRC20 (Tron) y ERC20 (Ethereum)
+- **Moneda de destino:** Pesos colombianos (COP)
+- **Formas de entrega:** Efectivo en punto físico o transferencia bancaria a cuenta colombiana (mismo día hábil)
+- **Monto mínimo:** 100 USDT
+- **Proceso KYC obligatorio:** Verificación de identidad y origen de fondos para todos los clientes
+- **Sistema SARLAFT:** Prevención de lavado de activos y financiación del terrorismo
+- **Documentos aceptados:** Cédula de ciudadanía (colombianos) o pasaporte (turistas extranjeros)
+- **Tiempo de operación:** Aproximadamente 5 minutos una vez completado el KYC
+
+## Ubicaciones físicas (Medellín y Envigado, Colombia)
+
+Todos los puntos operan dentro de las oficinas de NUTIFINANZAS:
+
+- **Centro Comercial Oviedo** — Local 158, Medellín
+- **Edificio Coltejer** — Local 203, Medellín
+- **Centro Comercial Viva Envigado** — Local 203Z, Envigado
+
+Horario de atención: Lunes a sábado, 9:00am – 7:00pm
+
+## Clientes que atendemos
+
+- Turistas internacionales en Medellín con USDT que necesitan pesos para gastos locales (no requieren cuenta bancaria colombiana)
+- Traders, freelancers y receptores de remesas cripto que necesitan convertir USDT o BTC a pesos colombianos con respaldo legal
+- Personas naturales y jurídicas que requieren proceso KYC y cumplimiento normativo
+
+## Contacto
+
+- WhatsApp: +573192454560
+- Email: info@bitwaveco.com
+- Sitio web: https://www.bitwaveco.com
+
+## Aviso legal
+
+BitWave S.A.S. no es una entidad vigilada por la Superintendencia Financiera de Colombia. El intercambio de criptoactivos no está prohibido en Colombia. Los criptoactivos no son moneda de curso legal. Las operaciones se realizan bajo la normativa colombiana vigente aplicable a este tipo de servicios.
