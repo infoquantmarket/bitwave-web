@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { getTranslations } from "next-intl/server"
-import { getWhatsAppUrl } from "@/lib/config"
-import { ArrowRight, MapPin } from "lucide-react"
+import { getWhatsAppUrl, siteConfig } from "@/lib/config"
+import { ArrowRight, MessageCircle, MapPin } from "lucide-react"
 
 export default async function HeroSection() {
   const t = await getTranslations("hero")
@@ -16,21 +16,30 @@ export default async function HeroSection() {
           <p className="mt-6 text-lg text-text-body leading-relaxed max-w-xl text-center lg:text-left">
             {t("subtitle")}
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
+            <a
+              href={siteConfig.zabioUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-primary text-white font-bold px-6 py-3.5 rounded-lg transition-colors text-base shadow-md"
+            >
+              {t("ctaStart")}
+              <ArrowRight size={18} />
+            </a>
             <a
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-primary text-white font-semibold px-6 py-3 rounded-lg transition-colors text-base"
+              className="inline-flex items-center justify-center gap-2 border-2 border-brand-primary text-brand-primary hover:bg-brand-light font-semibold px-6 py-3.5 rounded-lg transition-colors text-base"
             >
+              <MessageCircle size={18} />
               {t("ctaPrimary")}
-              <ArrowRight size={18} />
             </a>
             <a
               href="#ubicaciones"
-              className="inline-flex items-center gap-2 border-2 border-brand-primary text-brand-primary hover:bg-brand-light font-semibold px-6 py-3 rounded-lg transition-colors text-base"
+              className="inline-flex items-center justify-center gap-2 text-text-body hover:text-brand-primary font-medium px-4 py-3.5 transition-colors text-sm"
             >
-              <MapPin size={18} />
+              <MapPin size={16} />
               {t("ctaSecondary")}
             </a>
           </div>

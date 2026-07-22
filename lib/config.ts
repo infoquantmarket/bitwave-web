@@ -5,6 +5,7 @@ export const siteConfig = {
   siteUrl: "https://www.bitwaveco.com",
   companyName: "BitWave S.A.S.",
   nit: "901.920.120-1",
+  zabioUrl: "https://www.zabio.xyz/i/bitwave",
 }
 
 export function getWhatsAppUrl(message?: string) {

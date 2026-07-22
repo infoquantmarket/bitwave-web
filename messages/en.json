@@ -10,7 +10,8 @@
   "hero": {
     "title": "Sell your USDT for Colombian pesos — safe, legal, fast",
     "subtitle": "Receive cash or bank transfer. Full KYC process, SARLAFT compliance. Physical locations in Medellín and Envigado.",
-    "ctaPrimary": "Quote on WhatsApp",
+    "ctaStart": "Start exchange",
+    "ctaPrimary": "Ask on WhatsApp",
     "ctaSecondary": "See locations"
   },
   "trust": {
@@ -91,8 +92,13 @@
     "a8": "Both options are available. At our physical locations we deliver cash pesos instantly. We can also make a bank transfer to a Colombian account (same business day)."
   },
   "contact": {
-    "title": "Contact us",
-    "subtitle": "Available on WhatsApp for quotes and inquiries",
+    "title": "Start your exchange",
+    "subtitle": "Choose how you want to begin — fast and hassle-free",
+    "qrLabel": "Scan with your camera",
+    "qrSub": "iOS & Android — no app needed",
+    "startBtn": "Start exchange",
+    "whatsappTitle": "Have questions?",
+    "whatsappDesc": "Message us on WhatsApp and we'll reply instantly with today's rate.",
     "whatsappBtn": "Message on WhatsApp",
     "email": "Email",
     "attention": "In-person service",

@@ -10,7 +10,8 @@
   "hero": {
     "title": "Cambia tus USDT por pesos colombianos, de forma legal y segura",
     "subtitle": "Entregamos pesos en efectivo o transferencia bancaria. Proceso KYC completo, sistema SARLAFT y verificación de fondos. Puntos físicos en Medellín y Envigado.",
-    "ctaPrimary": "Cotiza por WhatsApp",
+    "ctaStart": "Iniciar intercambio",
+    "ctaPrimary": "Consultar por WhatsApp",
     "ctaSecondary": "Ver ubicaciones"
   },
   "trust": {
@@ -91,8 +92,13 @@
     "a8": "Ofrecemos ambas opciones. En nuestros puntos físicos entregamos pesos en efectivo al instante. También podemos realizar transferencia bancaria a cuenta colombiana (mismo día hábil)."
   },
   "contact": {
-    "title": "Contáctanos",
-    "subtitle": "Estamos disponibles por WhatsApp para cotizaciones y consultas",
+    "title": "Empieza tu intercambio",
+    "subtitle": "Elige cómo quieres comenzar — rápido y sin complicaciones",
+    "qrLabel": "Escanea con tu cámara",
+    "qrSub": "iOS y Android — sin descargar app",
+    "startBtn": "Iniciar intercambio",
+    "whatsappTitle": "¿Tienes preguntas?",
+    "whatsappDesc": "Escríbenos por WhatsApp y te respondemos al instante con la tasa del día.",
     "whatsappBtn": "Escribir por WhatsApp",
     "email": "Correo electrónico",
     "attention": "Atención en puntos físicos",
