@@ -11,8 +11,11 @@
     "title": "Sell your USDT for Colombian pesos — safe, legal, fast",
     "subtitle": "Receive cash or bank transfer. Full KYC process, SARLAFT compliance. Physical locations in Medellín and Envigado.",
     "ctaStart": "Start exchange",
+    "ctaFreeze": "Lock this rate",
     "ctaPrimary": "Ask on WhatsApp",
-    "ctaSecondary": "See locations"
+    "ctaSecondary": "See locations",
+    "rateLabel": "Approximate buying rate",
+    "rateDisclaimer": "Reference only · Updated every 20 min"
   },
   "trust": {
     "legal": "Legally registered company",

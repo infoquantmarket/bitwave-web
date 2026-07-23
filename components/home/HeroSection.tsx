@@ -1,7 +1,10 @@
+import { Suspense } from "react"
 import Image from "next/image"
 import { getTranslations } from "next-intl/server"
 import { getWhatsAppUrl, siteConfig } from "@/lib/config"
 import { ArrowRight, MessageCircle, MapPin } from "lucide-react"
+import RateDisplay from "./RateDisplay"
+import RateSkeleton from "./RateSkeleton"
 
 export default async function HeroSection() {
   const t = await getTranslations("hero")
@@ -16,14 +19,23 @@ export default async function HeroSection() {
           <p className="mt-6 text-lg text-text-body leading-relaxed max-w-xl text-center lg:text-left">
             {t("subtitle")}
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
+
+          {/* Live rate ticker */}
+          <div className="mt-7 flex justify-center lg:justify-start">
+            <Suspense fallback={<RateSkeleton />}>
+              <RateDisplay />
+            </Suspense>
+          </div>
+
+          {/* CTAs */}
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
             <a
               href={siteConfig.zabioUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-primary text-white font-bold px-6 py-3.5 rounded-lg transition-colors text-base shadow-md"
             >
-              {t("ctaStart")}
+              {t("ctaFreeze")}
               <ArrowRight size={18} />
             </a>
             <a
