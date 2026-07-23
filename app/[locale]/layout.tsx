@@ -63,10 +63,10 @@ export default async function LocaleLayout({
       { "@type": "City", name: "Envigado" },
       { "@type": "State", name: "Antioquia" },
     ],
-    openingHours: "Mo-Sa 09:00-19:00",
+    openingHours: ["Mo-Fr 08:00-19:00", "Sa 09:00-16:00"],
     currenciesAccepted: "COP",
     priceRange: "$$",
-    knowsAbout: ["USDT", "criptoactivos", "cambio de divisas", "pesos colombianos", "TRC20", "ERC20"],
+    knowsAbout: ["USDT", "USDC", "criptoactivos", "cambio de divisas", "pesos colombianos", "Polygon", "Tron", "Solana", "Ethereum"],
   }))
 
   const faqSchema = {

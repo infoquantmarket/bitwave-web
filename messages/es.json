@@ -15,7 +15,9 @@
     "ctaPrimary": "Consultar por WhatsApp",
     "ctaSecondary": "Ver ubicaciones",
     "rateLabel": "Tasa aproximada de compra",
-    "rateDisclaimer": "Las tasas están sujetas a cambios sin previo aviso. Valida la tasa vía WhatsApp o en nuestras oficinas."
+    "rateDisclaimer": "Las tasas están sujetas a cambios sin previo aviso. Valida la tasa vía WhatsApp o en nuestras oficinas.",
+    "coinsLabel": "Compramos:",
+    "coinsNetworks": "En redes Polygon, Tron, Solana, Ethereum y más"
   },
   "trust": {
     "legal": "Empresa legalmente constituida",
@@ -45,7 +47,7 @@
     "touristsBadge": "Aceptamos pasaporte",
     "localsTitle": "Locales y profesionales",
     "localsDesc": "Traders, freelancers o receptores de remesas cripto que quieren convertir USDT o BTC a pesos con respaldo legal y cumplimiento normativo.",
-    "localsBadge": "USDT · BTC · Redes TRC20 / ERC20"
+    "localsBadge": "USDT · USDC · Polygon · Tron · Solana"
   },
   "locations": {
     "title": "Nuestros puntos de atención",
@@ -89,8 +91,8 @@
     "a5": "Sí. El intercambio de criptoactivos no está prohibido en Colombia. BitWave opera como empresa legalmente constituida, cumpliendo las obligaciones de prevención de lavado de activos y las demás normas aplicables.",
     "q6": "Soy turista y no tengo cédula colombiana, ¿me atienden?",
     "a6": "Sí. Atendemos a turistas internacionales con pasaporte vigente. Es el documento oficial reconocido en nuestro proceso KYC para clientes extranjeros.",
-    "q7": "¿Qué redes de USDT aceptan?",
-    "a7": "Aceptamos USDT en redes TRC20 (Tron) y ERC20 (Ethereum). Consulta la red disponible al momento de tu operación. No aceptamos redes no verificadas para evitar pérdidas.",
+    "q7": "¿Qué monedas y redes aceptan?",
+    "a7": "Aceptamos principalmente USDT y USDC en redes como Polygon, Tron, Solana, Ethereum y otras más. Consulta la red disponible al momento de tu operación. No aceptamos redes no verificadas para evitar pérdidas.",
     "q8": "¿Cómo recibo los pesos, en efectivo o transferencia?",
     "a8": "Ofrecemos ambas opciones. En nuestros puntos físicos entregamos pesos en efectivo al instante. También podemos realizar transferencia bancaria a cuenta colombiana (mismo día hábil)."
   },

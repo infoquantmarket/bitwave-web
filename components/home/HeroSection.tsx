@@ -55,6 +55,24 @@ export default async function HeroSection() {
               {t("ctaSecondary")}
             </a>
           </div>
+
+          {/* Coins aceptados */}
+          <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 justify-center lg:justify-start">
+            <span className="text-sm font-medium text-text-body/70">{t("coinsLabel")}</span>
+            <div className="flex items-center gap-4">
+              <span className="inline-flex items-center gap-2">
+                <Image src="/usdt.svg" alt="USDT" width={28} height={28} className="h-7 w-7" />
+                <span className="text-sm font-semibold text-text-title">USDT</span>
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Image src="/usdc.svg" alt="USDC" width={28} height={28} className="h-7 w-7" />
+                <span className="text-sm font-semibold text-text-title">USDC</span>
+              </span>
+            </div>
+            <span className="text-xs text-text-body/50 basis-full lg:basis-auto text-center lg:text-left">
+              {t("coinsNetworks")}
+            </span>
+          </div>
         </div>
 
         <div className="flex justify-center lg:justify-end order-first lg:order-last">

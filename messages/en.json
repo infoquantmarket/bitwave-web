@@ -15,7 +15,9 @@
     "ctaPrimary": "Ask on WhatsApp",
     "ctaSecondary": "See locations",
     "rateLabel": "Approximate buying rate",
-    "rateDisclaimer": "Rates are subject to change without notice. Confirm the rate via WhatsApp or at our offices."
+    "rateDisclaimer": "Rates are subject to change without notice. Confirm the rate via WhatsApp or at our offices.",
+    "coinsLabel": "We buy:",
+    "coinsNetworks": "On Polygon, Tron, Solana, Ethereum and more"
   },
   "trust": {
     "legal": "Legally registered company",
@@ -45,7 +47,7 @@
     "touristsBadge": "Passport accepted",
     "localsTitle": "Locals & professionals",
     "localsDesc": "Traders, freelancers, or crypto remittance recipients who want to convert USDT or BTC to pesos with legal backing and regulatory compliance.",
-    "localsBadge": "USDT · BTC · TRC20 / ERC20 networks"
+    "localsBadge": "USDT · USDC · Polygon · Tron · Solana"
   },
   "locations": {
     "title": "Our locations",
@@ -89,8 +91,8 @@
     "a5": "Yes. Crypto-asset exchange is not prohibited in Colombia. BitWave operates as a legally incorporated company, fulfilling anti-money laundering obligations and other applicable regulations.",
     "q6": "I'm a tourist without a Colombian ID — can you help me?",
     "a6": "Yes. We serve international tourists with a valid passport. It is the official document recognized in our KYC process for foreign clients.",
-    "q7": "Which USDT networks do you accept?",
-    "a7": "We accept USDT on TRC20 (Tron) and ERC20 (Ethereum) networks. Check the available network at the time of your transaction. Unverified networks are not accepted.",
+    "q7": "Which coins and networks do you accept?",
+    "a7": "We mainly accept USDT and USDC on networks such as Polygon, Tron, Solana, Ethereum and others. Check the available network at the time of your transaction. Unverified networks are not accepted.",
     "q8": "Do I receive pesos in cash or bank transfer?",
     "a8": "Both options are available. At our physical locations we deliver cash pesos instantly. We can also make a bank transfer to a Colombian account (same business day)."
   },
