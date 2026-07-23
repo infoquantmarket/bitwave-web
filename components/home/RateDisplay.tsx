@@ -1,32 +1,5 @@
-import { get } from "@vercel/edge-config"
 import { getTranslations } from "next-intl/server"
-
-const RATES_URL = "https://co.dolarapi.com/v1/cotizaciones"
-const DEFAULT_SPREAD = 150
-
-async function getTasa(): Promise<{ tasaFinal: number; precioSpot: number; spread: number } | null> {
-  try {
-    const [ratesRes, spread] = await Promise.all([
-      fetch(RATES_URL, { next: { revalidate: 1200 } }),
-      get<number>("spread_trm").catch(() => DEFAULT_SPREAD),
-    ])
-
-    if (!ratesRes.ok) return null
-    const rates: Array<{ moneda: string; compra: number; venta: number }> = await ratesRes.json()
-    const usd = rates.find((r) => r.moneda === "USD")
-    if (!usd) return null
-
-    const precioSpot = usd.venta ?? usd.compra
-    const spreadValue = spread ?? DEFAULT_SPREAD
-    return {
-      tasaFinal: Math.round(precioSpot - spreadValue),
-      precioSpot: Math.round(precioSpot),
-      spread: spreadValue,
-    }
-  } catch {
-    return null
-  }
-}
+import { getTasa } from "@/lib/tasa"
 
 export default async function RateDisplay() {
   const [tasa, t] = await Promise.all([getTasa(), getTranslations("hero")])
