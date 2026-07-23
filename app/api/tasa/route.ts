@@ -1,30 +1,26 @@
 import { NextResponse } from "next/server"
 import { get } from "@vercel/edge-config"
 
-const SPOT_URL = "https://co.dolarapi.com/v1/cotizaciones/spot"
+const RATES_URL = "https://co.dolarapi.com/v1/cotizaciones"
 const DEFAULT_SPREAD = 150
 
 export async function GET() {
   try {
-    const [spotRes, spread] = await Promise.all([
-      fetch(SPOT_URL, { next: { revalidate: 1200 } }), // Cache 20 min in Next.js Data Cache
+    const [ratesRes, spread] = await Promise.all([
+      fetch(RATES_URL, { next: { revalidate: 1200 } }), // Cache 20 min in Next.js Data Cache
       get<number>("spread_trm").catch(() => DEFAULT_SPREAD),
     ])
 
-    if (!spotRes.ok) {
-      throw new Error(`DolarApi respondió con status ${spotRes.status}`)
+    if (!ratesRes.ok) {
+      throw new Error(`DolarApi respondió con status ${ratesRes.status}`)
     }
 
-    const spot = await spotRes.json()
-    // DolarApi Colombia spot: { compra, venta, nombre, fechaActualizacion }
-    const precioSpot: number = spot.venta ?? spot.compra ?? spot.precio
+    const rates: Array<{ moneda: string; compra: number; venta: number }> = await ratesRes.json()
+    const usd = rates.find((r) => r.moneda === "USD")
+    if (!usd) throw new Error("USD no encontrado en DolarApi")
 
-    if (!precioSpot || isNaN(precioSpot)) {
-      throw new Error("Precio spot inválido en la respuesta")
-    }
-
+    const precioSpot = usd.venta ?? usd.compra
     const spreadValue = spread ?? DEFAULT_SPREAD
-    // tasaFinal = lo que BitWave paga al cliente por cada USDT (COP)
     const tasaFinal = Math.round(precioSpot - spreadValue)
 
     return NextResponse.json({
