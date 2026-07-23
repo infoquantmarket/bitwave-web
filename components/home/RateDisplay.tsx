@@ -34,7 +34,7 @@ export default async function RateDisplay() {
   if (!tasa) return null
 
   return (
-    <div className="inline-flex flex-col bg-brand-light border border-brand-accent/20 rounded-xl px-5 py-4 gap-0.5">
+    <div className="inline-flex flex-col bg-brand-light border border-brand-accent/20 rounded-xl px-5 py-4 gap-1">
       <p className="text-xs font-semibold text-text-body uppercase tracking-wider">
         {t("rateLabel")}
       </p>
@@ -42,8 +42,8 @@ export default async function RateDisplay() {
         ${tasa.tasaFinal.toLocaleString("es-CO")}{" "}
         <span className="text-base font-semibold text-text-body">COP</span>
       </p>
-      <p className="text-xs text-text-body/60 flex items-center gap-1.5 mt-0.5">
-        <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+      <p className="text-[10px] leading-snug text-text-body/50 flex items-start gap-1.5 mt-1 max-w-[260px]">
+        <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse flex-shrink-0 mt-0.5" />
         {t("rateDisclaimer")}
       </p>
     </div>
