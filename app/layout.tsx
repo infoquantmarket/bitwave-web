@@ -33,20 +33,11 @@ export const metadata: Metadata = {
     description,
     url: "https://www.bitwaveco.com",
     locale: "es_CO",
-    images: [
-      {
-        url: "/images/hero.png",
-        width: 1200,
-        height: 630,
-        alt: "BitWave — Cambia USDT por pesos colombianos en Medellín",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/images/hero.png"],
   },
   robots: {
     index: true,
