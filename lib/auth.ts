@@ -2,7 +2,7 @@ import { createHmac } from "crypto"
 
 const SECRET = process.env.ADMIN_SESSION_SECRET ?? "bw-dev-secret-change-in-production"
 
-export const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "info@bitwave.com"
+export const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "info@bitwaveco.com"
 export const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD ?? "Elzorro123"
 
 export function createSessionToken(): string {
