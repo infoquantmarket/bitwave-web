@@ -17,8 +17,15 @@ KYC en producción vía Zabio: https://www.zabio.xyz/i/bitwave (lib/config.ts �
 - Caché: `fetch` con `revalidate: 1200` (20 min) en Next.js Data Cache.
 - Consumido por `app/api/tasa/route.ts` y `components/home/RateDisplay.tsx`.
 - Panel admin: `/admin` (fuera de i18n, ver middleware matcher). Sesión HMAC en lib/auth.ts.
-- Env vars requeridas en Vercel: EDGE_CONFIG, EDGE_CONFIG_ID, VERCEL_API_TOKEN,
-  ADMIN_SESSION_SECRET, ADMIN_EMAIL, ADMIN_PASSWORD.
+- Env vars en Vercel (Production + Preview), TODAS configuradas: EDGE_CONFIG, EDGE_CONFIG_ID,
+  VERCEL_API_TOKEN, ADMIN_SESSION_SECRET, ADMIN_EMAIL, ADMIN_PASSWORD. lib/auth.ts tiene
+  defaults de fallback en el código (solo se usan si la env var no existe — en producción
+  siempre existe, así que el fallback es solo por si se corre local sin .env).
+  Credenciales de /admin: NO están en este repo ni en memoria — solo en Vercel env vars
+  (marcadas "Sensitive", no se pueden volver a leer ni desde la CLI). Si se pierden, se
+  rotan con `vercel env rm ADMIN_PASSWORD production/preview` + `vercel env add ...` +
+  `vercel deploy --prod` (los env vars no aplican a un build ya existente, hace falta
+  redeploy).
 
 ## Stack
 - Next.js 16 App Router + TypeScript
@@ -27,15 +34,45 @@ KYC en producción vía Zabio: https://www.zabio.xyz/i/bitwave (lib/config.ts �
 - Blog: archivos MDX en content/blog/
 - Deploy: Vercel · Dominio: bitwaveco.com
 
+## Deploy y operación
+- Repo: github.com/infoquantmarket/bitwave-web (push a `main` = auto-deploy en Vercel, no
+  hace falta CLI para esto).
+- Proyecto Vercel: `quant-market-s-projects/bitwave-web` (org `infoquantmarket-2088`).
+- La carpeta local ya está vinculada (`vercel link`, genera `.vercel/` gitignoreado). La
+  CLI de Vercel queda autenticada con sesión propia del usuario — NO se necesita ni se debe
+  pedir un token manual para nada (ver nota de seguridad abajo).
+- Para cambios que solo tocan env vars (sin cambio de código): usar `vercel deploy --prod`
+  directo, no hace falta un commit vacío.
+- **Nota de seguridad histórica:** en una sesión anterior el usuario compartió un
+  VERCEL_API_TOKEN por chat (necesario en ese momento porque la CLI no estaba vinculada
+  aún). Ya no es necesario pedir tokens así — la CLI vinculada cubre todo lo operativo.
+  Si en algún momento hace falta el `VERCEL_API_TOKEN` como env var (lo usa /admin para
+  escribir en Edge Config vía API REST, es un uso distinto al de la CLI), pedir al usuario
+  que lo genere él mismo desde Vercel → Account Settings → Tokens y lo pegue directo en
+  `vercel env add`, nunca por chat.
+- public/images/hero.png es en realidad un JPEG con extensión .png (bug menor preexistente,
+  no roto pero inconsistente — no se usa ya en metadatos OG/Twitter, solo como imagen normal
+  del hero vía next/image que sí sniffea el contenido real).
+
 ## Paleta
 - Primario: #1a4a2e  Acento/CTA: #2d8a4e  Fondo alterno: #e8f5ee
 - Títulos: #1a1a1a  Cuerpo: #4b5563
 
 ## Logos e imágenes de marca
 - public/logo_nb.png → navbar (grande en desktop: h-[72px]) y footer
-- public/logo_bl.png → logo BLANCO para fondos oscuros (logo_nb sobre oscuro da cuadro blanco)
-- public/logo.png → alternativa con fondo
+- public/logo_bl.png → logo BLANCO para fondos oscuros (logo_nb sobre oscuro da cuadro blanco);
+  también se usa embebido (base64, vía lib/og-image.tsx) en la tarjeta social generada
+- public/logo.png → alternativa con fondo; fuente del recorte del ícono (símbolo "b" solo)
+  usado en app/favicon.ico y app/icon.png
 - public/usdt.svg / public/usdc.svg → coins en el hero (vectoriales; reemplazables por PNG oficiales)
+- app/favicon.ico (16/32/48px) + app/icon.png (512px) → ícono de marca BitWave. OJO: el
+  proyecto arrancó con el triángulo default de Next.js/Vercel en favicon.ico durante meses
+  sin que nadie lo notara — si algún día vuelve a verse un ícono genérico en las pestañas,
+  es porque algo pisó estos archivos.
+- app/[locale]/opengraph-image.tsx y twitter-image.tsx → tarjeta social 1200×630 generada
+  en código (next/og ImageResponse, NO es una imagen estática), con textos ES/EN según
+  locale. Lógica compartida en lib/og-image.tsx (buildOgImage). Para cambiar el diseño de
+  la tarjeta se edita ese archivo, no hay que regenerar imágenes a mano.
 
 ## Configuración central
 - lib/config.ts → WhatsApp, email, nombre legal, NIT, zabioUrl
