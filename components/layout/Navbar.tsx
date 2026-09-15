@@ -2,16 +2,17 @@
 import Image from "next/image"
 import { useTranslations, useLocale } from "next-intl"
 import { Link, useRouter, usePathname } from "@/i18n/navigation"
-import { getWhatsAppUrl } from "@/lib/config"
+import { getWhatsAppUrl, siteConfig } from "@/lib/config"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
 const navLinks = [
-  { key: "howItWorks", href: "#como-funciona" },
-  { key: "locations", href: "#ubicaciones" },
-  { key: "blog", href: "/blog" },
-  { key: "faq", href: "#faq" },
-  { key: "contact", href: "#contacto" },
+  { key: "howItWorks", href: "#como-funciona", external: false },
+  { key: "locations", href: "#ubicaciones", external: false },
+  { key: "esim", href: siteConfig.esimUrl, external: true },
+  { key: "blog", href: "/blog", external: false },
+  { key: "faq", href: "#faq", external: false },
+  { key: "contact", href: "#contacto", external: false },
 ] as const
 
 export default function Navbar() {
@@ -41,16 +42,29 @@ export default function Navbar() {
         </Link>
 
         <ul className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <li key={link.key}>
-              <Link
-                href={link.href}
-                className="text-sm text-text-body hover:text-brand-primary font-medium transition-colors"
-              >
-                {t(link.key)}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <li key={link.key}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-text-body hover:text-brand-primary font-medium transition-colors"
+                >
+                  {t(link.key)}
+                </a>
+              </li>
+            ) : (
+              <li key={link.key}>
+                <Link
+                  href={link.href}
+                  className="text-sm text-text-body hover:text-brand-primary font-medium transition-colors"
+                >
+                  {t(link.key)}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
 
         <div className="flex items-center gap-3">
@@ -79,17 +93,31 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden bg-white border-t border-gray-100 px-4 pb-4">
           <ul className="flex flex-col gap-3 pt-3">
-            {navLinks.map((link) => (
-              <li key={link.key}>
-                <Link
-                  href={link.href}
-                  className="block text-sm text-text-body hover:text-brand-primary font-medium py-1"
-                  onClick={() => setOpen(false)}
-                >
-                  {t(link.key)}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <li key={link.key}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-sm text-text-body hover:text-brand-primary font-medium py-1"
+                    onClick={() => setOpen(false)}
+                  >
+                    {t(link.key)}
+                  </a>
+                </li>
+              ) : (
+                <li key={link.key}>
+                  <Link
+                    href={link.href}
+                    className="block text-sm text-text-body hover:text-brand-primary font-medium py-1"
+                    onClick={() => setOpen(false)}
+                  >
+                    {t(link.key)}
+                  </Link>
+                </li>
+              )
+            )}
             <li>
               <a
                 href={getWhatsAppUrl()}

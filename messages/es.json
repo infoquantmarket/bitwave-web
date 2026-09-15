@@ -2,6 +2,7 @@
   "nav": {
     "howItWorks": "Cómo funciona",
     "locations": "Ubicaciones",
+    "esim": "eSIM viajeros",
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contacto",
@@ -48,6 +49,12 @@
     "localsTitle": "Locales y profesionales",
     "localsDesc": "Traders, freelancers o receptores de remesas cripto que quieren convertir USDT o BTC a pesos con respaldo legal y cumplimiento normativo.",
     "localsBadge": "USDT · USDC · Polygon · Tron · Solana"
+  },
+  "esim": {
+    "badge": "Cobertura en 190+ países",
+    "title": "¿Vienes de viaje? Conéctate desde el primer minuto",
+    "desc": "Con NutiSim, nuestro aliado, consigue tu eSIM internacional y ten datos móviles apenas aterrices. Activación inmediata, sin tarjeta física, compatible con la mayoría de teléfonos recientes.",
+    "cta": "Comprar mi eSIM"
   },
   "locations": {
     "title": "Nuestros puntos de atención",

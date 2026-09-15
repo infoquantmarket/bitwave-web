@@ -3,6 +3,7 @@ import HeroSection from "@/components/home/HeroSection"
 import TrustBar from "@/components/home/TrustBar"
 import HowItWorks from "@/components/home/HowItWorks"
 import WhoWeServe from "@/components/home/WhoWeServe"
+import EsimSection from "@/components/home/EsimSection"
 import LocationsSection from "@/components/home/LocationsSection"
 import BlogCarousel from "@/components/home/BlogCarousel"
 import ComplianceSection from "@/components/home/ComplianceSection"
@@ -54,6 +55,7 @@ export default async function HomePage() {
       <TrustBar />
       <HowItWorks />
       <WhoWeServe />
+      <EsimSection />
       <LocationsSection />
       <BlogCarousel locale={locale} />
       <ComplianceSection />
