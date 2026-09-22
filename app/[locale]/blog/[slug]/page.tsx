@@ -68,6 +68,19 @@ export default async function BlogPostPage({
     mainEntityOfPage: { "@type": "WebPage", "@id": `${siteConfig.siteUrl}${locale === "en" ? "/en" : ""}/blog/${post.slug}` },
   }
 
+  const faqSchema =
+    post.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: post.faq.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null
+
   const backHref = locale === "en" ? "/en/blog" : "/blog"
   const backLabel = locale === "en" ? "Back to blog" : "Volver al blog"
   const readLabel = locale === "en" ? "read" : "lectura"
@@ -79,7 +92,12 @@ export default async function BlogPostPage({
 
   return (
     <main id="main-content" className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema ? [articleSchema, faqSchema] : articleSchema),
+        }}
+      />
       <Link
         href={backHref}
         className="inline-flex items-center gap-1.5 text-sm text-brand-accent hover:text-brand-primary mb-8 font-medium transition-colors"

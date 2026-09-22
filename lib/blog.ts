@@ -18,6 +18,7 @@ export interface PostMeta {
   metaTitle: string
   metaDescription: string
   keywords: string[]
+  faq: { q: string; a: string }[]
 }
 
 export interface Post extends PostMeta {
@@ -38,6 +39,7 @@ function buildPostMeta(data: Record<string, unknown>, content: string, filename:
     metaTitle: (data.metaTitle as string) ?? (data.title as string) ?? "",
     metaDescription: (data.metaDescription as string) ?? (data.excerpt as string) ?? "",
     keywords: (data.keywords as string[]) ?? [],
+    faq: (data.faq as { q: string; a: string }[]) ?? [],
   }
 }
 
