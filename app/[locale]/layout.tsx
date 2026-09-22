@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
 import Navbar from "@/components/layout/Navbar"
@@ -28,6 +28,7 @@ export default async function LocaleLayout({
   const { locale } = await params
   if (!routing.locales.includes(locale as "es" | "en")) notFound()
   const messages = await getMessages()
+  const t = await getTranslations("faq")
 
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -72,11 +73,11 @@ export default async function LocaleLayout({
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      { "@type": "Question", name: "¿Qué documentos necesito?", acceptedAnswer: { "@type": "Answer", text: "Cédula de ciudadanía para colombianos, pasaporte para extranjeros." } },
-      { "@type": "Question", name: "¿Cuál es el monto mínimo?", acceptedAnswer: { "@type": "Answer", text: "El monto mínimo es de 100 USDT." } },
-      { "@type": "Question", name: "¿Es legal cambiar USDT en Colombia?", acceptedAnswer: { "@type": "Answer", text: "Sí. BitWave opera como empresa legalmente constituida en Colombia." } },
-    ],
+    mainEntity: ["1", "2", "3", "4", "5", "6", "7", "8"].map((k) => ({
+      "@type": "Question",
+      name: t(("q" + k) as Parameters<typeof t>[0]),
+      acceptedAnswer: { "@type": "Answer", text: t(("a" + k) as Parameters<typeof t>[0]) },
+    })),
   }
 
   return (
