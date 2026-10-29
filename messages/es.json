@@ -18,7 +18,8 @@
     "rateDisclaimer": "Las tasas están sujetas a cambios sin previo aviso. Valida la tasa vía WhatsApp o en nuestras oficinas.",
     "coinsLabel": "Compramos:",
     "coinsNetworks": "También Bitcoin (BTC) · En redes Polygon, Tron, Solana, Ethereum y más",
-    "ctaNegotiate": "Iniciar negociación"
+    "ctaNegotiate": "Iniciar negociación",
+    "imageAlt": "Persona realizando un cambio de USDT en Medellín"
   },
   "trust": {
     "legal": "Empresa legalmente constituida",
@@ -61,7 +62,8 @@
     "subtitle": "Opera bajo contratos de concesión dentro de los puntos Nutifinanzas",
     "directions": "Cómo llegar",
     "hours": "Horario",
-    "mapTitle": "Mapa"
+    "mapTitle": "Mapa",
+    "viewPage": "Ver sede"
   },
   "blog": {
     "title": "Blog",
@@ -126,5 +128,47 @@
     "contactTitle": "Contacto",
     "disclaimer": "BitWave no es entidad vigilada por la Superintendencia Financiera de Colombia. Los criptoactivos no son moneda de curso legal.",
     "rights": "Todos los derechos reservados."
+  },
+  "whatsapp": {
+    "float": "Consúltanos",
+    "aria": "Contactar por WhatsApp"
+  },
+  "locationPage": {
+    "breadcrumbHome": "Inicio",
+    "breadcrumbLocations": "Sedes",
+    "badge": "Punto de atención",
+    "h1": "BitWave en {name}",
+    "subtitle": "Cambia USDT, USDC y Bitcoin por pesos colombianos en {zone}. Recibe tu dinero en efectivo o por transferencia bancaria.",
+    "address": "Dirección",
+    "hours": "Horario",
+    "directions": "Cómo llegar",
+    "whatsapp": "Cotizar por WhatsApp",
+    "start": "Iniciar negociación",
+    "howTitle": "¿Cómo funciona en esta sede?",
+    "how1": "Consulta tu cotización por WhatsApp o inicia tu negociación en línea. Indícanos el criptoactivo y el monto.",
+    "how2": "Completa la verificación de identidad y del origen de los fondos, como lo exige la ley.",
+    "how3": "Confirma con nuestro equipo la red y las instrucciones de envío antes de enviar tus criptoactivos.",
+    "how4": "Recibe tus pesos en efectivo en esta sede o por transferencia bancaria.",
+    "bringTitle": "Qué llevar",
+    "bring1": "Cédula de ciudadanía si eres colombiano, o pasaporte vigente si eres extranjero.",
+    "bring2": "Tu cotización confirmada por WhatsApp, con el criptoactivo y el monto que quieres cambiar.",
+    "bring3": "La red y la dirección de recepción confirmadas con nuestro equipo antes de enviar.",
+    "bring4": "Revisa el horario de esta sede antes de ir: domingos y festivos permanece cerrada.",
+    "nutiTitle": "BitWave y Nutifinanzas",
+    "nuti": "BitWave S.A.S. y Nutifinanzas son empresas diferentes. BitWave opera este punto de atención dentro de las oficinas de Nutifinanzas, bajo un contrato de concesión.",
+    "faqTitle": "Preguntas frecuentes sobre esta sede",
+    "f1q": "¿Dónde queda BitWave en {short}?",
+    "f1a": "{name}, {local}. Dirección: {address}, {city}.",
+    "f2q": "¿Cuál es el horario de esta sede?",
+    "f2a": "{hours}.",
+    "f3q": "¿Qué documento debo llevar?",
+    "f3a": "Cédula de ciudadanía si eres colombiano o pasaporte vigente si eres extranjero. Aplicamos verificación de identidad (KYC) y del origen de los fondos a todos los clientes.",
+    "f4q": "¿Puedo recibir efectivo en esta sede?",
+    "f4a": "Sí. Puedes recibir tus pesos en efectivo en este punto de atención o elegir transferencia bancaria. Confirma la modalidad al cotizar.",
+    "f5q": "¿BitWave es lo mismo que Nutifinanzas?",
+    "f5a": "No. Son empresas diferentes. BitWave opera este punto de atención dentro de las oficinas de Nutifinanzas.",
+    "othersTitle": "Otras sedes de BitWave",
+    "metaTitle": "Cambiar USDT y Bitcoin en {zone}",
+    "metaDesc": "Cambia USDT, USDC y Bitcoin por pesos colombianos en {name} ({zone}). {address}. {hours}. Efectivo o transferencia, con verificación KYC."
   }
 }

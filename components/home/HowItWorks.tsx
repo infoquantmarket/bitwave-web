@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 import { MessageCircle, UserCheck, Banknote, ArrowRight } from "lucide-react"
 import { getWhatsAppUrl } from "@/lib/config"
 
@@ -10,6 +10,7 @@ const steps = [
 
 export default async function HowItWorks() {
   const t = await getTranslations("howItWorks")
+  const locale = await getLocale()
 
   return (
     <section id="como-funciona" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -31,7 +32,7 @@ export default async function HowItWorks() {
         </div>
         <div className="text-center mt-10">
           <a
-            href={getWhatsAppUrl()}
+            href={getWhatsAppUrl(undefined, locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-primary text-white font-bold px-8 py-3.5 rounded-lg transition-colors text-base shadow-md"

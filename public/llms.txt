@@ -29,6 +29,14 @@ Todos los puntos operan dentro de las oficinas de NUTIFINANZAS:
 - **Edificio Coltejer** — Local 203, Medellín · Lun–Vie 8am–5pm · Sáb 9am–1pm · Dom y festivos cerrado
 - **Centro Comercial Viva Envigado** — Local 203Z, Envigado · Lun–Vie 8am–7pm · Sáb 9am–4pm · Dom y festivos cerrado
 
+Páginas por sede (ES / EN):
+
+- Oviedo (El Poblado): https://www.bitwaveco.com/sedes/oviedo · https://www.bitwaveco.com/en/locations/oviedo
+- Coltejer (Centro): https://www.bitwaveco.com/sedes/coltejer · https://www.bitwaveco.com/en/locations/coltejer
+- Viva Envigado: https://www.bitwaveco.com/sedes/viva-envigado · https://www.bitwaveco.com/en/locations/viva-envigado
+
+BitWave y Nutifinanzas son empresas diferentes: BitWave opera estos puntos de atención dentro de las oficinas de Nutifinanzas, bajo contrato de concesión.
+
 ## Clientes que atendemos
 
 - Turistas internacionales en Medellín con USDT que necesitan pesos para gastos locales (no requieren cuenta bancaria colombiana)

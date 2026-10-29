@@ -2,13 +2,14 @@ import Image from "next/image"
 import Link from "next/link"
 import { getTranslations } from "next-intl/server"
 import { siteConfig } from "@/lib/config"
-import { locations } from "@/lib/locations"
+import { locations, locationPath } from "@/lib/locations"
 import { MapPin } from "lucide-react"
 
 export default async function Footer({ locale }: { locale: string }) {
   const t = await getTranslations("footer")
   const nav = await getTranslations("nav")
   const year = new Date().getFullYear()
+  const prefix = locale === "en" ? "/en" : ""
 
   return (
     <footer className="bg-brand-primary text-white">
@@ -32,11 +33,11 @@ export default async function Footer({ locale }: { locale: string }) {
           <h3 className="text-xs font-semibold uppercase tracking-wider text-white/60 mb-3">{t("links")}</h3>
           <ul className="space-y-1.5 text-xs text-white/80">
             {[
-              { label: nav("howItWorks"), href: "#como-funciona" },
-              { label: nav("locations"), href: "#ubicaciones" },
+              { label: nav("howItWorks"), href: `${prefix}/#como-funciona` },
+              { label: nav("locations"), href: `${prefix}/#ubicaciones` },
               { label: nav("blog"), href: `${locale === "en" ? "/en" : ""}/blog` },
-              { label: nav("faq"), href: "#faq" },
-              { label: nav("contact"), href: "#contacto" },
+              { label: nav("faq"), href: `${prefix}/#faq` },
+              { label: nav("contact"), href: `${prefix}/#contacto` },
             ].map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="hover:text-white transition-colors">{l.label}</Link>
@@ -52,7 +53,7 @@ export default async function Footer({ locale }: { locale: string }) {
               <li key={loc.id} className="flex gap-1.5">
                 <MapPin size={12} className="mt-0.5 flex-shrink-0 text-brand-accent" />
                 <span>
-                  <span className="font-medium text-white">{loc.name}</span>
+                  <Link href={locationPath(loc.id, locale)} className="font-medium text-white hover:underline">{loc.name}</Link>
                   <br />
                   {loc.address}, {loc.city}
                 </span>

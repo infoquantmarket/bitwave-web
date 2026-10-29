@@ -1,17 +1,20 @@
 "use client"
 import { getWhatsAppUrl } from "@/lib/config"
 import { MessageCircle } from "lucide-react"
+import { useLocale, useTranslations } from "next-intl"
 import { useState } from "react"
 
 export default function WhatsAppFloatButton() {
   const [hovered, setHovered] = useState(false)
+  const locale = useLocale()
+  const t = useTranslations("whatsapp")
 
   return (
     <a
-      href={getWhatsAppUrl()}
+      href={getWhatsAppUrl(undefined, locale)}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contactar por WhatsApp"
+      aria-label={t("aria")}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-full shadow-lg transition-all duration-300"
@@ -22,7 +25,7 @@ export default function WhatsAppFloatButton() {
         className="text-sm font-semibold whitespace-nowrap overflow-hidden transition-all duration-300"
         style={{ maxWidth: hovered ? "120px" : "0px", opacity: hovered ? 1 : 0 }}
       >
-        Consúltanos
+        {t("float")}
       </span>
     </a>
   )

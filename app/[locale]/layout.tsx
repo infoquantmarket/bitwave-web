@@ -1,12 +1,13 @@
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages, getTranslations } from "next-intl/server"
+import { getMessages } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import { Inter } from "next/font/google"
 import { siteConfig } from "@/lib/config"
-import { locations } from "@/lib/locations"
+import { locations, locationPath } from "@/lib/locations"
+import { getPostAlternates } from "@/lib/blog"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default async function LocaleLayout({
   const { locale } = await params
   if (!routing.locales.includes(locale as "es" | "en")) notFound()
   const messages = await getMessages()
-  const t = await getTranslations("faq")
+  const isEn = locale === "en"
 
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -48,10 +49,13 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@type": "FinancialService",
     name: `BitWave — ${loc.name}`,
+    parentOrganization: { "@id": `${siteConfig.siteUrl}/#organization` },
     image: `${siteConfig.siteUrl}${loc.image}`,
     description:
-      "Intercambio de USDT por pesos colombianos (COP) en efectivo o transferencia bancaria. Proceso KYC completo y sistema SARLAFT.",
-    url: siteConfig.siteUrl,
+      isEn
+        ? "Exchange of USDT, USDC and Bitcoin for Colombian pesos (COP), in cash or bank transfer. Full KYC process and SARLAFT system."
+        : "Intercambio de USDT, USDC y Bitcoin por pesos colombianos (COP) en efectivo o transferencia bancaria. Proceso KYC completo y sistema SARLAFT.",
+    url: `${siteConfig.siteUrl}${locationPath(loc.id, locale)}`,
     telephone: siteConfig.whatsappNumber,
     address: {
       "@type": "PostalAddress",
@@ -64,21 +68,13 @@ export default async function LocaleLayout({
       { "@type": "City", name: "Envigado" },
       { "@type": "State", name: "Antioquia" },
     ],
-    openingHours: ["Mo-Fr 08:00-19:00", "Sa 09:00-16:00"],
+    openingHours: loc.openingHours,
     currenciesAccepted: "COP",
     priceRange: "$$",
     knowsAbout: ["USDT", "USDC", "Bitcoin","criptoactivos", "cambio de divisas", "pesos colombianos", "Polygon", "Tron", "Solana", "Ethereum"],
   }))
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: ["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((k) => ({
-      "@type": "Question",
-      name: t(("q" + k) as Parameters<typeof t>[0]),
-      acceptedAnswer: { "@type": "Answer", text: t(("a" + k) as Parameters<typeof t>[0]) },
-    })),
-  }
+  const postAlternates = getPostAlternates()
 
   return (
     <html lang={locale} className={inter.variable}>
@@ -86,9 +82,9 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, ...localBusinesses, faqSchema]) }}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, ...localBusinesses]) }}
           />
-          <Navbar />
+          <Navbar postAlternates={postAlternates} />
           {children}
           <Footer locale={locale} />
         </NextIntlClientProvider>

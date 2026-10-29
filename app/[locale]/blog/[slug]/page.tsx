@@ -24,16 +24,26 @@ export async function generateMetadata({
   const { slug, locale } = await params
   const post = getPostBySlug(slug, locale as "es" | "en")
   if (!post) return {}
+  const prefix = (l: string) => (l === "en" ? "/en" : "")
+  const self = `${siteConfig.siteUrl}${prefix(locale)}/blog/${post.slug}`
+  const otherLocale = locale === "en" ? "es" : "en"
+  const languages: Record<string, string> = { [locale]: self }
+  if (post.alternate) {
+    languages[otherLocale] = `${siteConfig.siteUrl}${prefix(otherLocale)}/blog/${post.alternate}`
+    languages["x-default"] = locale === "es" ? self : languages[otherLocale]
+  } else {
+    languages["x-default"] = self
+  }
   return {
     title: post.metaTitle,
     description: post.metaDescription,
     keywords: post.keywords.join(", "),
-    alternates: {
-      canonical: `${siteConfig.siteUrl}${locale === "en" ? "/en" : ""}/blog/${post.slug}`,
-    },
+    alternates: { canonical: self, languages },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
+      url: self,
+      locale: locale === "en" ? "en_US" : "es_CO",
       type: "article",
       publishedTime: post.date,
       images: [

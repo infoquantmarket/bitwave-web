@@ -1,11 +1,13 @@
 "use client"
-import { useTranslations } from "next-intl"
-import { locations } from "@/lib/locations"
+import { useLocale, useTranslations } from "next-intl"
+import { locations, locationPath } from "@/lib/locations"
+import Link from "next/link"
 import { MapPin, Clock, ExternalLink } from "lucide-react"
 import { useState } from "react"
 
 export default function LocationsSection() {
   const t = useTranslations("locations")
+  const locale = useLocale() as "es" | "en"
   const [selected, setSelected] = useState(0)
 
   return (
@@ -32,15 +34,22 @@ export default function LocationsSection() {
               aria-pressed={selected === idx}
             >
               <h3 className="font-bold text-text-title text-lg mb-1">{loc.name}</h3>
-              <p className="text-sm text-brand-accent font-bold mb-2">{loc.local}</p>
+              <p className="text-sm text-brand-accent font-bold mb-2">{loc.local[locale]}</p>
               <div className="flex items-start gap-2 text-sm text-text-body mb-2">
                 <MapPin size={14} className="mt-0.5 flex-shrink-0 text-brand-accent" />
                 <span>{loc.address}, {loc.city}</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-text-body mb-5">
                 <Clock size={14} className="text-brand-accent" />
-                <span>{loc.hours}</span>
+                <span>{loc.hours[locale]}</span>
               </div>
+              <Link
+                href={locationPath(loc.id, locale)}
+                className="block mb-3 text-sm font-semibold text-brand-primary hover:text-brand-accent transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {t("viewPage")} →
+              </Link>
               <a
                 href={loc.mapsUrl}
                 target="_blank"

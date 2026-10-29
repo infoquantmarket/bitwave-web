@@ -19,6 +19,8 @@ export interface PostMeta {
   metaDescription: string
   keywords: string[]
   faq: { q: string; a: string }[]
+  /** Slug del post equivalente en el otro idioma (para hreflang y selector de idioma). */
+  alternate?: string
 }
 
 export interface Post extends PostMeta {
@@ -40,7 +42,19 @@ function buildPostMeta(data: Record<string, unknown>, content: string, filename:
     metaDescription: (data.metaDescription as string) ?? (data.excerpt as string) ?? "",
     keywords: (data.keywords as string[]) ?? [],
     faq: (data.faq as { q: string; a: string }[]) ?? [],
+    alternate: (data.alternate as string) || undefined,
   }
+}
+
+/** Mapa slug -> slug equivalente en el otro idioma, por idioma de origen. */
+export function getPostAlternates(): Record<"es" | "en", Record<string, string>> {
+  const out: Record<"es" | "en", Record<string, string>> = { es: {}, en: {} }
+  for (const lang of ["es", "en"] as const) {
+    for (const p of getAllPosts(lang)) {
+      if (p.alternate) out[lang][p.slug] = p.alternate
+    }
+  }
+  return out
 }
 
 export function getAllPosts(lang: "es" | "en" = "es"): PostMeta[] {

@@ -1,11 +1,12 @@
 import Image from "next/image"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 import { getWhatsAppUrl, siteConfig } from "@/lib/config"
 import { MessageCircle, ArrowRight } from "lucide-react"
 import QrCode from "@/components/ui/QrCode"
 
 export default async function ContactSection() {
   const t = await getTranslations("contact")
+  const locale = await getLocale()
 
   return (
     <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-primary">
@@ -51,7 +52,7 @@ export default async function ContactSection() {
               <p className="text-white/60 text-sm leading-relaxed">{t("whatsappDesc")}</p>
             </div>
             <a
-              href={getWhatsAppUrl()}
+              href={getWhatsAppUrl(undefined, locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white font-bold px-6 py-3 rounded-lg transition-colors text-base w-full justify-center"

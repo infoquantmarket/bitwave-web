@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import Image from "next/image"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 import { getWhatsAppUrl, siteConfig } from "@/lib/config"
 import { ArrowRight, MessageCircle, MapPin } from "lucide-react"
 import RateDisplay from "./RateDisplay"
@@ -8,6 +8,7 @@ import RateSkeleton from "./RateSkeleton"
 
 export default async function HeroSection() {
   const t = await getTranslations("hero")
+  const locale = await getLocale()
 
   return (
     <section className="bg-white pt-12 pb-16 px-4 sm:px-6 lg:px-8">
@@ -39,7 +40,7 @@ export default async function HeroSection() {
               <ArrowRight size={18} />
             </a>
             <a
-              href={getWhatsAppUrl()}
+              href={getWhatsAppUrl(undefined, locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border-2 border-brand-primary text-brand-primary hover:bg-brand-light font-semibold px-6 py-3.5 rounded-lg transition-colors text-base"
@@ -79,7 +80,7 @@ export default async function HeroSection() {
           <div className="relative w-full lg:max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-brand-light">
             <Image
               src="/images/hero.png"
-              alt="Persona realizando un cambio de USDT en Medellín"
+              alt={t("imageAlt")}
               fill
               className="object-cover"
               priority

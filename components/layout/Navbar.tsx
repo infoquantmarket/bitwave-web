@@ -7,15 +7,17 @@ import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
 const navLinks = [
-  { key: "howItWorks", href: "#como-funciona", external: false },
-  { key: "locations", href: "#ubicaciones", external: false },
+  { key: "howItWorks", href: "/#como-funciona", external: false },
+  { key: "locations", href: "/#ubicaciones", external: false },
   { key: "esim", href: siteConfig.esimUrl, external: true },
   { key: "blog", href: "/blog", external: false },
-  { key: "faq", href: "#faq", external: false },
-  { key: "contact", href: "#contacto", external: false },
+  { key: "faq", href: "/#faq", external: false },
+  { key: "contact", href: "/#contacto", external: false },
 ] as const
 
-export default function Navbar() {
+type PostAlternates = Record<"es" | "en", Record<string, string>>
+
+export default function Navbar({ postAlternates }: { postAlternates?: PostAlternates }) {
   const t = useTranslations("nav")
   const locale = useLocale()
   const router = useRouter()
@@ -24,7 +26,16 @@ export default function Navbar() {
 
   function switchLocale() {
     const nextLocale = locale === "es" ? "en" : "es"
-    router.replace(pathname, { locale: nextLocale })
+    let target = pathname
+    const loc = pathname.match(/^\/(?:sedes|locations)\/([^/]+)$/)
+    const post = pathname.match(/^\/blog\/([^/]+)$/)
+    if (loc) {
+      target = nextLocale === "en" ? `/locations/${loc[1]}` : `/sedes/${loc[1]}`
+    } else if (post) {
+      const alt = postAlternates?.[locale as "es" | "en"]?.[post[1]]
+      target = alt ? `/blog/${alt}` : "/blog"
+    }
+    router.replace(target as never, { locale: nextLocale })
   }
 
   return (
@@ -77,7 +88,7 @@ export default function Navbar() {
             <span className="sr-only">{locale === "es" ? "Switch to English" : "Cambiar a Español"}</span>
           </button>
           <a
-            href={getWhatsAppUrl()}
+            href={getWhatsAppUrl(undefined, locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-primary text-white text-sm font-semibold px-3 sm:px-4 py-2 rounded-lg transition-colors"
@@ -120,7 +131,7 @@ export default function Navbar() {
             )}
             <li>
               <a
-                href={getWhatsAppUrl()}
+                href={getWhatsAppUrl(undefined, locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brand-accent text-white text-sm font-semibold px-4 py-2 rounded-lg mt-1"

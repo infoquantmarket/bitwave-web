@@ -18,7 +18,8 @@
     "rateDisclaimer": "Rates are subject to change without notice. Confirm the rate via WhatsApp or at our offices.",
     "coinsLabel": "We buy:",
     "coinsNetworks": "Also Bitcoin (BTC) · On Polygon, Tron, Solana, Ethereum and more",
-    "ctaNegotiate": "Start negotiation"
+    "ctaNegotiate": "Start negotiation",
+    "imageAlt": "Person exchanging USDT for pesos in Medellín"
   },
   "trust": {
     "legal": "Legally registered company",
@@ -61,7 +62,8 @@
     "subtitle": "Operating within Nutifinanzas concession points",
     "directions": "Get directions",
     "hours": "Hours",
-    "mapTitle": "Map"
+    "mapTitle": "Map",
+    "viewPage": "View location"
   },
   "blog": {
     "title": "Blog",
@@ -126,5 +128,47 @@
     "contactTitle": "Contact",
     "disclaimer": "BitWave is not supervised by the Superintendencia Financiera de Colombia. Crypto-assets are not legal tender.",
     "rights": "All rights reserved."
+  },
+  "whatsapp": {
+    "float": "Ask us",
+    "aria": "Contact us on WhatsApp"
+  },
+  "locationPage": {
+    "breadcrumbHome": "Home",
+    "breadcrumbLocations": "Locations",
+    "badge": "Service point",
+    "h1": "BitWave at {name}",
+    "subtitle": "Exchange USDT, USDC and Bitcoin for Colombian pesos in {zone}. Receive your money in cash or by bank transfer.",
+    "address": "Address",
+    "hours": "Hours",
+    "directions": "Get directions",
+    "whatsapp": "Get a quote on WhatsApp",
+    "start": "Start negotiation",
+    "howTitle": "How does it work at this location?",
+    "how1": "Get a quote on WhatsApp or start your negotiation online. Tell us the crypto-asset and the amount.",
+    "how2": "Complete identity and source-of-funds verification, as required by law.",
+    "how3": "Confirm the network and sending instructions with our team before sending your crypto-assets.",
+    "how4": "Receive your pesos in cash at this location or by bank transfer.",
+    "bringTitle": "What to bring",
+    "bring1": "Your valid passport if you are a foreigner, or your national ID (cédula) if you are Colombian.",
+    "bring2": "Your quote confirmed on WhatsApp, with the crypto-asset and the amount you want to exchange.",
+    "bring3": "The network and receiving address confirmed with our team before you send anything.",
+    "bring4": "Check this location opening hours before you go: it is closed on Sundays and holidays.",
+    "nutiTitle": "BitWave and Nutifinanzas",
+    "nuti": "BitWave S.A.S. and Nutifinanzas are different companies. BitWave operates this service point inside the Nutifinanzas offices, under a concession agreement.",
+    "faqTitle": "Frequently asked questions about this location",
+    "f1q": "Where is BitWave in {short}?",
+    "f1a": "{name}, {local}. Address: {address}, {city}.",
+    "f2q": "What are this location opening hours?",
+    "f2a": "{hours}.",
+    "f3q": "Which document should I bring?",
+    "f3a": "A valid passport if you are a foreigner, or your national ID (cédula) if you are Colombian. We apply identity (KYC) and source-of-funds verification to all clients.",
+    "f4q": "Can I receive cash at this location?",
+    "f4a": "Yes. You can receive your pesos in cash at this service point or choose a bank transfer. Confirm the option when you request your quote.",
+    "f5q": "Is BitWave the same as Nutifinanzas?",
+    "f5a": "No. They are different companies. BitWave operates this service point inside the Nutifinanzas offices.",
+    "othersTitle": "Other BitWave locations",
+    "metaTitle": "Exchange USDT and Bitcoin in {zone}",
+    "metaDesc": "Exchange USDT, USDC and Bitcoin for Colombian pesos at {name} ({zone}). {address}. {hours}. Cash or bank transfer, with KYC verification."
   }
 }

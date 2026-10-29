@@ -11,12 +11,17 @@ export async function generateMetadata({
   const { locale } = await params
   const isEN = locale === "en"
   return {
-    title: "Blog | BitWave",
+    title: "Blog",
     description: isEN
       ? "Articles about cryptocurrency, compliance and the Colombian market."
       : "Artículos sobre criptomonedas, cumplimiento y el mercado colombiano.",
     alternates: {
       canonical: isEN ? "https://www.bitwaveco.com/en/blog" : "https://www.bitwaveco.com/blog",
+      languages: {
+        es: "https://www.bitwaveco.com/blog",
+        en: "https://www.bitwaveco.com/en/blog",
+        "x-default": "https://www.bitwaveco.com/blog",
+      },
     },
   }
 }
@@ -38,7 +43,7 @@ export default async function BlogPage({
           <p className="mt-3 text-text-body">{t("subtitle")}</p>
         </div>
         {posts.length === 0 ? (
-          <p className="text-center text-text-body">Próximamente...</p>
+          <p className="text-center text-text-body">{t("comingSoon")}</p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (

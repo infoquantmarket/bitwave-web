@@ -11,6 +11,16 @@ const withMDX = createMDX({})
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  async redirects() {
+    return [
+      {
+        // El post trata de vender USDT; el slug "buy" se renombró a "sell".
+        source: "/en/blog/buy-usdt-medellin-tourists-guide",
+        destination: "/en/blog/sell-usdt-medellin-tourists-guide",
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default withNextIntl(withMDX(nextConfig))
