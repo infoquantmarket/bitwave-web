@@ -35,7 +35,7 @@ export default async function HeroSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-primary text-white font-bold px-6 py-3.5 rounded-lg transition-colors text-base shadow-md"
             >
-              {t("ctaFreeze")}
+              {t("ctaNegotiate")}
               <ArrowRight size={18} />
             </a>
             <a

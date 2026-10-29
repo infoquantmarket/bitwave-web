@@ -67,13 +67,13 @@ export default async function LocaleLayout({
     openingHours: ["Mo-Fr 08:00-19:00", "Sa 09:00-16:00"],
     currenciesAccepted: "COP",
     priceRange: "$$",
-    knowsAbout: ["USDT", "USDC", "criptoactivos", "cambio de divisas", "pesos colombianos", "Polygon", "Tron", "Solana", "Ethereum"],
+    knowsAbout: ["USDT", "USDC", "Bitcoin","criptoactivos", "cambio de divisas", "pesos colombianos", "Polygon", "Tron", "Solana", "Ethereum"],
   }))
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: ["1", "2", "3", "4", "5", "6", "7", "8"].map((k) => ({
+    mainEntity: ["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((k) => ({
       "@type": "Question",
       name: t(("q" + k) as Parameters<typeof t>[0]),
       acceptedAnswer: { "@type": "Answer", text: t(("a" + k) as Parameters<typeof t>[0]) },

@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 import { MessageCircle, UserCheck, Banknote, ArrowRight } from "lucide-react"
-import { siteConfig } from "@/lib/config"
+import { getWhatsAppUrl } from "@/lib/config"
 
 const steps = [
   { num: 1, titleKey: "step1Title" as const, descKey: "step1Desc" as const, icon: MessageCircle },
@@ -31,7 +31,7 @@ export default async function HowItWorks() {
         </div>
         <div className="text-center mt-10">
           <a
-            href={siteConfig.zabioUrl}
+            href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-primary text-white font-bold px-8 py-3.5 rounded-lg transition-colors text-base shadow-md"

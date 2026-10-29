@@ -20,12 +20,12 @@ export async function generateMetadata({
   const { locale } = await params
   const isEs = locale === "es"
 
-  const titleEs = "BitWave — Cambia USDT por pesos colombianos en Medellín | Legal y Seguro"
-  const titleEn = "BitWave — Sell USDT for Colombian Pesos in Medellín | Legal & Fast"
+  const titleEs = "BitWave — Cambia USDT, USDC y Bitcoin por pesos en Medellín | Legal y Seguro"
+  const titleEn = "BitWave — Exchange USDT, USDC & Bitcoin for Pesos in Medellín | Legal & Fast"
   const descEs =
-    "Convierte tus USDT a pesos colombianos en efectivo o transferencia. KYC, SARLAFT, empresa legal. 3 puntos físicos en Medellín y Envigado. Turistas bienvenidos."
+    "Convierte tus USDT, USDC y Bitcoin a pesos colombianos en efectivo o transferencia. Sin monto mínimo. KYC, SARLAFT, empresa legal. 3 puntos físicos en Medellín y Envigado. Turistas bienvenidos."
   const descEn =
-    "Exchange USDT for Colombian pesos — cash or bank transfer. Full KYC, SARLAFT compliance, legally registered. 3 locations in Medellín & Envigado. Tourists welcome."
+    "Exchange USDT, USDC and Bitcoin for Colombian pesos — cash or bank transfer. No minimum amount. Full KYC, SARLAFT compliance, legally registered. 3 locations in Medellín & Envigado. Tourists welcome."
 
   return {
     title: isEs ? titleEs : titleEn,
@@ -55,8 +55,8 @@ export default async function HomePage() {
       <TrustBar />
       <HowItWorks />
       <WhoWeServe />
-      <EsimSection />
       <LocationsSection />
+      <EsimSection />
       <BlogCarousel locale={locale} />
       <ComplianceSection />
       <FaqSection />

@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server"
 import { ChevronDown } from "lucide-react"
 
-const faqKeys = ["1", "2", "3", "4", "5", "6", "7", "8"] as const
+const faqKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9"] as const
 
 export default async function FaqSection() {
   const t = await getTranslations("faq")
