@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import { Inter } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 import { siteConfig } from "@/lib/config"
 import { locations, locationPath } from "@/lib/locations"
 import { getPostAlternates } from "@/lib/blog"
@@ -87,6 +88,7 @@ export default async function LocaleLayout({
           <Navbar postAlternates={postAlternates} />
           {children}
           <Footer locale={locale} />
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
