@@ -18,6 +18,7 @@ BitWave S.A.S. es una empresa colombiana con sede en Medellín que opera dos lí
 - **Monto mínimo:** Sin monto mínimo
 - **Proceso KYC obligatorio:** Verificación de identidad y origen de fondos para todos los clientes
 - **Sistema SARLAFT:** Prevención de lavado de activos y financiación del terrorismo
+- **Tiempo:** KYC normalmente hasta 15 minutos; ya verificado, la operación por lo general toma menos de 5 minutos. Entrega de pesos en efectivo inmediata
 - **Documentos aceptados:** Cédula de ciudadanía (colombianos) o pasaporte (turistas extranjeros)
 
 ## Ubicaciones físicas (Medellín y Envigado, Colombia)
