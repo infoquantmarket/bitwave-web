@@ -20,6 +20,7 @@ export default async function RateDisplay() {
       <p className="text-3xl font-bold text-brand-primary tabular-nums">
         ${tasa.tasaFinal.toLocaleString(locale === "en" ? "en-US" : "es-CO")}{" "}
         <span className="text-base font-semibold text-text-body">COP</span>
+        <span className="block text-sm font-medium text-text-body">{t("ratePer")}</span>
       </p>
       <p className="text-[10px] leading-snug text-text-body/50 flex items-start gap-1.5 mt-1 max-w-[260px]">
         <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse flex-shrink-0 mt-0.5" />

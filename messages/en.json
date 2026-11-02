@@ -22,7 +22,8 @@
     "ctaNegotiate": "Start negotiation",
     "imageAlt": "Person exchanging USDT for pesos in Medellín",
     "rateMore": "See rate, networks and guide",
-    "coinsNote": "Hold Bitcoin or another crypto? Convert it to USDT or USDC first"
+    "coinsNote": "Hold Bitcoin or another crypto? Convert it to USDT or USDC first",
+    "ratePer": "per 1 USDT or 1 USDC"
   },
   "trust": {
     "legal": "Legally registered company",
@@ -96,7 +97,7 @@
     "q2": "Is there a minimum amount to exchange?",
     "a2": "No. BitWave does not require a minimum amount. Ask for a quote for the amount you want to exchange and confirm the applicable network fees before sending.",
     "q3": "How is the exchange rate calculated?",
-    "a3": "The quote depends on the crypto-asset, the amount and market conditions at the time of the transaction. You can agree on it with our team on WhatsApp or when you start your negotiation online. Before sending your crypto-assets, confirm the rate, the conditions and the final amount of pesos you will receive.",
+    "a3": "The quote depends on the amount and market conditions at the time of the transaction, and it is the same for USDT and USDC. You can agree on it with our team on WhatsApp or when you start your negotiation online. Before sending your crypto-assets, confirm the rate, the conditions and the final amount of pesos you will receive.",
     "q4": "How long does the operation take?",
     "a4": "Identity verification (KYC) normally takes up to 15 minutes. Once verified, the operation generally takes under 5 minutes. Cash pesos are delivered immediately once we confirm receipt of your crypto-assets; bank transfers are processed on the same business day.",
     "q5": "Is it legal to exchange crypto-assets in Colombia?",
@@ -193,9 +194,9 @@
     "chip2": "Cash or bank transfer",
     "chip3": "Mandatory KYC verification",
     "rateTitle": "Approximate buying rate",
-    "ratePer": "per 1 USDT",
-    "rateNote": "USDT/COP reference, updated about every 20 minutes. The final rate is confirmed with our team before you send your crypto-assets.",
-    "rateOther": "For USDC, confirm the quote on WhatsApp.",
+    "ratePer": "per 1 USDT or 1 USDC",
+    "rateNote": "USDT/COP reference, the same for USDT and USDC, updated about every 20 minutes. The final rate is confirmed with our team before you send your crypto-assets.",
+    "rateOther": "We pay the same for USDT as for USDC.",
     "rateUnavailable": "We cannot show the rate right now. Ask on WhatsApp and we will answer right away.",
     "negTitle": "How we negotiate with you",
     "negSub": "Four clear steps, no surprises. The rate depends on the crypto-asset, the amount and the market at the time of the operation.",

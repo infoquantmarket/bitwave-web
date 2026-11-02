@@ -128,7 +128,10 @@ export default async function RatePage({ locale }: { locale: Locale }) {
               {tasa ? (
                 <>
                   <div className="mt-4 flex items-center gap-4">
-                    <Image src="/usdt.svg" alt="USDT" width={56} height={56} className="h-12 w-12 sm:h-14 sm:w-14 flex-shrink-0" />
+                    <span className="flex flex-shrink-0 -space-x-3">
+                      <Image src="/usdt.svg" alt="USDT" width={56} height={56} className="relative z-10 h-12 w-12 sm:h-14 sm:w-14 rounded-full ring-4 ring-white" />
+                      <Image src="/usdc.svg" alt="USDC" width={56} height={56} className="h-12 w-12 sm:h-14 sm:w-14 rounded-full ring-4 ring-white" />
+                    </span>
                     <p className="text-5xl sm:text-6xl font-bold text-brand-primary tabular-nums leading-none">
                       ${tasa.tasaFinal.toLocaleString(locale === "en" ? "en-US" : "es-CO")}
                       <span className="ml-2 text-xl font-semibold text-text-body">COP</span>
@@ -140,10 +143,7 @@ export default async function RatePage({ locale }: { locale: Locale }) {
                 <p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">{t("rateUnavailable")}</p>
               )}
               <p className="mt-6 text-xs leading-relaxed text-text-body border-t border-gray-100 pt-4">{t("rateNote")}</p>
-              <p className="mt-2 flex items-center gap-2 text-xs font-medium text-text-title">
-                <Image src="/usdc.svg" alt="USDC" width={20} height={20} className="h-5 w-5" />
-                {t("rateOther")}
-              </p>
+              <p className="mt-2 text-xs font-semibold text-brand-primary">{t("rateOther")}</p>
             </div>
 
             <div className="flex flex-col justify-center gap-5">

@@ -14,6 +14,7 @@ KYC en producción vía Zabio: https://www.zabio.xyz/i/bitwave (lib/config.ts �
 - Fuente principal: **Bitso** par `usdt_cop` (endpoint público, sin API key, tiempo real).
 - Respaldo: DolarApi USD (`co.dolarapi.com/v1/cotizaciones`) — OJO: solo refresca pocas
   veces al día, por eso NO se usa como principal.
+- La tasa es la MISMA para USDT y USDC (se paga igual en pesos por cada una).
 - Lógica compartida en `lib/tasa.ts` → `getTasa()`: spot − spread = tasaFinal.
 - `spread` se lee de Vercel Edge Config key `spread_trm` (default 150); editable en /admin.
 - Caché: `fetch` con `revalidate: 1200` (20 min) en Next.js Data Cache.

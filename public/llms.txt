@@ -17,6 +17,7 @@ BitWave S.A.S. es una empresa colombiana con sede en Medellín que opera dos lí
 - **Moneda de destino:** Pesos colombianos (COP)
 - **Formas de entrega:** Efectivo en punto físico o transferencia bancaria a cuenta colombiana (mismo día hábil)
 - **Monto mínimo:** Sin monto mínimo
+- **Tasa:** dinámica, cambia con el mercado; es la misma para USDT y USDC (se paga lo mismo en pesos por 1 USDT que por 1 USDC)
 - **Proceso KYC obligatorio:** Verificación de identidad y origen de fondos para todos los clientes
 - **Sistema SARLAFT:** Prevención de lavado de activos y financiación del terrorismo
 - **Tiempo:** KYC normalmente hasta 15 minutos; ya verificado, la operación por lo general toma menos de 5 minutos. Entrega de pesos en efectivo inmediata
