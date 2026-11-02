@@ -1,5 +1,5 @@
 import { getAllPosts, getPostBySlug } from "@/lib/blog"
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, Clock, ArrowLeft } from "lucide-react"
@@ -64,7 +64,13 @@ export default async function BlogPostPage({
 }) {
   const { slug, locale } = await params
   const post = getPostBySlug(slug, locale as "es" | "en")
-  if (!post) notFound()
+  if (!post) {
+    // El post existe en el otro idioma (p. ej. cookie de idioma distinto): llevamos al equivalente o al blog.
+    const other = getPostBySlug(slug, locale === "en" ? "es" : "en")
+    if (!other) notFound()
+    const pre = locale === "en" ? "/en" : ""
+    redirect(other.alternate ? `${pre}/blog/${other.alternate}` : `${pre}/blog`)
+  }
 
   const articleSchema = {
     "@context": "https://schema.org",

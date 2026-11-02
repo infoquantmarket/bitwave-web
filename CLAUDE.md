@@ -2,9 +2,11 @@
 
 ## Negocio
 BitWave S.A.S. (NIT 901.920.120-1) es una empresa de **soluciones tecnológicas**.
-Línea principal del sitio: compra **USDT y USDC** (también BTC) de clientes y entrega COP
+Línea principal del sitio: compra **USDT y USDC** de clientes y entrega COP
 (efectivo o transferencia). También es dueña de Tasa Directa (marketplace B2B de PCD).
 Redes soportadas: **Polygon, Tron, Solana, Ethereum y más**.
+BTC y otras cripto NO se reciben directamente (alta volatilidad de las que no son stablecoins): el cliente las convierte
+primero a USDT o USDC y luego las cambia por pesos con BitWave. Nunca decir que se compra/acepta BTC directamente.
 KYC obligatorio + SARLAFT. Puntos físicos en Medellín (Oviedo, Coltejer) y Envigado (Viva).
 KYC en producción vía Zabio: https://www.zabio.xyz/i/bitwave (lib/config.ts → zabioUrl).
 
@@ -85,6 +87,7 @@ KYC en producción vía Zabio: https://www.zabio.xyz/i/bitwave (lib/config.ts �
 - No afirmar que somos entidad vigilada por Superfinanciera
 - No lenguaje de inversión
 - No servicios de compra de cripto (solo compramos al cliente)
+- Solo se negocian USDT y USDC; BTC y otras cripto: conversión previa por el cliente (ver arriba)
 
 ## Estado de fases
 - [x] Fase 1: Setup

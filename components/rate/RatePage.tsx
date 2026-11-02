@@ -76,7 +76,7 @@ export default async function RatePage({ locale }: { locale: Locale }) {
     { t: t("g6t"), d: t("g6d") },
     { t: t("g7t"), d: t("g7d") },
   ]
-  const faqs = ["1", "2", "3", "4", "5", "6"].map((i) => ({
+  const faqs = ["1", "2", "3", "4", "5", "6", "7"].map((i) => ({
     q: t(`f${i}q` as "f1q"),
     a: t(`f${i}a` as "f1a"),
   }))
@@ -108,60 +108,63 @@ export default async function RatePage({ locale }: { locale: Locale }) {
 
       <PageNav />
 
-      {/* Hero: texto a la izquierda, tasa en vivo a la derecha */}
+      {/* Hero: título, luego la tasa como protagonista y los botones al lado */}
       <section id="tasa" className="scroll-mt-40 relative overflow-hidden bg-gradient-to-b from-brand-light to-white px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-16 lg:pb-20">
         <div aria-hidden="true" className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-accent/10 blur-3xl" />
-        <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">
-          <div>
-            <nav aria-label="Breadcrumb" className="text-sm text-text-body mb-5">
-              <Link href={home} className="hover:text-brand-primary">{t("breadcrumbHome")}</Link>
-              <span className="mx-2" aria-hidden="true">/</span>
-              <span className="font-medium text-text-title">{t("nav.rate")}</span>
-            </nav>
-            <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-text-title leading-tight tracking-tight">
-              {t("h1")}
-            </h1>
-            <p className="mt-5 text-lg text-text-body leading-relaxed max-w-xl">{t("sub")}</p>
-            <div className="mt-7 flex flex-col sm:flex-row gap-3">
-              <a href={siteConfig.zabioUrl} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
-                {t("ctaStart")}
-                <ArrowRight size={18} aria-hidden="true" />
-              </a>
-              <a href={wa} target="_blank" rel="noopener noreferrer" className={btnWhatsapp}>
-                <MessageCircle size={18} aria-hidden="true" />
-                {t("ctaWa")}
-              </a>
-            </div>
-            <ul className="mt-7 flex flex-wrap gap-2">
-              {[t("chip1"), t("chip2"), t("chip3")].map((c) => (
-                <li key={c} className="rounded-lg border border-brand-accent/20 bg-white px-3 py-1.5 text-sm font-medium text-brand-primary">
-                  {c}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="relative max-w-7xl mx-auto">
+          <nav aria-label="Breadcrumb" className="text-sm text-text-body mb-5">
+            <Link href={home} className="hover:text-brand-primary">{t("breadcrumbHome")}</Link>
+            <span className="mx-2" aria-hidden="true">/</span>
+            <span className="font-medium text-text-title">{t("nav.rate")}</span>
+          </nav>
+          <h1 className="max-w-4xl text-3xl sm:text-4xl xl:text-5xl font-bold text-text-title leading-tight tracking-tight">
+            {t("h1")}
+          </h1>
+          <p className="mt-4 text-lg text-text-body leading-relaxed max-w-2xl">{t("sub")}</p>
 
-          <div className="rounded-2xl border border-brand-accent/15 bg-white p-6 sm:p-8 shadow-[0_24px_60px_-24px_rgba(26,74,46,0.35)]">
-            <p className="text-sm font-semibold text-text-body">{t("rateTitle")}</p>
-            {tasa ? (
-              <>
-                <div className="mt-3 flex items-center gap-3">
-                  <Image src="/usdt.svg" alt="USDT" width={40} height={40} className="h-10 w-10 flex-shrink-0" />
-                  <p className="text-4xl sm:text-5xl font-bold text-brand-primary tabular-nums">
-                    ${tasa.tasaFinal.toLocaleString(locale === "en" ? "en-US" : "es-CO")}
-                    <span className="ml-2 text-lg font-semibold text-text-body">COP</span>
-                  </p>
-                </div>
-                <p className="mt-1 text-sm font-medium text-text-body">{t("ratePer")}</p>
-              </>
-            ) : (
-              <p className="mt-3 rounded-xl bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">{t("rateUnavailable")}</p>
-            )}
-            <p className="mt-5 text-xs leading-relaxed text-text-body border-t border-gray-100 pt-4">{t("rateNote")}</p>
-            <p className="mt-2 flex items-center gap-2 text-xs font-medium text-text-title">
-              <Image src="/usdc.svg" alt="USDC" width={20} height={20} className="h-5 w-5" />
-              {t("rateOther")}
-            </p>
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-6 lg:gap-8 items-stretch">
+            <div className="rounded-2xl border border-brand-accent/15 bg-white p-6 sm:p-9 shadow-[0_24px_60px_-24px_rgba(26,74,46,0.35)]">
+              <p className="text-sm font-semibold text-text-body">{t("rateTitle")}</p>
+              {tasa ? (
+                <>
+                  <div className="mt-4 flex items-center gap-4">
+                    <Image src="/usdt.svg" alt="USDT" width={56} height={56} className="h-12 w-12 sm:h-14 sm:w-14 flex-shrink-0" />
+                    <p className="text-5xl sm:text-6xl font-bold text-brand-primary tabular-nums leading-none">
+                      ${tasa.tasaFinal.toLocaleString(locale === "en" ? "en-US" : "es-CO")}
+                      <span className="ml-2 text-xl font-semibold text-text-body">COP</span>
+                    </p>
+                  </div>
+                  <p className="mt-2 text-sm font-medium text-text-body">{t("ratePer")}</p>
+                </>
+              ) : (
+                <p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">{t("rateUnavailable")}</p>
+              )}
+              <p className="mt-6 text-xs leading-relaxed text-text-body border-t border-gray-100 pt-4">{t("rateNote")}</p>
+              <p className="mt-2 flex items-center gap-2 text-xs font-medium text-text-title">
+                <Image src="/usdc.svg" alt="USDC" width={20} height={20} className="h-5 w-5" />
+                {t("rateOther")}
+              </p>
+            </div>
+
+            <div className="flex flex-col justify-center gap-5">
+              <div className="flex flex-col gap-3">
+                <a href={siteConfig.zabioUrl} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
+                  {t("ctaStart")}
+                  <ArrowRight size={18} aria-hidden="true" />
+                </a>
+                <a href={wa} target="_blank" rel="noopener noreferrer" className={btnWhatsapp}>
+                  <MessageCircle size={18} aria-hidden="true" />
+                  {t("ctaWa")}
+                </a>
+              </div>
+              <ul className="flex flex-wrap gap-2">
+                {[t("chip1"), t("chip2"), t("chip3")].map((c) => (
+                  <li key={c} className="rounded-lg border border-brand-accent/20 bg-white px-3 py-1.5 text-sm font-medium text-brand-primary">
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -190,6 +193,47 @@ export default async function RatePage({ locale }: { locale: Locale }) {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* Bitcoin y otras cripto: se convierten antes a USDT o USDC */}
+      <section id="bitcoin" className="scroll-mt-40 bg-brand-light px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14 items-center">
+          <div className="reveal">
+            <h2 className="text-3xl font-bold text-text-title tracking-tight">{t("btcTitle")}</h2>
+            <p className="mt-3 text-lg leading-relaxed text-text-body">{t("btcLead")}</p>
+            <ol className="mt-7 space-y-5">
+              {[
+                { t: t("btc1t"), d: t("btc1d") },
+                { t: t("btc2t"), d: t("btc2d") },
+                { t: t("btc3t"), d: t("btc3d") },
+              ].map((s2, i) => (
+                <li key={s2.t} className="flex gap-4">
+                  <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-brand-accent text-sm font-bold text-white">{i + 1}</span>
+                  <div>
+                    <h3 className="font-bold text-text-title">{s2.t}</h3>
+                    <p className="mt-0.5 text-sm leading-relaxed text-text-body">{s2.d}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="reveal space-y-4">
+            <div className="rounded-2xl bg-white p-6 shadow-[0_8px_30px_-16px_rgba(26,74,46,0.25)]">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 text-center">
+                <span className="flex-1 rounded-xl bg-gray-50 px-4 py-3 text-sm font-semibold text-text-title">{t("btcFlow1")}</span>
+                <ArrowRight size={18} aria-hidden="true" className="mx-auto rotate-90 sm:rotate-0 flex-shrink-0 text-brand-accent" />
+                <span className="flex-1 rounded-xl bg-brand-light px-4 py-3 text-sm font-bold text-brand-primary">{t("btcFlow2")}</span>
+                <ArrowRight size={18} aria-hidden="true" className="mx-auto rotate-90 sm:rotate-0 flex-shrink-0 text-brand-accent" />
+                <span className="flex-1 rounded-xl bg-brand-primary px-4 py-3 text-sm font-bold text-white">{t("btcFlow3")}</span>
+              </div>
+            </div>
+            <div className="rounded-2xl border border-brand-accent/20 bg-white/60 p-6">
+              <h3 className="font-bold text-text-title">{t("btcWhyT")}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-text-body">{t("btcWhy")}</p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -3,6 +3,8 @@ import Image from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
 import { getWhatsAppUrl, siteConfig } from "@/lib/config"
 import { ArrowRight, MessageCircle, MapPin } from "lucide-react"
+import Link from "next/link"
+import { ratePath } from "@/lib/rate"
 import RateDisplay from "./RateDisplay"
 import RateSkeleton from "./RateSkeleton"
 
@@ -73,6 +75,12 @@ export default async function HeroSection() {
             <span className="text-xs text-text-body/50 basis-full lg:basis-auto text-center lg:text-left">
               {t("coinsNetworks")}
             </span>
+            <Link
+              href={`${ratePath(locale)}#bitcoin`}
+              className="basis-full text-center lg:text-left text-sm font-medium text-brand-primary underline-offset-4 hover:underline"
+            >
+              {t("coinsNote")} →
+            </Link>
           </div>
         </div>
 

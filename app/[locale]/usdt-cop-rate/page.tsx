@@ -1,5 +1,6 @@
-import { notFound } from "next/navigation"
+import { redirect } from "next/navigation"
 import type { Metadata } from "next"
+import { ratePath } from "@/lib/rate"
 import RatePage, { buildRateMetadata } from "@/components/rate/RatePage"
 
 // Ruta en inglés: /en/usdt-cop-rate. En español la ruta es /tasa-de-compra.
@@ -19,6 +20,6 @@ export async function generateMetadata({
 
 export default async function RateEnPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  if (locale !== "en") notFound()
+  if (locale !== "en") redirect(ratePath("es"))
   return <RatePage locale="en" />
 }

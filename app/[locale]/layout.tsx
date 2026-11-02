@@ -54,8 +54,8 @@ export default async function LocaleLayout({
     image: `${siteConfig.siteUrl}${loc.image}`,
     description:
       isEn
-        ? "Exchange of USDT, USDC and Bitcoin for Colombian pesos (COP), in cash or bank transfer. Full KYC process and SARLAFT system."
-        : "Intercambio de USDT, USDC y Bitcoin por pesos colombianos (COP) en efectivo o transferencia bancaria. Proceso KYC completo y sistema SARLAFT.",
+        ? "Exchange of USDT and USDC for Colombian pesos (COP), in cash or bank transfer. Full KYC process and SARLAFT system."
+        : "Intercambio de USDT y USDC por pesos colombianos (COP) en efectivo o transferencia bancaria. Proceso KYC completo y sistema SARLAFT.",
     url: `${siteConfig.siteUrl}${locationPath(loc.id, locale)}`,
     telephone: siteConfig.whatsappNumber,
     address: {
@@ -72,7 +72,7 @@ export default async function LocaleLayout({
     openingHours: loc.openingHours,
     currenciesAccepted: "COP",
     priceRange: "$$",
-    knowsAbout: ["USDT", "USDC", "Bitcoin","criptoactivos", "cambio de divisas", "pesos colombianos", "Polygon", "Tron", "Solana", "Ethereum"],
+    knowsAbout: ["USDT", "USDC", "stablecoins", "criptoactivos", "cambio de divisas", "pesos colombianos", "Polygon", "Tron", "Solana", "Ethereum"],
   }))
 
   const postAlternates = getPostAlternates()

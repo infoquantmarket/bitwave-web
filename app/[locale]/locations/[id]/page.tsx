@@ -1,7 +1,7 @@
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 import type { Metadata } from "next"
 import LocationPage, { buildLocationMetadata } from "@/components/locations/LocationPage"
-import { getLocation, locations } from "@/lib/locations"
+import { getLocation, locationPath, locations } from "@/lib/locations"
 
 // Ruta en inglés: /en/locations/[id]. En español la ruta es /sedes/[id].
 export function generateStaticParams() {
@@ -24,6 +24,7 @@ export default async function LocationEnPage({
   params: Promise<{ locale: string; id: string }>
 }) {
   const { locale, id } = await params
-  if (locale !== "en" || !getLocation(id)) notFound()
+  if (!getLocation(id)) notFound()
+  if (locale !== "en") redirect(locationPath(id, "es"))
   return <LocationPage id={id} locale="en" />
 }
