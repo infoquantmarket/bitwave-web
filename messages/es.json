@@ -18,7 +18,7 @@
     "rateLabel": "Tasa aproximada de compra",
     "rateDisclaimer": "Las tasas están sujetas a cambios sin previo aviso. Valida la tasa vía WhatsApp o en nuestras oficinas.",
     "coinsLabel": "Negociamos:",
-    "coinsNetworks": "En redes Polygon, Tron, Solana, Ethereum y más",
+    "coinsNetworks": "En las redes Polygon, Ethereum, Tron y Solana",
     "ctaNegotiate": "Iniciar negociación",
     "imageAlt": "Persona realizando un cambio de USDT en Medellín",
     "rateMore": "Ver tasa, redes y guía",
@@ -52,7 +52,7 @@
     "touristsBadge": "Aceptamos pasaporte",
     "localsTitle": "Locales y profesionales",
     "localsDesc": "Traders, freelancers o receptores de remesas cripto que quieren convertir USDT o USDC a pesos con respaldo legal y cumplimiento normativo.",
-    "localsBadge": "USDT · USDC · Polygon · Tron · Solana"
+    "localsBadge": "USDT · USDC · Polygon · Ethereum · Tron · Solana"
   },
   "esim": {
     "badge": "Cobertura en 190+ países",
@@ -104,7 +104,7 @@
     "q6": "Soy turista y no tengo cédula colombiana, ¿me atienden?",
     "a6": "Sí. Atendemos a turistas internacionales con pasaporte vigente. Es el documento oficial reconocido en nuestro proceso KYC para clientes extranjeros.",
     "q7": "¿Qué monedas negocian? ¿Reciben Bitcoin?",
-    "a7": "Negociamos USDT y USDC, en redes como Polygon, Ethereum, Tron y Solana. No recibimos Bitcoin ni otras criptomonedas directamente, por la alta volatilidad de las que no son stablecoins. Si tienes BTC u otra cripto y la quieres en pesos, conviértela tú primero a USDT o USDC y luego cámbiala con nosotros. Confirma la red y la dirección con nuestro equipo antes de enviar.",
+    "a7": "Negociamos USDT y USDC, en las redes Polygon, Ethereum, Tron y Solana. No recibimos Bitcoin ni otras criptomonedas directamente, por la alta volatilidad de las que no son stablecoins. Si tienes BTC u otra cripto y la quieres en pesos, conviértela tú primero a USDT o USDC y luego cámbiala con nosotros. Confirma la red y la dirección con nuestro equipo antes de enviar.",
     "q8": "¿Cómo recibo mis pesos?",
     "a8": "Puedes recibirlos en efectivo en nuestros puntos de atención de Oviedo, Viva Envigado y Coltejer, o mediante transferencia bancaria. Confirma la modalidad al cotizar.",
     "q9": "¿Qué es Zabio?",
@@ -211,7 +211,7 @@
     "band1Body": "Si te registras antes, tu operación avanza más rápido el día que quieras cambiar.",
     "bandRegister": "Registrarme y verificarme",
     "netTitle": "Redes por las que recibimos",
-    "netSub": "Recibimos USDT y USDC por estas redes principales. Confirma con nuestro equipo la red y la dirección de recepción antes de enviar.",
+    "netSub": "Recibimos USDT y USDC por estas cuatro redes. Confirma con nuestro equipo la red y la dirección de recepción antes de enviar.",
     "netLabels": {
       "standard": "Estándar",
       "token": "Token de la comisión",

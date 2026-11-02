@@ -4,7 +4,7 @@
 BitWave S.A.S. (NIT 901.920.120-1) es una empresa de **soluciones tecnológicas**.
 Línea principal del sitio: compra **USDT y USDC** de clientes y entrega COP
 (efectivo o transferencia). También es dueña de Tasa Directa (marketplace B2B de PCD).
-Redes soportadas: **Polygon, Tron, Solana, Ethereum y más**.
+Redes soportadas (lista completa): **Polygon, Ethereum, Tron y Solana**.
 BTC y otras cripto NO se reciben directamente (alta volatilidad de las que no son stablecoins): el cliente las convierte
 primero a USDT o USDC y luego las cambia por pesos con BitWave. Nunca decir que se compra/acepta BTC directamente.
 KYC obligatorio + SARLAFT. Puntos físicos en Medellín (Oviedo, Coltejer) y Envigado (Viva).

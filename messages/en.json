@@ -18,7 +18,7 @@
     "rateLabel": "Approximate buying rate",
     "rateDisclaimer": "Rates are subject to change without notice. Confirm the rate via WhatsApp or at our offices.",
     "coinsLabel": "We trade:",
-    "coinsNetworks": "On Polygon, Tron, Solana, Ethereum and more",
+    "coinsNetworks": "On the Polygon, Ethereum, Tron and Solana networks",
     "ctaNegotiate": "Start negotiation",
     "imageAlt": "Person exchanging USDT for pesos in Medellín",
     "rateMore": "See rate, networks and guide",
@@ -52,7 +52,7 @@
     "touristsBadge": "Passport accepted",
     "localsTitle": "Locals & professionals",
     "localsDesc": "Traders, freelancers, or crypto remittance recipients who want to convert USDT or USDC to pesos with legal backing and regulatory compliance.",
-    "localsBadge": "USDT · USDC · Polygon · Tron · Solana"
+    "localsBadge": "USDT · USDC · Polygon · Ethereum · Tron · Solana"
   },
   "esim": {
     "badge": "Coverage in 190+ countries",
@@ -104,7 +104,7 @@
     "q6": "I'm a tourist without a Colombian ID — can you help me?",
     "a6": "Yes. We serve international tourists with a valid passport. It is the official document recognized in our KYC process for foreign clients.",
     "q7": "Which coins do you trade? Do you accept Bitcoin?",
-    "a7": "We trade USDT and USDC, on networks such as Polygon, Ethereum, Tron and Solana. We do not receive Bitcoin or other cryptocurrencies directly, because of the high volatility of those that are not stablecoins. If you hold BTC or another crypto and want pesos, first convert it to USDT or USDC yourself and then exchange it with us. Confirm the network and address with our team before sending.",
+    "a7": "We trade USDT and USDC, on the Polygon, Ethereum, Tron and Solana networks. We do not receive Bitcoin or other cryptocurrencies directly, because of the high volatility of those that are not stablecoins. If you hold BTC or another crypto and want pesos, first convert it to USDT or USDC yourself and then exchange it with us. Confirm the network and address with our team before sending.",
     "q8": "How do I receive my pesos?",
     "a8": "You can receive them in cash at our locations in Oviedo, Viva Envigado and Coltejer, or by bank transfer. Confirm the option when you request your quote.",
     "q9": "What is Zabio?",
@@ -211,7 +211,7 @@
     "band1Body": "If you register first, your operation moves faster on the day you want to exchange.",
     "bandRegister": "Register and get verified",
     "netTitle": "Networks we receive on",
-    "netSub": "We receive USDT and USDC on these main networks. Confirm the network and receiving address with our team before sending.",
+    "netSub": "We receive USDT and USDC on these four networks. Confirm the network and receiving address with our team before sending.",
     "netLabels": {
       "standard": "Standard",
       "token": "Fee token",

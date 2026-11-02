@@ -6,13 +6,13 @@
 
 BitWave S.A.S. es una empresa colombiana con sede en Medellín que opera dos líneas de negocio tecnológicas:
 
-1. **Intercambio de USDT y USDC por pesos colombianos** (bitwaveco.com) — Compra USDT y USDC en redes como Polygon, Tron, Solana, Ethereum y otras, y los convierte a pesos colombianos (COP) en efectivo o transferencia bancaria. Atiende turistas internacionales y locales. Proceso KYC completo y sistema SARLAFT implementado.
+1. **Intercambio de USDT y USDC por pesos colombianos** (bitwaveco.com) — Compra USDT y USDC en las redes Polygon, Ethereum, Tron y Solana, y los convierte a pesos colombianos (COP) en efectivo o transferencia bancaria. Atiende turistas internacionales y locales. Proceso KYC completo y sistema SARLAFT implementado.
 
 2. **Tasa Directa** (tasadirecta.com) — Marketplace B2B para Profesionales de Compra y Venta de Divisas (PCD) autorizados por la DIAN en Colombia.
 
 ## Servicio de cambio de criptoactivos
 
-- **Criptomonedas que negocia:** únicamente las stablecoins USDT y USDC, en redes como Polygon, Tron (TRC20), Solana, Ethereum (ERC20) y otras
+- **Criptomonedas que negocia:** únicamente las stablecoins USDT y USDC, en las redes Polygon, Ethereum (ERC20), Tron (TRC20) y Solana
 - **Bitcoin y otras criptomonedas:** no se reciben directamente por su alta volatilidad. Quien tiene BTC u otra cripto la convierte primero a USDT o USDC y luego la cambia por pesos con BitWave
 - **Moneda de destino:** Pesos colombianos (COP)
 - **Formas de entrega:** Efectivo en punto físico o transferencia bancaria a cuenta colombiana (mismo día hábil)
