@@ -69,7 +69,7 @@ export default async function LearnMoreSection() {
                   </p>
                   <span
                     className={`mt-4 inline-block rounded-md px-2 py-0.5 text-xs font-semibold ${
-                      n.costLevel === "high" ? "bg-amber-100 text-amber-900" : "bg-brand-light text-brand-primary"
+                      n.costLevel !== "low" ? "bg-amber-100 text-amber-900" : "bg-brand-light text-brand-primary"
                     }`}
                   >
                     {r(`costLevels.${n.costLevel}` as "costLevels.low")}

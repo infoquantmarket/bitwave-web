@@ -148,7 +148,7 @@
     "directions": "Cómo llegar",
     "whatsapp": "Cotizar por WhatsApp",
     "start": "Iniciar negociación",
-    "howTitle": "¿Cómo funciona en esta sede?",
+    "howTitle": "Cómo llegar",
     "how1": "Consulta tu cotización por WhatsApp o inicia tu negociación en línea. Indícanos el criptoactivo y el monto.",
     "how2": "Completa la verificación de identidad y del origen de los fondos, como lo exige la ley.",
     "how3": "Confirma con nuestro equipo la red y las instrucciones de envío antes de enviar tus criptoactivos.",
@@ -173,7 +173,9 @@
     "f5a": "No. Son empresas diferentes. BitWave opera este punto de atención dentro de las oficinas de Nutifinanzas.",
     "othersTitle": "Otras sedes de BitWave",
     "metaTitle": "Cambiar USDT y USDC en {zone}",
-    "metaDesc": "Cambia USDT y USDC por pesos colombianos en {name} ({zone}). {address}. {hours}. Efectivo o transferencia, con verificación KYC."
+    "metaDesc": "Cambia USDT y USDC por pesos colombianos en {name} ({zone}). {address}. {hours}. Efectivo o transferencia, con verificación KYC.",
+    "f6q": "¿Cómo llego a {short}?",
+    "f6a": "{howTo}"
   },
   "ratePage": {
     "metaTitle": "Tasa de compra de USDT y USDC",
@@ -222,11 +224,11 @@
       "fit": "Ideal para",
       "tip": "Ten en cuenta"
     },
-    "netDisclaimer": "Los costos son orientativos y los cobra la red, no BitWave. Cambian con la congestión y con el precio del token de la red. Verifícalos en tu wallet antes de confirmar.",
+    "netDisclaimer": "Rangos orientativos calculados con datos de cada red del 2 de noviembre de 2026. Los cobra la red, no BitWave, y cambian con la congestión y con el precio del token de la red. Verifícalos en tu wallet antes de confirmar.",
     "costLevels": {
       "low": "Muy bajo",
-      "lowmid": "Bajo a medio",
-      "high": "Alto"
+      "mid": "Medio",
+      "variable": "Variable"
     },
     "net": {
       "polygon": {
@@ -234,7 +236,7 @@
         "standard": "Polygon PoS",
         "token": "POL",
         "speed": "Segundos",
-        "cost": "Suele costar centavos de dólar.",
+        "cost": "Menos de un centavo de dólar por envío.",
         "address": "Empieza por 0x y tiene 42 caracteres.",
         "fit": "Envíos frecuentes con comisión baja.",
         "tip": "Usa el mismo formato de dirección que Ethereum. Elige bien la red al enviar."
@@ -244,9 +246,9 @@
         "standard": "ERC-20",
         "token": "ETH",
         "speed": "Segundos a pocos minutos",
-        "cost": "Puede ir desde cerca de 1 USD hasta decenas de dólares en momentos de congestión.",
+        "cost": "Hoy suele costar centavos de dólar, pero es la más variable: en momentos de congestión puede subir a varios dólares o más.",
         "address": "Empieza por 0x y tiene 42 caracteres.",
-        "fit": "Montos altos, donde la comisión pesa menos.",
+        "fit": "Montos altos, donde la variación de la comisión pesa menos.",
         "tip": "Revisa la comisión que muestra tu wallet antes de confirmar."
       },
       "tron": {
@@ -254,9 +256,9 @@
         "standard": "TRC-20",
         "token": "TRX",
         "speed": "Segundos a un minuto",
-        "cost": "De 1 a 5 USD aproximadamente, según la energía de la cuenta.",
+        "cost": "Alrededor de 2 a 4 USD si la cuenta no tiene energía, y menos si la tiene.",
         "address": "Empieza por T y tiene 34 caracteres.",
-        "fit": "Envíos de USDT de monto medio.",
+        "fit": "Montos medios o altos, donde una comisión fija pesa menos.",
         "tip": "Necesitas TRX en tu wallet para pagar la comisión."
       },
       "solana": {
@@ -264,7 +266,7 @@
         "standard": "SPL",
         "token": "SOL",
         "speed": "Segundos",
-        "cost": "Suele costar una fracción de centavo.",
+        "cost": "Menos de un centavo de dólar. Si la wallet de destino no tiene cuenta del token, se paga una sola vez cerca de 0,2 USD por crearla.",
         "address": "Cadena de 32 a 44 caracteres, sin 0x.",
         "fit": "Envíos rápidos y de comisión muy baja.",
         "tip": "Algunas wallets piden un poco de SOL para la comisión y para crear la cuenta del token."
@@ -316,7 +318,7 @@
     "f3q": "¿Qué pasa si envío por una red equivocada?",
     "f3a": "Los fondos pueden perderse o requerir un proceso de recuperación que no siempre es posible. Por eso pedimos confirmar la red y la dirección antes de cada envío.",
     "f4q": "¿Cuánto cuesta enviar?",
-    "f4a": "La comisión la cobra la red, no BitWave, y cambia con la congestión. Polygon y Solana suelen ser las más económicas. Revisa el costo exacto en tu wallet antes de confirmar.",
+    "f4a": "La comisión la cobra la red, no BitWave, y cambia con la congestión. Polygon y Solana suelen ser las más económicas, Tron tiene una comisión media y Ethereum es la más variable. Revisa el costo exacto en tu wallet antes de confirmar.",
     "f5q": "¿Necesito registrarme antes de cambiar?",
     "f5a": "La verificación de identidad (KYC) es obligatoria para todos. Puedes adelantarla registrándote en línea para que tu operación avance más rápido.",
     "f6q": "¿Hay un monto mínimo?",

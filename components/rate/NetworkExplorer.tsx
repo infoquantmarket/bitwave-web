@@ -6,8 +6,8 @@ import { networks, type CostLevel, type NetworkId } from "@/lib/rate"
 
 const costStyle: Record<CostLevel, string> = {
   low: "bg-brand-light text-brand-primary",
-  lowmid: "bg-brand-light text-brand-primary",
-  high: "bg-amber-50 text-amber-800",
+  mid: "bg-amber-50 text-amber-800",
+  variable: "bg-amber-50 text-amber-800",
 }
 
 export default function NetworkExplorer() {

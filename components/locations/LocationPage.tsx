@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
-import { ArrowRight, ChevronDown, Clock, ExternalLink, MapPin, MessageCircle } from "lucide-react"
+import { ArrowRight, ChevronDown, Clock, ExternalLink, MapPin, MessageCircle, Navigation } from "lucide-react"
 import { getWhatsAppUrl, siteConfig } from "@/lib/config"
 import { getLocation, locationPath, locations, type Locale } from "@/lib/locations"
 
@@ -55,8 +55,9 @@ export default async function LocationPage({ id, locale }: { id: string; locale:
     address: loc.address,
     city: loc.city,
     hours: loc.hours[locale],
+    howTo: loc.howTo[locale],
   }
-  const faqs = ["1", "2", "3", "4", "5"].map((k) => ({
+  const faqs = ["1", "2", "3", "4", "5", "6"].map((k) => ({
     q: t(`f${k}q` as "f1q", faqParams),
     a: t(`f${k}a` as "f1a", faqParams),
   }))
@@ -147,6 +148,13 @@ export default async function LocationPage({ id, locale }: { id: string; locale:
               <div>
                 <h2 className="font-bold text-text-title">{t("hours")}</h2>
                 <p className="text-text-body">{loc.hours[locale]}</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Navigation size={20} className="mt-0.5 flex-shrink-0 text-brand-accent" aria-hidden="true" />
+              <div>
+                <h2 className="font-bold text-text-title">{t("howTitle")}</h2>
+                <p className="leading-relaxed text-text-body">{loc.howTo[locale]}</p>
               </div>
             </div>
             <a

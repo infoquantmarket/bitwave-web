@@ -148,7 +148,7 @@
     "directions": "Get directions",
     "whatsapp": "Get a quote on WhatsApp",
     "start": "Start negotiation",
-    "howTitle": "How does it work at this location?",
+    "howTitle": "How to get there",
     "how1": "Get a quote on WhatsApp or start your negotiation online. Tell us the crypto-asset and the amount.",
     "how2": "Complete identity and source-of-funds verification, as required by law.",
     "how3": "Confirm the network and sending instructions with our team before sending your crypto-assets.",
@@ -173,7 +173,9 @@
     "f5a": "No. They are different companies. BitWave operates this service point inside the Nutifinanzas offices.",
     "othersTitle": "Other BitWave locations",
     "metaTitle": "Exchange USDT and USDC in {zone}",
-    "metaDesc": "Exchange USDT and USDC for Colombian pesos at {name} ({zone}). {address}. {hours}. Cash or bank transfer, with KYC verification."
+    "metaDesc": "Exchange USDT and USDC for Colombian pesos at {name} ({zone}). {address}. {hours}. Cash or bank transfer, with KYC verification.",
+    "f6q": "How do I get to {short}?",
+    "f6a": "{howTo}"
   },
   "ratePage": {
     "metaTitle": "USDT and USDC buying rate in pesos",
@@ -222,11 +224,11 @@
       "fit": "Best for",
       "tip": "Keep in mind"
     },
-    "netDisclaimer": "Costs are approximate and charged by the network, not by BitWave. They change with congestion and the price of the network token. Check them in your wallet before confirming.",
+    "netDisclaimer": "Approximate ranges calculated with each network data from November 2, 2026. The network charges them, not BitWave, and they change with congestion and the price of the network token. Check them in your wallet before confirming.",
     "costLevels": {
       "low": "Very low",
-      "lowmid": "Low to medium",
-      "high": "High"
+      "mid": "Medium",
+      "variable": "Variable"
     },
     "net": {
       "polygon": {
@@ -234,7 +236,7 @@
         "standard": "Polygon PoS",
         "token": "POL",
         "speed": "Seconds",
-        "cost": "Usually costs a few cents of a dollar.",
+        "cost": "Less than one cent of a dollar per transfer.",
         "address": "Starts with 0x and has 42 characters.",
         "fit": "Frequent transfers with low fees.",
         "tip": "It uses the same address format as Ethereum. Choose the network carefully when sending."
@@ -244,9 +246,9 @@
         "standard": "ERC-20",
         "token": "ETH",
         "speed": "Seconds to a few minutes",
-        "cost": "Can range from around 1 USD to tens of dollars during congestion.",
+        "cost": "Today it usually costs cents of a dollar, but it is the most variable: during congestion it can rise to several dollars or more.",
         "address": "Starts with 0x and has 42 characters.",
-        "fit": "Large amounts, where the fee weighs less.",
+        "fit": "Large amounts, where fee variation weighs less.",
         "tip": "Check the fee your wallet shows before confirming."
       },
       "tron": {
@@ -254,9 +256,9 @@
         "standard": "TRC-20",
         "token": "TRX",
         "speed": "Seconds to a minute",
-        "cost": "Roughly 1 to 5 USD, depending on the account energy.",
+        "cost": "Around 2 to 4 USD if the account has no energy, and less if it does.",
         "address": "Starts with T and has 34 characters.",
-        "fit": "Mid-size USDT transfers.",
+        "fit": "Mid-size or large amounts, where a fixed fee weighs less.",
         "tip": "You need TRX in your wallet to pay the fee."
       },
       "solana": {
@@ -264,7 +266,7 @@
         "standard": "SPL",
         "token": "SOL",
         "speed": "Seconds",
-        "cost": "Usually a fraction of a cent.",
+        "cost": "Less than one cent of a dollar. If the destination wallet has no token account, a one-time fee of about 0.2 USD is paid to create it.",
         "address": "A string of 32 to 44 characters, no 0x.",
         "fit": "Fast transfers with very low fees.",
         "tip": "Some wallets ask for a little SOL to pay the fee and to create the token account."
@@ -316,7 +318,7 @@
     "f3q": "What happens if I send on the wrong network?",
     "f3a": "The funds can be lost or may need a recovery process that is not always possible. That is why we ask you to confirm the network and the address before every transfer.",
     "f4q": "How much does it cost to send?",
-    "f4a": "The fee is charged by the network, not by BitWave, and it changes with congestion. Polygon and Solana are usually the cheapest. Check the exact cost in your wallet before confirming.",
+    "f4a": "The fee is charged by the network, not by BitWave, and it changes with congestion. Polygon and Solana are usually the cheapest, Tron has a medium fee and Ethereum is the most variable. Check the exact cost in your wallet before confirming.",
     "f5q": "Do I need to register before exchanging?",
     "f5a": "Identity verification (KYC) is mandatory for everyone. You can do it ahead of time by registering online so your operation moves faster.",
     "f6q": "Is there a minimum amount?",
