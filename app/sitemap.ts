@@ -2,6 +2,7 @@ import { MetadataRoute } from "next"
 import { siteConfig } from "@/lib/config"
 import { getAllPosts } from "@/lib/blog"
 import { locations, locationPath } from "@/lib/locations"
+import { ratePath } from "@/lib/rate"
 
 // Fecha del último cambio real de contenido en home y páginas de sede.
 // Actualizar SOLO cuando cambie ese contenido (nunca new Date()).
@@ -19,6 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/en`, lastModified: SITE_CONTENT_UPDATED, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/blog`, lastModified: latest(esPosts), changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/en/blog`, lastModified: latest(enPosts), changeFrequency: "weekly", priority: 0.7 },
+  ]
+
+  const ratePages: MetadataRoute.Sitemap = [
+    { url: `${base}${ratePath("es")}`, lastModified: SITE_CONTENT_UPDATED, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}${ratePath("en")}`, lastModified: SITE_CONTENT_UPDATED, changeFrequency: "weekly", priority: 0.8 },
   ]
 
   const locationPages: MetadataRoute.Sitemap = locations.flatMap((loc) => [
@@ -41,5 +47,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 
-  return [...staticPages, ...locationPages, ...posts]
+  return [...staticPages, ...ratePages, ...locationPages, ...posts]
 }

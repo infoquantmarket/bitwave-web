@@ -21,6 +21,10 @@ BitWave S.A.S. es una empresa colombiana con sede en Medellín que opera dos lí
 - **Tiempo:** KYC normalmente hasta 15 minutos; ya verificado, la operación por lo general toma menos de 5 minutos. Entrega de pesos en efectivo inmediata
 - **Documentos aceptados:** Cédula de ciudadanía (colombianos) o pasaporte (turistas extranjeros)
 
+## Tasa de compra y redes
+
+- Página de tasa aproximada, negociación, redes (Polygon, Ethereum, Tron, Solana) y guía para enviar criptoactivos: https://www.bitwaveco.com/tasa-de-compra · https://www.bitwaveco.com/en/usdt-cop-rate
+
 ## Ubicaciones físicas (Medellín y Envigado, Colombia)
 
 Todos los puntos operan dentro de las oficinas de NUTIFINANZAS:

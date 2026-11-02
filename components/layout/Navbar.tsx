@@ -1,5 +1,7 @@
 "use client"
 import Image from "next/image"
+import NextLink from "next/link"
+import { ratePath } from "@/lib/rate"
 import { useTranslations, useLocale } from "next-intl"
 import { Link, useRouter, usePathname } from "@/i18n/navigation"
 import { getWhatsAppUrl, siteConfig } from "@/lib/config"
@@ -8,12 +10,39 @@ import { useState } from "react"
 
 const navLinks = [
   { key: "howItWorks", href: "/#como-funciona", external: false },
+  { key: "rate", href: "/tasa-de-compra", external: false },
   { key: "locations", href: "/#ubicaciones", external: false },
   { key: "esim", href: siteConfig.esimUrl, external: true },
   { key: "blog", href: "/blog", external: false },
   { key: "faq", href: "/#faq", external: false },
   { key: "contact", href: "/#contacto", external: false },
 ] as const
+
+function NavLink({
+  link,
+  locale,
+  children,
+  ...rest
+}: {
+  link: { key: string; href: string }
+  locale: string
+  children: React.ReactNode
+  className?: string
+  onClick?: () => void
+}) {
+  if (link.key === "rate") {
+    return (
+      <NextLink href={ratePath(locale)} {...rest}>
+        {children}
+      </NextLink>
+    )
+  }
+  return (
+    <Link href={link.href as never} {...rest}>
+      {children}
+    </Link>
+  )
+}
 
 type PostAlternates = Record<"es" | "en", Record<string, string>>
 
@@ -29,7 +58,9 @@ export default function Navbar({ postAlternates }: { postAlternates?: PostAltern
     let target = pathname
     const loc = pathname.match(/^\/(?:sedes|locations)\/([^/]+)$/)
     const post = pathname.match(/^\/blog\/([^/]+)$/)
-    if (loc) {
+    if (pathname === "/tasa-de-compra" || pathname === "/usdt-cop-rate") {
+      target = nextLocale === "en" ? "/usdt-cop-rate" : "/tasa-de-compra"
+    } else if (loc) {
       target = nextLocale === "en" ? `/locations/${loc[1]}` : `/sedes/${loc[1]}`
     } else if (post) {
       const alt = postAlternates?.[locale as "es" | "en"]?.[post[1]]
@@ -67,12 +98,13 @@ export default function Navbar({ postAlternates }: { postAlternates?: PostAltern
               </li>
             ) : (
               <li key={link.key}>
-                <Link
-                  href={link.href}
+                <NavLink
+                  link={link}
+                  locale={locale}
                   className="text-sm text-text-body hover:text-brand-primary font-medium transition-colors"
                 >
                   {t(link.key)}
-                </Link>
+                </NavLink>
               </li>
             )
           )}
@@ -119,13 +151,14 @@ export default function Navbar({ postAlternates }: { postAlternates?: PostAltern
                 </li>
               ) : (
                 <li key={link.key}>
-                  <Link
-                    href={link.href}
+                  <NavLink
+                    link={link}
+                    locale={locale}
                     className="block text-sm text-text-body hover:text-brand-primary font-medium py-1"
                     onClick={() => setOpen(false)}
                   >
                     {t(link.key)}
-                  </Link>
+                  </NavLink>
                 </li>
               )
             )}
