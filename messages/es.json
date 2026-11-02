@@ -321,5 +321,15 @@
     "f6a": "No. En BitWave no exigimos un monto mínimo. Confirma la cotización para la cantidad que deseas cambiar.",
     "finalTitle": "¿Listo para cambiar?",
     "finalBody": "Inicia tu negociación en línea o escríbenos por WhatsApp y te acompañamos."
+  },
+  "learnMore": {
+    "title": "Conoce más sobre el proceso, las redes y la tasa",
+    "body": "Todo lo que necesitas saber antes de enviar tus criptoactivos, reunido en una sola página.",
+    "topic1": "Cómo negociamos la tasa contigo",
+    "topic2": "Redes que recibimos y sus costos orientativos",
+    "topic3": "Guía paso a paso para enviar entre wallets",
+    "cta": "Ver tasa, redes y guía",
+    "networksLabel": "Redes por las que recibimos",
+    "note": "Costos orientativos. Los cobra la red y cambian con la congestión."
   }
 }

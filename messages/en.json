@@ -321,5 +321,15 @@
     "f6a": "No. BitWave does not require a minimum amount. Confirm the quote for the amount you want to exchange.",
     "finalTitle": "Ready to exchange?",
     "finalBody": "Start your negotiation online or message us on WhatsApp and we will guide you."
+  },
+  "learnMore": {
+    "title": "Learn more about the process, networks and rate",
+    "body": "Everything you need to know before sending your crypto-assets, gathered on a single page.",
+    "topic1": "How we negotiate the rate with you",
+    "topic2": "Networks we receive on and their approximate costs",
+    "topic3": "Step-by-step guide to sending between wallets",
+    "cta": "See rate, networks and guide",
+    "networksLabel": "Networks we receive on",
+    "note": "Approximate costs. The network charges them and they change with congestion."
   }
 }

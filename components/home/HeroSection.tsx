@@ -3,8 +3,6 @@ import Image from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
 import { getWhatsAppUrl, siteConfig } from "@/lib/config"
 import { ArrowRight, MessageCircle, MapPin } from "lucide-react"
-import Link from "next/link"
-import { ratePath } from "@/lib/rate"
 import RateDisplay from "./RateDisplay"
 import RateSkeleton from "./RateSkeleton"
 
@@ -28,12 +26,6 @@ export default async function HeroSection() {
             <Suspense fallback={<RateSkeleton />}>
               <RateDisplay />
             </Suspense>
-            <Link
-              href={ratePath(locale)}
-              className="ml-4 self-center text-sm font-semibold text-brand-accent hover:text-brand-primary transition-colors"
-            >
-              {t("rateMore")} →
-            </Link>
           </div>
 
           {/* CTAs */}
