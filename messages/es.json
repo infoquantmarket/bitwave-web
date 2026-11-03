@@ -56,6 +56,12 @@
     "localsDesc": "Traders, freelancers o receptores de remesas cripto que quieren convertir USDT o USDC a pesos con respaldo legal y cumplimiento normativo.",
     "localsBadge": "USDT · USDC · Polygon · Ethereum · Tron · Solana"
   },
+  "walletHome": {
+    "badge": "Servicio gratuito",
+    "title": "Revisa una billetera antes de enviar o recibir",
+    "sub": "Pega una dirección de Ethereum, Polygon, Tron o Solana y mira si aparece en la lista de sanciones OFAC o tiene alertas de riesgo. Es gratis, no pide registro y no guardamos la dirección.",
+    "more": "Cómo funciona el verificador"
+  },
   "esim": {
     "badge": "Cobertura en 190+ países",
     "title": "¿Vienes de viaje? Conéctate desde el primer minuto",

@@ -56,6 +56,12 @@
     "localsDesc": "Traders, freelancers, or crypto remittance recipients who want to convert USDT or USDC to pesos with legal backing and regulatory compliance.",
     "localsBadge": "USDT · USDC · Polygon · Ethereum · Tron · Solana"
   },
+  "walletHome": {
+    "badge": "Free service",
+    "title": "Check a wallet before you send or receive",
+    "sub": "Paste an Ethereum, Polygon, Tron or Solana address and see whether it appears on the OFAC sanctions list or carries risk alerts. It's free, needs no sign-up, and we don't store the address.",
+    "more": "How the checker works"
+  },
   "esim": {
     "badge": "Coverage in 190+ countries",
     "title": "Traveling? Stay connected from minute one",
