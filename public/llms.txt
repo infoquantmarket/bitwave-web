@@ -26,6 +26,7 @@ BitWave S.A.S. es una empresa colombiana con sede en Medellín que opera dos lí
 ## Tasa de compra y redes
 
 - Página de tasa aproximada, negociación, redes (Polygon, Ethereum, Tron, Solana) y guía para enviar criptoactivos: https://www.bitwaveco.com/tasa-de-compra · https://www.bitwaveco.com/en/usdt-cop-rate
+- Verificador gratuito de billeteras (sanciones OFAC y alertas de riesgo; informativo, no es un certificado): https://www.bitwaveco.com/verificador-de-billetera · https://www.bitwaveco.com/en/wallet-checker
 
 ## Ubicaciones físicas (Medellín y Envigado, Colombia)
 

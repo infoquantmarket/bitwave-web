@@ -60,6 +60,8 @@ export default function Navbar({ postAlternates }: { postAlternates?: PostAltern
     const post = pathname.match(/^\/blog\/([^/]+)$/)
     if (pathname === "/tasa-de-compra" || pathname === "/usdt-cop-rate") {
       target = nextLocale === "en" ? "/usdt-cop-rate" : "/tasa-de-compra"
+    } else if (pathname === "/verificador-de-billetera" || pathname === "/wallet-checker") {
+      target = nextLocale === "en" ? "/wallet-checker" : "/verificador-de-billetera"
     } else if (loc) {
       target = nextLocale === "en" ? `/locations/${loc[1]}` : `/sedes/${loc[1]}`
     } else if (post) {

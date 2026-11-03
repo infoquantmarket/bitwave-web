@@ -1,0 +1,37 @@
+name: Actualizar lista OFAC
+
+# Corre cada día, pero el script solo descarga si la lista guardada tiene 8 días o más.
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Descargar aunque la lista tenga menos de 8 días"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Descargar lista OFAC
+        run: node scripts/update-ofac.mjs ${{ inputs.force && ' ' || '--if-older-than=8' }}
+      - name: Guardar cambios
+        run: |
+          if git diff --quiet -- data/ofac-addresses.json; then
+            echo "Sin cambios."
+            exit 0
+          fi
+          git config user.name "Jaime Calle"
+          git config user.email "jaimecalle@gmail.com"
+          git add data/ofac-addresses.json
+          git commit -m "data: refresh OFAC sanctioned crypto addresses"
+          git push

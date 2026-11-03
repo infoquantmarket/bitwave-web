@@ -3,10 +3,11 @@ import { siteConfig } from "@/lib/config"
 import { getAllPosts } from "@/lib/blog"
 import { locations, locationPath } from "@/lib/locations"
 import { ratePath } from "@/lib/rate"
+import { walletPath } from "@/lib/wallet"
 
 // Fecha del último cambio real de contenido en home y páginas de sede.
 // Actualizar SOLO cuando cambie ese contenido (nunca new Date()).
-const SITE_CONTENT_UPDATED = new Date("2026-10-29")
+const SITE_CONTENT_UPDATED = new Date("2026-11-02")
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.siteUrl
@@ -25,6 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const ratePages: MetadataRoute.Sitemap = [
     { url: `${base}${ratePath("es")}`, lastModified: SITE_CONTENT_UPDATED, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}${ratePath("en")}`, lastModified: SITE_CONTENT_UPDATED, changeFrequency: "weekly", priority: 0.8 },
+  ]
+
+  const walletPages: MetadataRoute.Sitemap = [
+    { url: `${base}${walletPath("es")}`, lastModified: SITE_CONTENT_UPDATED, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}${walletPath("en")}`, lastModified: SITE_CONTENT_UPDATED, changeFrequency: "monthly", priority: 0.7 },
   ]
 
   const locationPages: MetadataRoute.Sitemap = locations.flatMap((loc) => [
@@ -47,5 +53,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ]
 
-  return [...staticPages, ...ratePages, ...locationPages, ...posts]
+  return [...staticPages, ...ratePages, ...walletPages, ...locationPages, ...posts]
 }

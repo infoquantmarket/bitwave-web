@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server"
 import { siteConfig } from "@/lib/config"
 import { locations, locationPath } from "@/lib/locations"
 import { ratePath } from "@/lib/rate"
+import { walletPath } from "@/lib/wallet"
 import { MapPin } from "lucide-react"
 
 export default async function Footer({ locale }: { locale: string }) {
@@ -36,6 +37,7 @@ export default async function Footer({ locale }: { locale: string }) {
             {[
               { label: nav("howItWorks"), href: `${prefix}/#como-funciona` },
               { label: nav("rate"), href: ratePath(locale) },
+              { label: nav("wallet"), href: walletPath(locale) },
               { label: nav("locations"), href: `${prefix}/#ubicaciones` },
               { label: nav("blog"), href: `${locale === "en" ? "/en" : ""}/blog` },
               { label: nav("faq"), href: `${prefix}/#faq` },

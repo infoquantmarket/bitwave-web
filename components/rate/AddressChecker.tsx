@@ -1,7 +1,9 @@
 "use client"
 import { useId, useState } from "react"
-import { useTranslations } from "next-intl"
+import NextLink from "next/link"
+import { useLocale, useTranslations } from "next-intl"
 import { CheckCircle2, CircleAlert, ShieldCheck } from "lucide-react"
+import { walletPath } from "@/lib/wallet"
 
 type Kind = "empty" | "evm" | "tron" | "solana" | "btc" | "unknown"
 
@@ -19,6 +21,7 @@ function detect(raw: string): Kind {
 
 export default function AddressChecker() {
   const t = useTranslations("ratePage")
+  const locale = useLocale()
   const id = useId()
   const [value, setValue] = useState("")
   const kind = detect(value)
@@ -79,6 +82,9 @@ export default function AddressChecker() {
         <span>{message[kind]}</span>
       </div>
       {kind !== "empty" && <p className="mt-3 text-xs text-text-body">{t("checkWarn")}</p>}
+      <NextLink href={walletPath(locale)} className="mt-3 inline-block text-sm font-semibold text-brand-accent hover:text-brand-primary">
+        {t("checkMore")}
+      </NextLink>
     </div>
   )
 }
