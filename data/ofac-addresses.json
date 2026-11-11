@@ -1,7 +1,7 @@
 {
  "source": "OFAC SDN List",
- "updated": "2026-11-03",
- "count": 1058,
+ "updated": "2026-11-11",
+ "count": 1064,
  "addresses": {
   "0x0330070fd38ec3bb94f58fa55d40368271e9e54a": [
    "ETH"
@@ -245,9 +245,9 @@
    "ETH"
   ],
   "0x983a81ca6fb1e441266d2fbcb7d8e530ac2e05a2": [
-   "ETH",
+   "USDT",
    "USDC",
-   "USDT"
+   "ETH"
   ],
   "0x9be599d7867f5e1a2d7ec6db9710df2b98a15573": [
    "ETH"
@@ -283,9 +283,9 @@
    "ETH"
   ],
   "0xb6f5ec1a0a9cd1526536d3f0426c429529471f40": [
-   "ETH",
    "USDT",
-   "USDC"
+   "USDC",
+   "ETH"
   ],
   "0xbb69e01921b17cd22080968bcc96ba6115da6062": [
    "ETH"
@@ -2293,6 +2293,9 @@
   "TCqKhk7MpPnGH3UfygE1TRzUo92a5tuVy6": [
    "TRX"
   ],
+  "TCreRMzGspdHNEkqkasejS6xTzqXNkYJJZ": [
+   "TRX"
+  ],
   "TCu5onCzXuqxjvVzdB2tR4FLuF66d4yRqf": [
    "TRX"
   ],
@@ -2521,6 +2524,9 @@
   "TH96tFMn8KGiYSLiwcV3E2UiaJc8jmcbz3": [
    "USDT"
   ],
+  "THauYJJEaFGLpEknoKnYmXmT5TCeQGKjDE": [
+   "TRX"
+  ],
   "THEQTsqPhRDDfgcfBW5npH5Lr9PZhpthrf": [
    "USDT"
   ],
@@ -2578,10 +2584,16 @@
   "TJGVHmHVNuU1vsXGGALLoirPwoRZoMUuhg": [
    "TRX"
   ],
+  "TJHZswisiMgjioAVpmpMSWXCeQGCPjcTMK": [
+   "TRX"
+  ],
   "TJjRAn9kLiyh8h6gjBjaYjkfDkskgZfyW9": [
    "TRX"
   ],
   "TJkBr9TZ1xBeJoF7RNWqyEMbYqVJ6fXXHR": [
+   "TRX"
+  ],
+  "TJT3JZKJWVHVkKRKSmWmg5UYHhAqBM7mfP": [
    "TRX"
   ],
   "TK17wfSPp32RWrnzZPrGpv7TxdNFvvvE2s": [
@@ -2633,6 +2645,9 @@
    "USDT"
   ],
   "TLvuvpfBKdxddxSsJefeiGCe9eVY8HUroE": [
+   "TRX"
+  ],
+  "TLyRLCNwBhaXkYak1bTFUYTj72crbgN5Vy": [
    "TRX"
   ],
   "TM6Kix9wH8cYQ4rLpFifsQ4ddH3rPX3f8p": [
@@ -3027,6 +3042,9 @@
   ],
   "TW3RgbhYkFEFnmRJ9mE9b83T9XYSMkjwuD": [
    "USDT"
+  ],
+  "TW5NEaaoPHXC1rt5PaYgG474gQ49oiZ2F5": [
+   "TRX"
   ],
   "TW5tokvhEfrb77z98Rc8HqbkzQJ6sxYtGX": [
    "TRX"
