@@ -1,15 +1,12 @@
-import { getAllPosts, getPostBySlug } from "@/lib/blog"
+import { absoluteImage, getAllPosts, getPostBySlug } from "@/lib/blog"
 import { notFound, redirect } from "next/navigation"
-import Image from "next/image"
-import Link from "next/link"
-import { Calendar, Clock, ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
 import { siteConfig } from "@/lib/config"
-import { MDXRemote } from "next-mdx-remote/rsc"
+import PostArticle from "@/components/blog/PostArticle"
 
 export async function generateStaticParams() {
-  const esPosts = getAllPosts("es")
-  const enPosts = getAllPosts("en")
+  const esPosts = await getAllPosts("es")
+  const enPosts = await getAllPosts("en")
   return [
     ...esPosts.map((p) => ({ locale: "es", slug: p.slug })),
     ...enPosts.map((p) => ({ locale: "en", slug: p.slug })),
@@ -22,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
   const { slug, locale } = await params
-  const post = getPostBySlug(slug, locale as "es" | "en")
+  const post = await getPostBySlug(slug, locale as "es" | "en")
   if (!post) return {}
   const prefix = (l: string) => (l === "en" ? "/en" : "")
   const self = `${siteConfig.siteUrl}${prefix(locale)}/blog/${post.slug}`
@@ -48,7 +45,7 @@ export async function generateMetadata({
       publishedTime: post.date,
       images: [
         {
-          url: `${siteConfig.siteUrl}${post.coverImage}`,
+          url: absoluteImage(post.coverImage),
           width: 1200,
           height: 630,
         },
@@ -63,10 +60,10 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string; locale: string }>
 }) {
   const { slug, locale } = await params
-  const post = getPostBySlug(slug, locale as "es" | "en")
+  const post = await getPostBySlug(slug, locale as "es" | "en")
   if (!post) {
     // El post existe en el otro idioma (p. ej. cookie de idioma distinto): llevamos al equivalente o al blog.
-    const other = getPostBySlug(slug, locale === "en" ? "es" : "en")
+    const other = await getPostBySlug(slug, locale === "en" ? "es" : "en")
     if (!other) notFound()
     const pre = locale === "en" ? "/en" : ""
     redirect(other.alternate ? `${pre}/blog/${other.alternate}` : `${pre}/blog`)
@@ -77,7 +74,7 @@ export default async function BlogPostPage({
     "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription,
-    image: `${siteConfig.siteUrl}${post.coverImage}`,
+    image: absoluteImage(post.coverImage),
     datePublished: post.date,
     author: { "@type": "Organization", name: "BitWave", url: siteConfig.siteUrl },
     publisher: { "@type": "Organization", name: "BitWave", logo: { "@type": "ImageObject", url: `${siteConfig.siteUrl}/logo.png` } },
@@ -114,43 +111,7 @@ export default async function BlogPostPage({
           __html: JSON.stringify(faqSchema ? [articleSchema, faqSchema] : articleSchema),
         }}
       />
-      <Link
-        href={backHref}
-        className="inline-flex items-center gap-1.5 text-sm text-brand-accent hover:text-brand-primary mb-8 font-medium transition-colors"
-      >
-        <ArrowLeft size={15} aria-hidden="true" />
-        {backLabel}
-      </Link>
-
-      <h1 className="text-3xl sm:text-4xl font-bold text-text-title leading-tight mb-4">
-        {post.title}
-      </h1>
-
-      <div className="flex items-center gap-4 text-sm text-text-body mb-8">
-        <span className="flex items-center gap-1.5">
-          <Calendar size={14} aria-hidden="true" />
-          <time dateTime={post.date}>{dateStr}</time>
-        </span>
-        <span className="flex items-center gap-1.5">
-          <Clock size={14} aria-hidden="true" />
-          {post.readTime} {readLabel}
-        </span>
-      </div>
-
-      <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden mb-10 bg-brand-light">
-        <Image
-          src={post.coverImage}
-          alt={post.title}
-          fill
-          className="object-cover"
-          priority
-          sizes="(max-width: 768px) 100vw, 768px"
-        />
-      </div>
-
-      <article className="space-y-4">
-        <MDXRemote source={post.content} />
-      </article>
+      <PostArticle post={post} locale={locale} />
     </main>
   )
 }

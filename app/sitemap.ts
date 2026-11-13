@@ -9,10 +9,10 @@ import { walletPath } from "@/lib/wallet"
 // Actualizar SOLO cuando cambie ese contenido (nunca new Date()).
 const SITE_CONTENT_UPDATED = new Date("2026-11-02")
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.siteUrl
-  const esPosts = getAllPosts("es")
-  const enPosts = getAllPosts("en")
+  const esPosts = await getAllPosts("es")
+  const enPosts = await getAllPosts("en")
   const latest = (posts: { date: string }[]) =>
     posts.length ? new Date(Math.max(...posts.map((p) => new Date(p.date).getTime()))) : SITE_CONTENT_UPDATED
 

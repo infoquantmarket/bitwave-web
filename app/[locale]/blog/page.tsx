@@ -32,7 +32,7 @@ export default async function BlogPage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  const posts = getAllPosts(locale as "es" | "en")
+  const posts = await getAllPosts(locale as "es" | "en")
   const t = await getTranslations("blog")
 
   return (

@@ -1,6 +1,7 @@
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 import Image from "next/image"
+import Link from "next/link"
 import { createSessionToken, validateSessionToken, ADMIN_EMAIL, ADMIN_PASSWORD } from "@/lib/auth"
 
 export const dynamic = "force-dynamic"
@@ -242,6 +243,20 @@ export default async function AdminPage({
               Guardar cambios
             </button>
           </form>
+        </div>
+
+        {/* Blog */}
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex items-center justify-between gap-4">
+          <div>
+            <h2 className="text-base font-bold text-gray-800">Blog</h2>
+            <p className="text-sm text-gray-500 mt-0.5">Publica artículos con SEO, portada y contenido.</p>
+          </div>
+          <Link
+            href="/admin/blog"
+            className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-2.5 rounded-lg transition-colors text-sm whitespace-nowrap"
+          >
+            Ir al blog
+          </Link>
         </div>
 
         {/* Info Card */}

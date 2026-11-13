@@ -10,7 +10,7 @@ interface BlogCarouselProps {
 export default async function BlogCarousel({ locale }: BlogCarouselProps) {
   const t = await getTranslations("blog")
   const lang = (locale === "en" ? "en" : "es") as "es" | "en"
-  const posts = getAllPosts(lang).slice(0, 3)
+  const posts = (await getAllPosts(lang)).slice(0, 3)
   const blogHref = locale === "en" ? "/en/blog" : "/blog"
 
   return (

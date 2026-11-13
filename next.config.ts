@@ -11,6 +11,10 @@ const withMDX = createMDX({})
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  images: {
+    // Portadas de posts publicados desde /admin (Vercel Blob).
+    remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
+  },
   async redirects() {
     return [
       {

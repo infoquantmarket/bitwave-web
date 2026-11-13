@@ -75,7 +75,7 @@ export default async function LocaleLayout({
     knowsAbout: ["USDT", "USDC", "stablecoins", "criptoactivos", "cambio de divisas", "pesos colombianos", "Polygon", "Tron", "Solana", "Ethereum"],
   }))
 
-  const postAlternates = getPostAlternates()
+  const postAlternates = await getPostAlternates()
 
   return (
     <html lang={locale} className={inter.variable}>

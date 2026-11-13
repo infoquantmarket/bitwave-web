@@ -41,7 +41,7 @@ export default async function WalletPage({ locale }: { locale: Locale }) {
   const wa = getWhatsAppUrl(undefined, locale)
   // Enlaza al post de estafas cuando esté publicado; mientras tanto, al índice del blog.
   const scamsSlug = locale === "en" ? "avoid-scams-exchanging-usdt-medellin" : "como-evitar-estafas-cambiar-usdt-medellin"
-  const scamsPublished = getAllPosts(locale).some((p) => p.slug === scamsSlug)
+  const scamsPublished = (await getAllPosts(locale)).some((p) => p.slug === scamsSlug)
   const blogRoot = locale === "en" ? "/en/blog" : "/blog"
   const scamsPath = scamsPublished ? `${blogRoot}/${scamsSlug}` : blogRoot
 
