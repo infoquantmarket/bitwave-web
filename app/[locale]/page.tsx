@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import HeroSection from "@/components/home/HeroSection"
 import TrustBar from "@/components/home/TrustBar"
 import HowItWorks from "@/components/home/HowItWorks"
+import PartnerBanner from "@/components/home/PartnerBanner"
 import WalletCheckSection from "@/components/home/WalletCheckSection"
 import LearnMoreSection from "@/components/home/LearnMoreSection"
 import WhoWeServe from "@/components/home/WhoWeServe"
@@ -69,6 +70,7 @@ export default async function HomePage() {
       <HowItWorks />
       <WalletCheckSection />
       <LearnMoreSection />
+      <PartnerBanner />
       <WhoWeServe />
       <LocationsSection />
       <EsimSection />
