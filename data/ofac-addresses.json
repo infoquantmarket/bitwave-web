@@ -1,7 +1,7 @@
 {
  "source": "OFAC SDN List",
- "updated": "2026-11-11",
- "count": 1064,
+ "updated": "2026-11-19",
+ "count": 1065,
  "addresses": {
   "0x0330070fd38ec3bb94f58fa55d40368271e9e54a": [
    "ETH"
@@ -46,8 +46,8 @@
    "ETH"
   ],
   "0x19aa5fe80d33a56d56c78e82ea5e50e5d80b4dff": [
-   "ETH",
-   "USDT"
+   "USDT",
+   "ETH"
   ],
   "0x19f8f2b0915daa12a3f5c9cf01df9e24d53794f7": [
    "ETH"
@@ -77,8 +77,8 @@
    "ETH"
   ],
   "0x2f389ce8bd8ff92de3402ffce4691d17fc4f6535": [
-   "ETH",
-   "USDT"
+   "USDT",
+   "ETH"
   ],
   "0x308ed4b7b49797e1a98d3818bff6fe5385410370": [
    "ETH"
@@ -658,8 +658,8 @@
    "XBT"
   ],
   "1CF46Rfbp97absrs7zb7dFfZS6qBXUm9EP": [
-   "XBT",
-   "USDT"
+   "USDT",
+   "XBT"
   ],
   "1CG1aSCxUnbmv9G34ofxTQoHtuVnMLJtQV": [
    "XBT"
@@ -689,8 +689,8 @@
    "XBT"
   ],
   "1Df883c96LVauVsx9FEgnsourD8DELwCUQ": [
-   "XBT",
-   "USDT"
+   "USDT",
+   "XBT"
   ],
   "1DfyWkiXVVqWfcSduj23qTDis9kb2qvRDa": [
    "XBT"
@@ -894,8 +894,8 @@
    "XBT"
   ],
   "1KUUJPkyDhamZXgpsyXqNGc3x1QPXtdhgz": [
-   "XBT",
-   "USDT"
+   "USDT",
+   "XBT"
   ],
   "1Kys8fqDen8NGFUJ6AFcXfFW5qquuTH4eh": [
    "XBT"
@@ -928,8 +928,8 @@
    "XBT"
   ],
   "1LrxsRd7zNuxPJcL5rttnoeJFy1y4AffYY": [
-   "XBT",
-   "USDT"
+   "USDT",
+   "XBT"
   ],
   "1LuDiMd95Df4i2bcvrfw47t2GKpLLXAQMZ": [
    "XBT"
@@ -3029,6 +3029,9 @@
    "USDT"
   ],
   "TVUS1CVQnnzoJG8PBWkcWyf7DkLrS8yh5Z": [
+   "TRX"
+  ],
+  "TVwLtgUXyDhmcSoQ9x2z9QSua41f8mDFvU": [
    "TRX"
   ],
   "TVXHp8bMrpRd5HGy3w1yu9f87qwRrMHFp8": [
